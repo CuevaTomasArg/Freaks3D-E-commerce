@@ -1,3 +1,4 @@
+@import "../base/var";
 header{
     .container-fluid{
         flex-direction: row-reverse;
@@ -15,6 +16,7 @@ header{
             background-color: transparent;
         }
         .offcanvas-body{
+            @import "cart";
             .dropdown{
                 a,i{
                     display:inline-block

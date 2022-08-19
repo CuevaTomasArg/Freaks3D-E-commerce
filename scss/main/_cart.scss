@@ -1,0 +1,56 @@
+@import "../base/var";
+.producto-en-carrito{
+    display:grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas: 
+    "img pro trash "
+    "img car trash "
+    "cant price price "
+    "cant_input price price ";
+    justify-items:flex-start ;
+    img{
+        width: 80%;
+        grid-area: img;
+        margin: 0 auto;
+    }
+    p{
+        display: inline-block;
+        margin: 0;
+        font-size: 12px;
+        text-align: start;
+        margin-left: 4px;
+        height: 32px;
+    }
+    p:nth-child(2){
+        margin-top: 4px;
+    }
+    .nombre{
+        grid-area: pro;
+    }
+    .caracter{
+        grid-area: car;
+    }
+    button{
+        grid-area: trash;
+        background-color: transparent;
+        border: none;
+        width:32px;
+        height: 32px;
+        margin:12px 16px 12px auto
+    }
+    label{
+        font-weight: 800;
+    }
+    input{
+        grid-area: cant_input;
+        width: 32px;
+        margin: 8px auto auto 32px ;
+    }
+    .price{
+        font-size: 1.5rem;
+        font-weight: 700;
+        grid-area: price;
+        margin: auto 32px 32px auto;
+    }
+}

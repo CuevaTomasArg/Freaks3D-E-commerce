@@ -38,6 +38,57 @@ header .container-fluid .cart-button {
   border: none;
   background-color: transparent;
 }
+header .container-fluid .offcanvas-body .producto-en-carrito {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  grid-template-areas: "img pro trash " "img car trash " "cant price price " "cant_input price price ";
+  justify-items: flex-start;
+}
+header .container-fluid .offcanvas-body .producto-en-carrito img {
+  width: 80%;
+  grid-area: img;
+  margin: 0 auto;
+}
+header .container-fluid .offcanvas-body .producto-en-carrito p {
+  display: inline-block;
+  margin: 0;
+  font-size: 12px;
+  text-align: start;
+  margin-left: 4px;
+  height: 32px;
+}
+header .container-fluid .offcanvas-body .producto-en-carrito p:nth-child(2) {
+  margin-top: 4px;
+}
+header .container-fluid .offcanvas-body .producto-en-carrito .nombre {
+  grid-area: pro;
+}
+header .container-fluid .offcanvas-body .producto-en-carrito .caracter {
+  grid-area: car;
+}
+header .container-fluid .offcanvas-body .producto-en-carrito button {
+  grid-area: trash;
+  background-color: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  margin: 12px 16px 12px auto;
+}
+header .container-fluid .offcanvas-body .producto-en-carrito label {
+  font-weight: 800;
+}
+header .container-fluid .offcanvas-body .producto-en-carrito input {
+  grid-area: cant_input;
+  width: 32px;
+  margin: 8px auto auto 32px;
+}
+header .container-fluid .offcanvas-body .producto-en-carrito .price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  grid-area: price;
+  margin: auto 32px 32px auto;
+}
 header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .offcanvas-body .dropdown i {
   display: inline-block;
 }
