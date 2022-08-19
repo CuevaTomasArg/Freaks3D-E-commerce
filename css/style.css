@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #1b1b1b;
+  background-color: rgb(244, 244, 244);
+}
+
+main {
+  margin-top: 64px;
+}
+main section {
+  margin: 64px 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header .container-fluid {
+  flex-direction: row-reverse;
+}
+header .container-fluid .offcanvas-end i, header .container-fluid .offcanvas-end a {
+  display: inline-block;
+  margin: 0px 4px;
+}
+header .container-fluid .offcanvas-end i {
+  padding-right: 8px;
+}
+header .container-fluid .cart-button {
+  border: none;
+  background-color: transparent;
+}
+header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .offcanvas-body .dropdown i {
+  display: inline-block;
+}
+
+.MasVendidos > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.MasVendidos > div .card {
+  width: 45%;
+  margin: 16px 8px;
+}
+
+.productos > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-items: center;
+  gap: 8px;
+}
+.productos > div .card {
+  width: 90%;
+  margin: 4px 0px;
+}
+.productos > nav {
+  text-align: center;
+  margin: 12px;
+  padding-top: 32px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #dbdbdb;
+}
+footer div ul {
+  margin: 0;
+  padding: 0;
+}
+footer div ul li {
+  margin: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */

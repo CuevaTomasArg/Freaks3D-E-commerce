@@ -1,0 +1,25 @@
+@import "base/var";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color:$font-color;
+    background-color: $background;
+}
+main{
+    margin-top: 64px;
+    section{
+        margin: 64px 0px;
+    }
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+@import "main/header";
+@import "main/main";
+@import "main/footer";

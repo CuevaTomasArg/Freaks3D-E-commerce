@@ -1,0 +1,31 @@
+.MasVendidos{
+    >div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .card{
+            width: 45%;
+            margin: 16px 8px;
+        }
+    }
+}
+.productos{
+    >div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+        justify-items: center;
+        gap: 8px;
+        .card{
+            width: 90%;
+             margin: 4px 0px;
+        }
+    }
+    >nav{
+        text-align: center;
+        margin: 12px;
+        padding-top: 32px;
+    }
+}

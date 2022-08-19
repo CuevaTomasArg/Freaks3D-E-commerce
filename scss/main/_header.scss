@@ -1,0 +1,25 @@
+header{
+    .container-fluid{
+        flex-direction: row-reverse;
+        .offcanvas-end{
+            i,a{
+                display: inline-block;
+                margin: 0px 4px;
+            }
+            i{
+                padding-right: 8px;
+            }
+        }
+        .cart-button{
+            border:none;
+            background-color: transparent;
+        }
+        .offcanvas-body{
+            .dropdown{
+                a,i{
+                    display:inline-block
+                }
+            }
+        }
+    }
+}

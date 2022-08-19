@@ -1,0 +1,18 @@
+@import "../base/var";
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: darken($background, 10%);
+    div{
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                margin: 12px;
+            }
+        }
+    }
+}
