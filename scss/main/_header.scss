@@ -11,12 +11,24 @@ header{
                 padding-right: 8px;
             }
         }
+        .navbar-brand{
+            img{
+                width: 128px;
+            }
+        }
+        .navbar-toggler{
+            margin-left: 16px;
+        }
         .cart-button{
             border:none;
             background-color: transparent;
+            margin-right: 16px
         }
         .offcanvas-body{
             @import "cart";
+            >div{
+                margin:64px 0
+            }
             .dropdown{
                 a,i{
                     display:inline-block

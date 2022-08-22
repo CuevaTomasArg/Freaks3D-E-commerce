@@ -1,0 +1,13 @@
+@import "../base/var";
+%grid{
+    display: grid;
+}
+%flex{
+    display: flex;
+}
+%flexColumn{
+    flex-direction: column;
+}
+%flexRow{
+    flex-direction: row;
+}

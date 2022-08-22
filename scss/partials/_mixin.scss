@@ -1,0 +1,9 @@
+@import "../base/var";
+
+@mixin CTA ($ancho,$alto){
+    width:$ancho;
+    height: $alto;
+    background-color:nth($CTA , 1 );
+    border-radius: 4px;
+    color: $font-color;
+}

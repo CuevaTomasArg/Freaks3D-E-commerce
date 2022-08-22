@@ -22,6 +22,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #02aab0;
 }
 
 header .container-fluid {
@@ -34,9 +35,16 @@ header .container-fluid .offcanvas-end i, header .container-fluid .offcanvas-end
 header .container-fluid .offcanvas-end i {
   padding-right: 8px;
 }
+header .container-fluid .navbar-brand img {
+  width: 128px;
+}
+header .container-fluid .navbar-toggler {
+  margin-left: 16px;
+}
 header .container-fluid .cart-button {
   border: none;
   background-color: transparent;
+  margin-right: 16px;
 }
 header .container-fluid .offcanvas-body .producto-en-carrito {
   display: grid;
@@ -44,6 +52,9 @@ header .container-fluid .offcanvas-body .producto-en-carrito {
   grid-template-rows: 1fr 2fr 1fr 1fr;
   grid-template-areas: "img pro trash " "img car trash " "cant price price " "cant_input price price ";
   justify-items: flex-start;
+}
+header .container-fluid .offcanvas-body .producto-en-carrito hr {
+  margin-bottom: 64px;
 }
 header .container-fluid .offcanvas-body .producto-en-carrito img {
   width: 80%;
@@ -77,6 +88,7 @@ header .container-fluid .offcanvas-body .producto-en-carrito button {
 }
 header .container-fluid .offcanvas-body .producto-en-carrito label {
   font-weight: 800;
+  margin: 12px auto auto 24px;
 }
 header .container-fluid .offcanvas-body .producto-en-carrito input {
   grid-area: cant_input;
@@ -88,6 +100,68 @@ header .container-fluid .offcanvas-body .producto-en-carrito .price {
   font-weight: 700;
   grid-area: price;
   margin: auto 32px 32px auto;
+}
+header .container-fluid .offcanvas-body .metodo-entrega > div .tipo-entrega {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: 64px;
+  margin: 12px auto;
+  border: 1px solid rgba(0, 0, 0, 0.55);
+  border-radius: 4px;
+}
+header .container-fluid .offcanvas-body .metodo-entrega > div .tipo-entrega label, header .container-fluid .offcanvas-body .metodo-entrega > div .tipo-entrega input {
+  margin: auto 24px;
+}
+header .container-fluid .offcanvas-body .metodo-entrega > div .provincia-entrega {
+  display: block;
+}
+header .container-fluid .offcanvas-body .metodo-entrega > div .provincia-entrega label {
+  display: block;
+}
+header .container-fluid .offcanvas-body .metodo-entrega > div .provincia-entrega select {
+  display: inline-block;
+  width: 136px;
+  margin: 12px 12px auto auto;
+}
+header .container-fluid .offcanvas-body .metodo-entrega > div .provincia-entrega p {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 12px auto 12px 52px;
+}
+header .container-fluid .offcanvas-body .monto-total p, header .container-fluid .offcanvas-body .monto-total strong {
+  display: inline-block;
+}
+header .container-fluid .offcanvas-body .monto-total strong {
+  font-size: 1.4rem;
+  margin: 12px 32px 12px 32px;
+}
+header .container-fluid .offcanvas-body .monto-total p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 12px 32px 12px 64px;
+}
+header .container-fluid .offcanvas-body .volver {
+  text-align: center;
+}
+header .container-fluid .offcanvas-body .volver button {
+  margin: 12px;
+  width: 90%;
+  height: 32px;
+  background-color: #02aab0;
+  border-radius: 4px;
+  color: #1b1b1b;
+}
+header .container-fluid .offcanvas-body .volver button a {
+  color: #1b1b1b;
+}
+header .container-fluid .offcanvas-body .volver .seguir-viendo {
+  margin: 24px;
+}
+header .container-fluid .offcanvas-body > div {
+  margin: 64px 0;
 }
 header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .offcanvas-body .dropdown i {
   display: inline-block;
@@ -136,6 +210,54 @@ footer div ul {
 }
 footer div ul li {
   margin: 12px;
+}
+
+main .compra-final .carta-compra div {
+  display: grid;
+}
+
+main .compra-final .carta-compra {
+  display: flex;
+}
+
+main .compra-final .carta-compra {
+  flex-direction: row;
+}
+
+header {
+  text-align: center;
+}
+header img {
+  width: 300px;
+}
+
+main nav {
+  display: inline-block;
+  margin: 12px 24px;
+}
+main nav a, main nav p {
+  display: inline;
+  margin: 4px;
+}
+main .compra-final .carta-compra img {
+  width: 128px;
+}
+main .compra-final .carta-compra div {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "titulo titulo" "caracter caracter" "cantidad precio";
+}
+main .compra-final .carta-compra div strong {
+  grid-area: titulo;
+}
+main .compra-final .carta-compra div .caracter {
+  grid-area: caracter;
+}
+main .compra-final .carta-compra div .cant {
+  grid-area: cantidad;
+}
+main .compra-final .carta-compra div .monto {
+  grid-area: precio;
 }
 
 /*# sourceMappingURL=style.css.map */

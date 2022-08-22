@@ -1,5 +1,9 @@
 @import "../base/var";
+@import "../partials/mixin";
 .producto-en-carrito{
+    hr{
+        margin-bottom: 64px;
+    }
     display:grid;
     grid-template-columns: 3fr 2fr 2fr;
     grid-template-rows: 1fr 2fr 1fr 1fr;
@@ -41,6 +45,7 @@
     }
     label{
         font-weight: 800;
+        margin: 12px auto auto 24px;
     }
     input{
         grid-area: cant_input;
@@ -52,5 +57,68 @@
         font-weight: 700;
         grid-area: price;
         margin: auto 32px 32px auto;
+    }
+}
+
+.metodo-entrega{
+    >div{
+        .tipo-entrega{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+            height: 64px;
+            margin: 12px auto;
+            border: 1px solid  rgba(0, 0, 0, 0.55);
+            border-radius: 4px;
+            label,input{
+                margin: auto 24px;
+            }
+        }
+        .provincia-entrega{
+            display: block;
+            label{
+                display:block
+            }
+            select{
+                display:inline-block;
+                width:136px;
+                margin:12px 12px auto auto
+            }
+            p{
+                display: inline-block;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin: 12px auto 12px 52px;
+            }
+        }
+    }
+}
+.monto-total{
+    p,strong{
+        display: inline-block;
+    }
+    strong{
+        font-size: 1.4rem;
+        margin: 12px 32px 12px 32px;
+    }
+    p{
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 12px 32px 12px 64px;
+    }
+
+}
+.volver{
+    text-align: center;
+    button{
+        margin: 12px;
+        @include CTA( 90%,32px);
+        a{
+            color: $font-color;
+        }
+    }
+    .seguir-viendo{
+        margin: 24px;
     }
 }

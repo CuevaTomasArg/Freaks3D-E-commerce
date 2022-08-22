@@ -1,0 +1,49 @@
+@import "../base/var";
+@import "../partials/mixin";
+@import "../partials/extends";
+header{
+    text-align: center;
+    img{
+        width: 300px;
+    }
+}
+main{
+    nav{
+        display: inline-block;
+        margin: 12px 24px;
+        a,p{
+            display: inline;
+            margin: 4px;
+        }
+    }
+    .compra-final{
+        .carta-compra{
+            @extend %flex;
+            @extend %flexRow;
+            img{
+                width: 128px;
+            }
+            div{
+                @extend %grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas: 
+                "titulo titulo"
+                "caracter caracter"
+                "cantidad precio";
+                strong{
+                    grid-area: titulo;
+                }
+                .caracter{
+                    grid-area: caracter;
+                }
+                .cant{
+                    grid-area: cantidad;
+                }
+                .monto{
+                    grid-area: precio;
+                }
+            }
+        }
+    }
+}
