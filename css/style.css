@@ -28,12 +28,151 @@ a {
 header .container-fluid {
   flex-direction: row-reverse;
 }
+header .container-fluid .offcanvas-start .offcanvas-title {
+  font-size: 24px;
+  color: #02aab0;
+}
+header .container-fluid .offcanvas-start .offcanvas-body {
+  text-align: start;
+}
+header .container-fluid .offcanvas-start .offcanvas-body i {
+  margin-left: 8px;
+}
+header .container-fluid .offcanvas-start .offcanvas-body a {
+  transition: all 0.3s;
+}
+header .container-fluid .offcanvas-start .offcanvas-body a:hover {
+  transform: translateX(3px);
+}
+header .container-fluid .offcanvas-start .offcanvas-body .nav-item {
+  transition: all 0.3s;
+}
+header .container-fluid .offcanvas-start .offcanvas-body .nav-item:hover a {
+  transform: translateX(3px);
+}
+header .container-fluid .offcanvas-start .offcanvas-body .dropdown-menu {
+  border: none;
+}
 header .container-fluid .offcanvas-end i, header .container-fluid .offcanvas-end a {
   display: inline-block;
   margin: 0px 4px;
 }
 header .container-fluid .offcanvas-end i {
   padding-right: 8px;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  grid-template-areas: "img pro trash " "img car trash " "cant price price " "cant_input price price ";
+  justify-items: flex-start;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito hr {
+  margin-bottom: 64px;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito img {
+  width: 80%;
+  grid-area: img;
+  margin: 0 auto;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito p {
+  display: inline-block;
+  margin: 0;
+  font-size: 12px;
+  text-align: start;
+  margin-left: 4px;
+  height: 32px;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito p:nth-child(2) {
+  margin-top: 4px;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito .nombre {
+  grid-area: pro;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito .caracter {
+  grid-area: car;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito button {
+  grid-area: trash;
+  background-color: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  margin: 12px 16px 12px auto;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito label {
+  font-weight: 800;
+  margin: 12px auto auto 24px;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito input {
+  grid-area: cant_input;
+  width: 32px;
+  margin: 8px auto auto 32px;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito .price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  grid-area: price;
+  margin: auto 32px 32px auto;
+}
+header .container-fluid .offcanvas-end .metodo-entrega > div .tipo-entrega {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: 64px;
+  margin: 12px auto;
+  border: 1px solid rgba(0, 0, 0, 0.55);
+  border-radius: 4px;
+}
+header .container-fluid .offcanvas-end .metodo-entrega > div .tipo-entrega label, header .container-fluid .offcanvas-end .metodo-entrega > div .tipo-entrega input {
+  margin: auto 24px;
+}
+header .container-fluid .offcanvas-end .metodo-entrega > div .provincia-entrega {
+  display: block;
+}
+header .container-fluid .offcanvas-end .metodo-entrega > div .provincia-entrega label {
+  display: block;
+}
+header .container-fluid .offcanvas-end .metodo-entrega > div .provincia-entrega select {
+  display: inline-block;
+  width: 136px;
+  margin: 12px 12px auto auto;
+}
+header .container-fluid .offcanvas-end .metodo-entrega > div .provincia-entrega p {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 12px auto 12px 52px;
+}
+header .container-fluid .offcanvas-end .monto-total p, header .container-fluid .offcanvas-end .monto-total strong {
+  display: inline-block;
+}
+header .container-fluid .offcanvas-end .monto-total strong {
+  font-size: 1.4rem;
+  margin: 12px 32px 12px 32px;
+}
+header .container-fluid .offcanvas-end .monto-total p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 12px 32px 12px 64px;
+}
+header .container-fluid .offcanvas-end .volver {
+  text-align: center;
+}
+header .container-fluid .offcanvas-end .volver button {
+  margin: 12px;
+  width: 90%;
+  height: 32px;
+  background-color: #02aab0;
+  border-radius: 4px;
+  color: #1b1b1b;
+}
+header .container-fluid .offcanvas-end .volver button a {
+  color: #1b1b1b;
+}
+header .container-fluid .offcanvas-end .volver .seguir-viendo {
+  margin: 24px;
 }
 header .container-fluid .navbar-brand img {
   width: 128px;
@@ -45,120 +184,6 @@ header .container-fluid .cart-button {
   border: none;
   background-color: transparent;
   margin-right: 16px;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito {
-  display: grid;
-  grid-template-columns: 3fr 2fr 2fr;
-  grid-template-rows: 1fr 2fr 1fr 1fr;
-  grid-template-areas: "img pro trash " "img car trash " "cant price price " "cant_input price price ";
-  justify-items: flex-start;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito hr {
-  margin-bottom: 64px;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito img {
-  width: 80%;
-  grid-area: img;
-  margin: 0 auto;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito p {
-  display: inline-block;
-  margin: 0;
-  font-size: 12px;
-  text-align: start;
-  margin-left: 4px;
-  height: 32px;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito p:nth-child(2) {
-  margin-top: 4px;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito .nombre {
-  grid-area: pro;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito .caracter {
-  grid-area: car;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito button {
-  grid-area: trash;
-  background-color: transparent;
-  border: none;
-  width: 32px;
-  height: 32px;
-  margin: 12px 16px 12px auto;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito label {
-  font-weight: 800;
-  margin: 12px auto auto 24px;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito input {
-  grid-area: cant_input;
-  width: 32px;
-  margin: 8px auto auto 32px;
-}
-header .container-fluid .offcanvas-body .producto-en-carrito .price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  grid-area: price;
-  margin: auto 32px 32px auto;
-}
-header .container-fluid .offcanvas-body .metodo-entrega > div .tipo-entrega {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-  height: 64px;
-  margin: 12px auto;
-  border: 1px solid rgba(0, 0, 0, 0.55);
-  border-radius: 4px;
-}
-header .container-fluid .offcanvas-body .metodo-entrega > div .tipo-entrega label, header .container-fluid .offcanvas-body .metodo-entrega > div .tipo-entrega input {
-  margin: auto 24px;
-}
-header .container-fluid .offcanvas-body .metodo-entrega > div .provincia-entrega {
-  display: block;
-}
-header .container-fluid .offcanvas-body .metodo-entrega > div .provincia-entrega label {
-  display: block;
-}
-header .container-fluid .offcanvas-body .metodo-entrega > div .provincia-entrega select {
-  display: inline-block;
-  width: 136px;
-  margin: 12px 12px auto auto;
-}
-header .container-fluid .offcanvas-body .metodo-entrega > div .provincia-entrega p {
-  display: inline-block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 12px auto 12px 52px;
-}
-header .container-fluid .offcanvas-body .monto-total p, header .container-fluid .offcanvas-body .monto-total strong {
-  display: inline-block;
-}
-header .container-fluid .offcanvas-body .monto-total strong {
-  font-size: 1.4rem;
-  margin: 12px 32px 12px 32px;
-}
-header .container-fluid .offcanvas-body .monto-total p {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 12px 32px 12px 64px;
-}
-header .container-fluid .offcanvas-body .volver {
-  text-align: center;
-}
-header .container-fluid .offcanvas-body .volver button {
-  margin: 12px;
-  width: 90%;
-  height: 32px;
-  background-color: #02aab0;
-  border-radius: 4px;
-  color: #1b1b1b;
-}
-header .container-fluid .offcanvas-body .volver button a {
-  color: #1b1b1b;
-}
-header .container-fluid .offcanvas-body .volver .seguir-viendo {
-  margin: 24px;
 }
 header .container-fluid .offcanvas-body > div {
   margin: 64px 0;
@@ -212,15 +237,19 @@ footer div ul li {
   margin: 12px;
 }
 
-main .compra-final .carta-compra div {
+.datos-compra .compra-final .carta-compra div {
   display: grid;
 }
 
-main .compra-final .carta-compra {
+.datos-compra form .datos-vivienda .calle, .datos-compra form .datos-vivienda .altura, .datos-compra form .datos-vivienda, .datos-compra .compra-final .carta-compra {
   display: flex;
 }
 
-main .compra-final .carta-compra {
+.datos-compra form .datos-vivienda .calle, .datos-compra form .datos-vivienda .altura {
+  flex-direction: column;
+}
+
+.datos-compra form .datos-vivienda, .datos-compra .compra-final .carta-compra {
   flex-direction: row;
 }
 
@@ -231,33 +260,145 @@ header img {
   width: 300px;
 }
 
-main nav {
+.datos-compra nav {
   display: inline-block;
   margin: 12px 24px;
 }
-main nav a, main nav p {
+.datos-compra nav a, .datos-compra nav p {
   display: inline;
   margin: 4px;
 }
-main .compra-final .carta-compra img {
+.datos-compra .compra-final {
+  display: inline-block;
+  margin: 24px;
+}
+.datos-compra .compra-final .carta-compra img {
   width: 128px;
 }
-main .compra-final .carta-compra div {
+.datos-compra .compra-final .carta-compra div {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "titulo titulo" "caracter caracter" "cantidad precio";
+  justify-items: flex-start;
+  column-gap: 24px;
+  margin-left: 18px;
 }
-main .compra-final .carta-compra div strong {
+.datos-compra .compra-final .carta-compra div strong {
   grid-area: titulo;
 }
-main .compra-final .carta-compra div .caracter {
+.datos-compra .compra-final .carta-compra div .caracter {
   grid-area: caracter;
 }
-main .compra-final .carta-compra div .cant {
+.datos-compra .compra-final .carta-compra div .cant {
   grid-area: cantidad;
 }
-main .compra-final .carta-compra div .monto {
+.datos-compra .compra-final .carta-compra div .monto {
   grid-area: precio;
+}
+.datos-compra .carta-envio, .datos-compra .monto-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 24px;
+}
+.datos-compra .carta-envio strong, .datos-compra .monto-total strong {
+  font-size: 24px;
+}
+.datos-compra .carta-envio p, .datos-compra .monto-total p {
+  margin-left: 98px;
+}
+.datos-compra h1 {
+  text-align: center;
+}
+.datos-compra form {
+  display: inline-block;
+  text-align: center;
+}
+.datos-compra form div {
+  display: inline-block;
+  text-align: start;
+  width: 95%;
+  margin: 4px auto;
+}
+.datos-compra form div label {
+  margin-left: 32px;
+}
+.datos-compra form div input {
+  width: 90%;
+  margin: 8px auto 18px 12px;
+  height: 44px;
+  border: 1px solid #c1c1c1;
+  border-radius: 4px;
+}
+.datos-compra form div select {
+  width: 90%;
+  margin-left: 12px;
+  height: 36px;
+}
+.datos-compra form .datos-vivienda {
+  margin-left: 4px;
+  align-items: flex-start;
+}
+.datos-compra form .datos-vivienda .calle, .datos-compra form .datos-vivienda .altura {
+  margin-left: 0;
+}
+.datos-compra form .datos-vivienda .calle {
+  width: 132px;
+}
+.datos-compra form .datos-vivienda .calle input {
+  width: 125%;
+}
+.datos-compra form .datos-vivienda .altura {
+  width: 72px;
+}
+.datos-compra form .datos-vivienda .altura input {
+  width: 100%;
+}
+.datos-compra form .dpto {
+  width: 128px;
+}
+.datos-compra form h2 {
+  text-align: center;
+}
+.datos-compra form .datos-transferencia {
+  display: inline-block;
+  width: 90%;
+  margin: 12px auto 12px 24px;
+  border-top: 1px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+}
+.datos-compra form .datos-transferencia strong:first-child {
+  display: block;
+  text-align: center;
+  margin: 4px auto 12px auto;
+  font-size: 18px;
+}
+.datos-compra form .datos-transferencia strong, .datos-compra form .datos-transferencia p {
+  margin-left: 12px;
+}
+.datos-compra form .datos-transferencia strong {
+  margin-top: 24px;
+}
+.datos-compra form .datos-transferencia p {
+  margin-top: 4px;
+}
+.datos-compra form .datos-comprobante input {
+  border: none;
+}
+.datos-compra form .transaccion input {
+  height: 28px;
+  width: 60%;
+}
+.datos-compra form button {
+  width: 256px;
+  height: 32px;
+  background-color: #02aab0;
+  border-radius: 4px;
+  color: #1b1b1b;
+  margin: 12px auto 32px auto;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

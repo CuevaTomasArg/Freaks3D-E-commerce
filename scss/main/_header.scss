@@ -2,6 +2,33 @@
 header{
     .container-fluid{
         flex-direction: row-reverse;
+        .offcanvas-start{
+            .offcanvas-title{
+                font-size: 24px;
+                color: nth($CTA , 1 );
+            }
+            .offcanvas-body{
+                text-align: start;
+                i{
+                    margin-left: 8px;
+                }
+                a{
+                    transition: all .3s;
+                        &:hover{
+                            transform: translateX(3px);
+                        }
+                }
+                .nav-item{
+                    transition: all .3s;
+                    &:hover a{
+                        transform: translateX(3px);
+                    }
+                }
+                .dropdown-menu{
+                    border: none;
+                }
+            }
+        }
         .offcanvas-end{
             i,a{
                 display: inline-block;
@@ -10,6 +37,7 @@ header{
             i{
                 padding-right: 8px;
             }
+            @import "cart";
         }
         .navbar-brand{
             img{
@@ -25,7 +53,6 @@ header{
             margin-right: 16px
         }
         .offcanvas-body{
-            @import "cart";
             >div{
                 margin:64px 0
             }

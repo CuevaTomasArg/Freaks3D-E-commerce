@@ -11,9 +11,9 @@
 </head>
 <body>
     <header>
-        <img src="../multimedia/logos/logo_general.png" alt="">
+        <a href="../index.html"><img src="../multimedia/logos/logo_general.png" alt=""></a>
     </header>
-    <main>
+    <main class="datos-compra">
         <nav>
             <a href="../index.html">Inicio</a><p>/</p><a href="#">Compra</a>
         </nav>
@@ -32,65 +32,162 @@
         <div class="carta-envio">
             <strong>Envio</strong>
             <p>$XXXX,XX</p>
+            <hr>
         </div>
         <div class="monto-total">
             <strong>Total</strong>
             <p>$XXXX,XX</p>
+            <hr>
         </div>
-        <h1>Datos de envíp</h1>
+        <h1>Datos de envío</h1>
         <form action="../php/compra.php" method="post">
-            <label for=""></label>
-            <input type="text" name="nombre">
-            <label for=""></label>
-            <input type="text" name="email">
-            <label for=""></label>
-            <input type="text" name="celular">
-            <label for=""></label>
-            <input type="text" name="street">
-            <label for=""></label>
-            <input type="text" name="num">
-            <label for=""></label>
-            <input type="text" name="dpto">
-            <label for=""></label>
-            <input type="text" name="prov">
-            <label for=""></label>
-            <input type="text" name="localidad">
-            <label for=""></label>
-            <input type="text" name="CodP">
             <div>
-                <strong>
+                <label for="">Nombre y apellido</label>
+                <input type="text" name="nombre">
+            </div>
+            <div>
+                <label for="">Email</label>
+                <input type="text" name="email">
+            </div>
+            <div>
+                <label for="">Celular</label>
+                <input type="text" name="celular">
+            </div>
+            <div class="datos-vivienda">
+                <div class="calle">
+                    <label for="">Calle</label>
+                    <input type="text" name="street">
+                </div>
+                <div class="altura">
+                    <label for="">Altura</label>
+                    <input type="text" name="num">
+                </div>
+            </div>
+            <div class="dpto">
+                <label for="">Depto</label>
+                <input type="text" name="dpto">
+            </div>
+            <div>
+                <label for="provincia-destino">Provincia</label>
+                <select name="provincia-destino">
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="CABA - Ciudad Autonoma de Buenos Aires">CABA - Ciudad Autonoma de Buenos Aires</option>
+                    <option value="Catamarca">Catamarca</option>
+                    <option value="Chaco">Chaco</option>
+                    <option value="Chubut">Chubut</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Corrientes">Corrientes</option>
+                    <option value="Entre Ríos">Entre Ríos</option>
+                    <option value="Formoza">Formoza</option>
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="La Pampa">La Pampa</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Río Negro">Río Negro</option>
+                    <option value="Salta">Salta</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="San Luis">San Luis</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                    <option value="Santiago del Estero">Santiago del Estero</option>
+                    <option value="Tierra del Fuego, Antártida a islas del Atlántico Sur">Tierra del Fuego, Antártida a islas del Atlántico Sur</option>
+                    <option value="Tucumán">Tucumán</option>
+                  </select>
+            </div>
+            <div>
+                <label for="">Localidad</label>
+                <input type="text" name="localidad">
+            </div>
+            <div>
+                <label for="">Cod. Postal</label>
+                <input type="text" name="CodP">
+            </div>
+            <div>
+                <h2>
                     Datos de transferencia
-                </strong>
-                <div>
+                </h2>
+                <div class="datos-transferencia">
+                    <strong>
+                        MercadoPago
+                    </strong>
                     <strong>
                         CVU:
                     </strong>
-                    <p>xxxxxxxxxxxxxxxxxx</p>
+                    <p>0000003100078625438957</p>
                     <strong>
                         Alias:
                     </strong>
                     <p>
-                        conejo.hueso.pan
-                    </p>
-                    <strong>MercadoPago</strong>
-                    <strong>
-                        Cuil:
-                    </strong>
-                    <p>
-                        11-44.xxx.xxx-x
+                        freaks.3d
                     </p>
                 </div>
-                <label for=""></label>
-                <input type="file" name="comprobante">
-                <label for=""></label>
-                <input type="text" name="transaccion">
+                <div class="datos-comprobante">
+                    <label for="">Comprobante</label>
+                    <input type="file" name="comprobante">
+                </div>
+                <div class="transaccion">
+                    <label for="">Numero de transacción</label>
+                    <input type="text" name="transaccion">
+                </div>
             </div>
             <button>
                 Comprar
             </button>
         </form>
     </main>
-    <footer></footer>
+    <footer>
+        <div>
+            <strong>Navegación</strong>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Personalizables</a></li>
+                <li><a href="">Filamento</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>Medios de pago</strong>
+            <ul>
+                <li>
+                    <img src="" alt="">
+                    <p>Metodo de pago</p>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <p>Metodo de pago</p>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <strong><a href="">Contactos</a></strong>
+            <ul>
+                <li><a href="">Telefono</a></li>
+                <li><a href="">gmail</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>Redes sociales</strong>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
