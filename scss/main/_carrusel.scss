@@ -1,0 +1,12 @@
+@import "../base/var";
+@import "../partials/extends";
+@import "../partials/mixin";
+.carousel-inner{
+    height: 300px;
+    .carousel-item{
+        img{
+            object-fit:fill;
+            width: 100%;
+        }
+    }
+}

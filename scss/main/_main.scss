@@ -1,7 +1,59 @@
+@import "../base/var";
+@import "../partials/extends";
+@import "../partials/mixin";
+.index{
+    margin-top: 218px;
+    @import "carrusel";
+    .card{
+        border: none;
+        background: none;
+        border-radius: 0;
+        img{
+            height: 216px;
+            border-radius: 0;
+        }
+        .card-body{
+            text-align: center;
+            p,strong{
+                margin:0
+            }
+            strong{
+                font-size: 18px
+            }
+            p{
+                margin-top: 4px;
+                font-size:24px;
+            }
+            button{
+                @extend %add_cart;
+                transition: all .3s;
+                &:hover a{
+                    color: lighten($background, 40%);
+                }
+                a{
+                    color:darken($background, 60%);
+                    i{
+                        margin-right: 4px;
+                    }
+                    .boton-comprar-xs{
+                        @media only screen and (max-width:744px){
+                            display: inline;
+                        }
+                    }
+                    span{
+                        @media only screen and (max-width:744px){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 .MasVendidos{
     >div{
-        display: flex;
-        flex-direction: row;
+        @extend %flex;
+        @extend %flexRow;
         flex-wrap: wrap;
         justify-content: space-evenly;
         .card{
@@ -12,7 +64,7 @@
 }
 .productos{
     >div{
-        display: grid;
+        @extend %grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         align-items: center;
@@ -27,5 +79,10 @@
         text-align: center;
         margin: 12px;
         padding-top: 32px;
+        button{
+            @include CTA(90%,32px);
+            color:$background;
+            border:none
+        }
     }
 }

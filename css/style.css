@@ -25,6 +25,38 @@ a {
   color: #02aab0;
 }
 
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h4 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h5 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h6 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h2 {
+  margin-left: 44px;
+}
+
+p {
+  margin-left: 22px;
+}
+
 header .container-fluid {
   flex-direction: row-reverse;
 }
@@ -192,9 +224,123 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   display: inline-block;
 }
 
-.MasVendidos > div {
+.datos-compra .compra-final .carta-compra div, .productos > div {
+  display: grid;
+}
+
+.datos-compra form .datos-vivienda .calle, .datos-compra form .datos-vivienda .altura, .datos-compra form .datos-vivienda, .datos-compra .compra-final .carta-compra, .MasVendidos > div {
   display: flex;
+}
+
+.datos-compra form .datos-vivienda .calle, .datos-compra form .datos-vivienda .altura {
+  flex-direction: column;
+}
+
+.datos-compra form .datos-vivienda, .datos-compra .compra-final .carta-compra, .MasVendidos > div {
   flex-direction: row;
+}
+
+.index .card .card-body button {
+  background-color: transparent;
+  border: 1px solid #0f0f0f;
+  border-radius: 32px;
+  padding: 6px 16px;
+  margin: 8px 0;
+  transition: all 0.3s;
+}
+.index .card .card-body button:hover {
+  background-color: #00cdac;
+  border-color: white;
+}
+.index .card .card-body button:active {
+  background-color: #01ffd6;
+  border-color: white;
+}
+
+.index {
+  margin-top: 218px;
+}
+.index .datos-compra .compra-final .carta-compra div, .datos-compra .compra-final .carta-compra .index div, .index .productos > div {
+  display: grid;
+}
+.index .datos-compra form .datos-vivienda .calle, .datos-compra form .datos-vivienda .index .calle, .index .datos-compra form .datos-vivienda .altura, .datos-compra form .datos-vivienda .index .altura, .index .datos-compra form .datos-vivienda, .datos-compra form .index .datos-vivienda, .index .datos-compra .compra-final .carta-compra, .datos-compra .compra-final .index .carta-compra, .index .MasVendidos > div {
+  display: flex;
+}
+.index .datos-compra form .datos-vivienda .calle, .datos-compra form .datos-vivienda .index .calle, .index .datos-compra form .datos-vivienda .altura, .datos-compra form .datos-vivienda .index .altura {
+  flex-direction: column;
+}
+.index .datos-compra form .datos-vivienda, .datos-compra form .index .datos-vivienda, .index .datos-compra .compra-final .carta-compra, .datos-compra .compra-final .index .carta-compra, .index .MasVendidos > div {
+  flex-direction: row;
+}
+.index .card .card-body button {
+  background-color: transparent;
+  border: 1px solid #0f0f0f;
+  border-radius: 32px;
+  padding: 6px 16px;
+  margin: 8px 0;
+  transition: all 0.3s;
+}
+.index .card .card-body button:hover {
+  background-color: #00cdac;
+  border-color: white;
+}
+.index .card .card-body button:active {
+  background-color: #01ffd6;
+  border-color: white;
+}
+.index .carousel-inner {
+  height: 300px;
+}
+.index .carousel-inner .carousel-item img {
+  object-fit: fill;
+  width: 100%;
+}
+.index .card {
+  border: none;
+  background: none;
+  border-radius: 0;
+}
+.index .card img {
+  height: 216px;
+  border-radius: 0;
+}
+.index .card .card-body {
+  text-align: center;
+}
+.index .card .card-body p, .index .card .card-body strong {
+  margin: 0;
+}
+.index .card .card-body strong {
+  font-size: 18px;
+}
+.index .card .card-body p {
+  margin-top: 4px;
+  font-size: 24px;
+}
+.index .card .card-body button {
+  transition: all 0.3s;
+}
+.index .card .card-body button:hover a {
+  color: white;
+}
+.index .card .card-body button a {
+  color: #5b5b5b;
+}
+.index .card .card-body button a i {
+  margin-right: 4px;
+}
+@media only screen and (max-width: 744px) {
+  .index .card .card-body button a .boton-comprar-xs {
+    display: inline;
+  }
+}
+@media only screen and (max-width: 744px) {
+  .index .card .card-body button a span {
+    display: none;
+  }
+}
+
+.MasVendidos > div {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -204,7 +350,6 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 }
 
 .productos > div {
-  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   align-items: center;
@@ -219,6 +364,15 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   text-align: center;
   margin: 12px;
   padding-top: 32px;
+}
+.productos > nav button {
+  width: 90%;
+  height: 32px;
+  background-color: #02aab0;
+  border-radius: 4px;
+  color: #1b1b1b;
+  color: rgb(244, 244, 244);
+  border: none;
 }
 
 footer {
@@ -237,11 +391,11 @@ footer div ul li {
   margin: 12px;
 }
 
-.datos-compra .compra-final .carta-compra div {
+.datos-compra .compra-final .carta-compra div, .productos > div {
   display: grid;
 }
 
-.datos-compra form .datos-vivienda .calle, .datos-compra form .datos-vivienda .altura, .datos-compra form .datos-vivienda, .datos-compra .compra-final .carta-compra {
+.datos-compra form .datos-vivienda .calle, .datos-compra form .datos-vivienda .altura, .datos-compra form .datos-vivienda, .datos-compra .compra-final .carta-compra, .MasVendidos > div {
   display: flex;
 }
 
@@ -249,8 +403,25 @@ footer div ul li {
   flex-direction: column;
 }
 
-.datos-compra form .datos-vivienda, .datos-compra .compra-final .carta-compra {
+.datos-compra form .datos-vivienda, .datos-compra .compra-final .carta-compra, .MasVendidos > div {
   flex-direction: row;
+}
+
+.index .card .card-body button {
+  background-color: transparent;
+  border: 1px solid #0f0f0f;
+  border-radius: 32px;
+  padding: 6px 16px;
+  margin: 8px 0;
+  transition: all 0.3s;
+}
+.index .card .card-body button:hover {
+  background-color: #00cdac;
+  border-color: white;
+}
+.index .card .card-body button:active {
+  background-color: #01ffd6;
+  border-color: white;
 }
 
 header {
