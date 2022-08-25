@@ -11,15 +11,15 @@ body{
 main{
     margin-top: 64px;
     section{
-        margin: 64px 0px;
+        margin: 72px 0px;
     }
 }
 ul{
     list-style-type: none;
 }
-a{
+a,i{
     text-decoration: none;
-    color:nth($CTA,1)
+    color: $links;
 }
 @for $i from 1 through 6{
     h#{$i}{

@@ -2,7 +2,7 @@
 @import "../partials/extends";
 @import "../partials/mixin";
 .index{
-    margin-top: 218px;
+    margin-top: 156px;
     @import "carrusel";
     .card{
         border: none;
@@ -75,14 +75,15 @@
              margin: 4px 0px;
         }
     }
-    >nav{
-        text-align: center;
-        margin: 12px;
-        padding-top: 32px;
-        button{
-            @include CTA(90%,32px);
-            color:$background;
-            border:none
-        }
+}
+.CTA-verMas{
+    text-align: center;
+    margin: 12px;
+    padding-top: 32px;
+    button{
+        @include CTA(90%,32px);
+        color:$background;
+        border:none;
     }
 }
+@import "scrolleable";

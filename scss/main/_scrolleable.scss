@@ -1,0 +1,24 @@
+@import "../base/var";
+@import "../partials/extends";
+.scrolleable-cards{
+    @extend %flex;
+    overflow-x:scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 24px;
+    padding: 24px;
+    width: 300px;
+    border-radius: 8px;
+    gap: 12px;
+    >div{
+        flex: 0 0 100%;
+        padding: 24px 16px 24px 72px;
+        border-radius: 4px;
+        scroll-snap-align: center;
+    }
+    .caracteristicas-servicio{
+        text-align: center;
+        svg{
+            margin: 16px;
+        }
+    } 
+}

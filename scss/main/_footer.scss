@@ -1,4 +1,5 @@
 @import "../base/var";
+@import "../partials/extends";
 footer{
     display: flex;
     flex-direction: column;
@@ -6,13 +7,93 @@ footer{
     align-items: center;
     text-align: center;
     background-color: darken($background, 10%);
+    border-top: 32px solid darken($background, 10%);
     div{
+        a,p{
+            color: $links;
+        }
+        strong{
+            color: darken(rgba(0, 0, 0, 0.55),95%);
+            margin-top:24px;
+            padding:24px;
+            font-size: 18px;
+        }
+        .metodos-de-pago{
+            img{
+                width: 128px;
+            }
+        }
+        .redes{
+            @extend %flex;
+            @extend %flexRow
+        }
         ul{
             margin: 0;
             padding: 0;
             li{
                 margin: 12px;
             }
+            .redes-sociales{
+                a{
+                    display: inline-block;
+                    background:#fff ;
+                    box-shadow: 0 5px 15px -5px #aaa;
+                    margin: 10px;
+                    border-radius: 30%;
+                    overflow: hidden;
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: -110%;
+                        top: 90%;
+                        width: 120%;
+                        height: 120%;
+                        background:linear-gradient(#00c6ff,nth($CTA,2)) ;
+                        transform:rotate(45deg) ;
+                    }
+                    &:hover{
+                        color: #fff;
+                        transform: scale(1.3);
+                    }
+                    &:hover::before{
+                        animation: socialMedia .7s 1;
+                        left:-10%;
+                        top: -10%;
+                    }
+                    @media only screen and (max-width:744px){
+                        &:active{
+                            color: #fff;
+                            transform: scale(1.3);
+                        }
+                        &:active::before{
+                            animation: socialMedia .7s 1;
+                            left:-10%;
+                            top: -10%;
+                        }
+                    }
+                    svg{
+                        position: relative;
+                        z-index: 4;
+                        line-height: 90px;
+                        transition: all .3s ease-in-out;
+                    }
+                }
+            }    
         }
+    }
+}
+@keyframes socialMedia {
+    0%{
+        left: -110%;
+        top:90%
+    }
+    50%{
+        left: 10%;
+        top: -30%;
+    }
+    100%{
+        top: -10%;
+        left: -10%;
     }
 }

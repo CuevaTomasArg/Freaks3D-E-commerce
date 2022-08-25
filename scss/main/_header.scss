@@ -1,5 +1,8 @@
 @import "../base/var";
 header{
+    .navbar{
+        padding: 0;
+    }
     .container-fluid{
         flex-direction: row-reverse;
         .offcanvas-start{
@@ -41,7 +44,7 @@ header{
         }
         .navbar-brand{
             img{
-                width: 128px;
+                width: 98px;
             }
         }
         .navbar-toggler{
