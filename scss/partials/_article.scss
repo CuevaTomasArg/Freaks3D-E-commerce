@@ -1,0 +1,80 @@
+@import "../base/var";
+@import "extends";
+
+.floating-butt {
+    position: absolute;
+    left: 20px;
+    top: 100px;    
+}
+
+.floating-butt input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+.floating-butt label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    pointer-events: none;
+}
+
+.floating-butt > label div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.floating-butt .butt {
+    height: 32px;
+    width: 128px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.2rem;
+    transition: .3s;
+    box-shadow: 0 1px 3px 3px rgb(80, 80, 80, .1);
+    pointer-events: all;
+}
+.floating-butt .butt:hover {
+    background-color: #fff;
+}
+
+.floating-butt .hide-butt {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 10px;
+    align-items: flex-start;
+    transform: translateY(-20px);
+    transition: .3s;
+    opacity: 0;
+    z-index: 2;
+    border-radius: 4px;
+    padding: 12px 0xp;
+}
+
+.floating-butt .hide-butt > div {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(245, 245, 245);
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+    transition: .3s;
+    box-shadow: 0 1px 2px 2px rgb(80, 80, 80, .1);
+}
+.floating-butt .hide-butt > div:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.floating-butt input:checked + label {
+    pointer-events: all;
+}
+.floating-butt input:checked + label .butt {
+    transform: scale(.95) ;
+}
+.floating-butt input:checked + label .hide-butt {
+    opacity: 1;
+    transform: translateY(0);
+}

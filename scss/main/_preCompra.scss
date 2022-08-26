@@ -1,0 +1,24 @@
+@import "../base/var";
+@import "../partials/extends";
+
+.pre-compra{
+    margin-top:128px ;
+    nav{
+        display: inline-block;
+        margin: 12px 24px;
+        a,p{
+            display: inline;
+            margin: 4px;
+        }
+    }
+    .carta-producto-precompra{
+        text-align: center;
+        img{
+            display: inline-block;
+            width: 90%;
+        }
+        div{
+            text-align: start;
+        }
+    }
+}
