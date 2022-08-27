@@ -80,7 +80,7 @@ header{
         label{
             margin-left: 32px;
         }
-        input{
+        input,textarea{
             width: 90%;
             margin: 8px auto 18px 12px;
             height: 44px;
@@ -91,6 +91,9 @@ header{
             width: 90%;
             margin-left: 12px;
             height: 36px
+        }
+        textarea{
+            height: 325px
         }
     }
     .datos-vivienda{

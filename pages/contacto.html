@@ -177,24 +177,26 @@
                     </li>
                 </ul>
             </article>
-            <form class="formulario" action="">
+            <form class="formulario" action="../php/consulta.php" method="post">
                 <div>
-                    <label for="">Nombre y apellido</label>
-                    <input type="text">
+                    <label for="nombre">Nombre y apellido</label>
+                    <input type="text" name="nombre">
                 </div>
                 <div>
-                    <label for="">Telefono</label>
-                    <input type="text">
+                    <label for="telefono">Telefono</label>
+                    <input type="number" name="telefono">
                 </div>
                 <div>
-                    <label for="">Email</label>
-                    <input type="text">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
                 </div>
                 <div>
-                    <label for="">Consulta</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label for="consulta">Consulta</label>
+                    <textarea name="consulta" id="" cols="30" rows="10"></textarea>
                 </div>
-                <button></button>
+                <button type="submit">
+                  Enviar
+                </button>
             </form>
         </section>
     </main>
