@@ -1,0 +1,25 @@
+@import "../base/var";
+@import "../partials/extends";
+.carta-producto-precompra{
+    article{
+        @extend %flex;
+        @extend %flexColumn;
+        width: 90%;
+        margin: 12px auto;
+    }
+    div{
+        ul{
+            @extend %flex;
+            @extend %flexColumn;
+            padding: 0;
+            width:90%;
+            margin: 12px auto;
+            li{
+                p{
+                    width: 90%;
+                    margin: 12px 0 0 0 ;
+                }
+            }
+        }
+    }
+}
