@@ -21,16 +21,18 @@ a,i{
     text-decoration: none;
     color: $links;
 }
-@for $i from 1 through 6{
-    h#{$i}{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 h2{
     margin-left: 44px
 }
 p{
     margin-left: 22px
+}
+img{
+    object-fit: cover
 }
 @import "main/header";
 @import "main/main";

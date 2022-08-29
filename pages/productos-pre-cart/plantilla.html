@@ -105,7 +105,7 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                      <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class=" dropdown">
                       <a class="nav-link" href="#">
@@ -115,14 +115,13 @@
                         <i class="bi bi-chevron-down"></i>
                       </button>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Set de mates</a></li>
-                        <li><a class="dropdown-item" href="#">Set de esponjas</a></li>
-                        <li><a class="dropdown-item" href="#">Porta esponjas</a></li>
-                        <li><a class="dropdown-item" href="#">Figuras</a></li>
-                        <li><a class="dropdown-item" href="#">masetas</a></li>
-                        <li><a class="dropdown-item" href="#">Tazas</a></li>
-                        <li><a class="dropdown-item" href="#">Lamparas</a></li>
-                        <li><a class="dropdown-item" href="#">Mates</a></li>
+                        <li><a class="dropdown-item" href="../categorias/SetMateros.html">Set de mates</a></li>
+                        <li><a class="dropdown-item" href="../categorias/mates.html">Mates</a></li>
+                        <li><a class="dropdown-item" href="../categorias/SetEsponjas.html">Set de esponjas</a></li>
+                        <li><a class="dropdown-item" href="../categorias/Figuras.html">Figuras</a></li>
+                        <li><a class="dropdown-item" href="../categorias/Macetas.html">masetas</a></li>
+                        <li><a class="dropdown-item" href="../categorias/">Tazas</a></li>
+                        <li><a class="dropdown-item" href="../categorias/">Lamparas</a></li>
                       </ul>
                     </li>
                     <li class="d-flex nav-item">
@@ -132,7 +131,7 @@
                         <a class="nav-link" href="#">Filamento</a>
                       </li>
                     <li class="d-flex nav-item">
-                        <a href="#" class="nav-link">Contacto</a>    
+                        <a href="../contacto.html" class="nav-link">Contacto</a>    
                     </li>
                   </ul>
                 </div>
@@ -142,31 +141,38 @@
     </header>
     <main class="pre-compra index">
         <nav>
-            <a href="../../index.html">Inicio</a><p>/</p><a href="#">Productos</a><p>/</p><a href="#">productoX</a>
+            <a href="../../index.html">Inicio</a><p>/</p><a href="../productos.html">Productos</a><p>/</p><a href="#">Mate copa del mundo</a>
         </nav>
         <section class="carta-producto-precompra">
             <img src="../../multimedia/fotos/masVendidos/MateCopaDelMundo.jpg" alt="">
             <article>
                 <div>
-                    <p>Nombre</p>
-                    <strong>$XXXX,XX</strong>
+                    <p>Mate - Copa del mundo</p>
+                    <strong>$2400</strong>
                     <hr>
                 </div>
-                <div>
-                    <p>Color</p>
-                    <input type="color">
-                    <hr>
+                <div class="unidades-producto">
+                    <p class="cantidadProducto">Cantidad</p>
+                    <div class="control-cantidad">
+                      <input type="text">
+                      <button type="button" class="sumador">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                        </svg>
+                      </button>
+                      <button type="button" class="restador">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                      </button>
+                    </div>
                 </div>
-                <div>
-                    <p>Cantidad</p>
-                    <input type="text">
-                    <button>
-                        Agregar al carrito
-                    </button>
-                    <hr>
-                </div>
+                <button type="submit" class="agregarACarrito">
+                  Agregar al carrito
+              </button>
             </article>
-            <div>
+            <div class="CaracteristicasProductoPreCompra">
+              <hr>
                 <h2>
                     Caracteristicas
                 </h2>
@@ -200,10 +206,10 @@
             </h2>
             <div>
                 <div class="card">
-                    <img src="../../multimedia/fotos/masVendidos/IMG_20220722_102159761_PORTRAIT.jpg" class="card-img-top" alt="...">
+                    <img src="../../multimedia/fotos/productos/mateBabyYoda.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <strong class="card-title">Card title</strong>
-                      <p class="card-text">$XXXX,XX</p>
+                      <p class="card-text">$1500</p>
                       <button>
                         <a href="">
                           <i class="bi bi-cart3"></i>
@@ -216,10 +222,10 @@
                     </div>
                   </div>
                   <div class="card">
-                    <img src="../../multimedia/fotos/masVendidos/IMG_20220716_150755.jpg" class="card-img-top" alt="...">
+                    <img src="../../multimedia/fotos/productos/SetMateroHarryPotter.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <strong class="card-title">Card title</strong>
-                      <p class="card-text">$XXXX,XX</p>
+                      <p class="card-text">$2600</p>
                       <button>
                         <a href="">
                           <i class="bi bi-cart3"></i>
