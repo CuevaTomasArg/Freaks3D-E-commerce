@@ -1,4 +1,5 @@
 @import "base/var";
+@import "partials/mixin";
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +13,16 @@ main{
     margin-top: 64px;
     section{
         margin: 72px 0px;
+        .CTA-verMas{
+            text-align: center;
+            margin: 12px;
+            padding-top: 32px;
+            button{
+                @include CTA(90%,32px);
+                color:$background;
+                border:none;
+            }
+        }
     }
 }
 ul{

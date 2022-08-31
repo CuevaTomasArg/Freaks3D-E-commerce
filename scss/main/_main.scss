@@ -76,14 +76,4 @@
         }
     }
 }
-.CTA-verMas{
-    text-align: center;
-    margin: 12px;
-    padding-top: 32px;
-    button{
-        @include CTA(90%,32px);
-        color:$background;
-        border:none;
-    }
-}
 @import "scrolleable";
