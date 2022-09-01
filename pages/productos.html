@@ -141,19 +141,21 @@
           </nav>
     </header>
     <main class="index" style="padding-top:24px ;">
-        <article class="floating-butt">
-            <input type="checkbox" id="add" />
-            <label for="add">
-                <div class="butt">Productos <i class="bi bi-chevron-down"></i></div>
-                <ul class="hide-butt">
-                    <li><a class="dropdown-item" href="#SetMatero">Set de mates</a></li>
-                    <li><a class="dropdown-item" href="#Esponjas">Set de esponjas</a></li>
-                    <li><a class="dropdown-item" href="#Figuras">Figuras</a></li>
-                    <li><a class="dropdown-item" href="#Masetas">Masetas</a></li>
-                    <li><a class="dropdown-item" href="#Tazas">Tazas</a></li>
-                    <li><a class="dropdown-item" href="#Mates">Mates</a></li>
+          <article class="drop-down">
+            <div class="text-select">
+                <span>Productos</span>
+                <i class='bi bi-chevron-down'></i>
+            </div>
+            <div class="menu-select hide">
+                <ul>
+                    <li><a href="#Mates">Mates</a></li>
+                    <li><a href="#SetMatero">Set matero</a></li>
+                    <li><a href="#Esponjas">Set Esponjas</a></li>
+                    <li><a href="#Figuras">Figuras</a></li>
+                    <li><a href="#Macetas">Macetas</a></li>
+                    <li><a href="#Tazas">Tazas</a></li>
                 </ul>
-            </label>
+            </div>
         </article>
         <section class="productos" id="#volverProductos Mates" >
             <h2>
@@ -615,7 +617,7 @@
                   </div>
             </div>
         </section>
-        <section class="productos" id="Masetas">
+        <section class="productos" id="Macetas">
             <h2>
                 Masetas
             </h2>
@@ -729,6 +731,7 @@
           </ul>
       </div>
   </footer>
+  <script src="../js/dropdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
