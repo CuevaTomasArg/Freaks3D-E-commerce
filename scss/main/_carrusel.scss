@@ -6,7 +6,7 @@
     .carousel-item{
         transition: all .5s;
         img{
-            object-fit:fill;
+            object-fit:cover;
             width: 100%;
         }
         .carousel-caption{ 

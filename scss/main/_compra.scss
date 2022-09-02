@@ -8,6 +8,9 @@ header{
     }
 }
 .datos-compra{
+    h1{
+        margin: 72px auto 32px auto; 
+    }
     nav{
         display: inline-block;
         margin: 12px 24px;
@@ -75,14 +78,14 @@ header{
     div{
         display: inline-block;
         text-align: start;
-        width: 95%;
+        width: 100%;
         margin: 4px auto;
         label{
             margin-left: 32px;
         }
         input,textarea{
             width: 90%;
-            margin: 8px auto 18px 12px;
+            margin: 8px auto 18px 1rem;
             height: 44px;
             border: 1px solid darken($background, 20%);
             border-radius: 4px;
@@ -101,26 +104,30 @@ header{
         @extend %flexRow;
         margin-left: 4px;
         align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
         .calle,.altura{
             @extend %flex;
             @extend %flexColumn;
-            margin-left: 0;
         }
         .calle{
-            width: 132px;
+            width: 156px;
+            margin: 0;
             input{
                 width:125%
             }
         }
         .altura{
-            width: 72px;
+            margin: auto 4rem;
+            width: 91px;
             input{
                 width: 100%;
             }
         }
-    }
-    .dpto{
-        width: 128px;
+        .dpto{
+            margin:0;
+            width: 128px;
+        }
     }
     h2{
         text-align: center;

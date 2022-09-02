@@ -4,6 +4,25 @@
 .index{
     margin-top: 156px;
     @import "carrusel";
+    .vista-personalizables{
+        >div{
+            margin: 6rem auto;
+        }
+    }
+    .explicacion{
+        h2{
+            text-align: center;
+            margin: 12px auto
+        }
+        ol{
+            margin-bottom: 24px;
+            li{
+                p{
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
     .card{
         border: none;
         background: none;
