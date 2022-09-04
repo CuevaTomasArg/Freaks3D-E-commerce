@@ -1,11 +1,64 @@
 @import "../base/var";
+@import "../partials/extends";
+@import "../partials/mixin";
 header{
+    z-index: 2;
     .navbar{
         padding: 0;
     }
     .container-fluid{
         flex-direction: row-reverse;
+        @media only screen and (min-width:992px){
+            justify-content: flex-end !important;
+            .none-lg{
+                display: none;
+            }
+            >a{
+                order: 2;
+                margin-left: 32px;
+                margin-right: 0;
+            }
+            >button:first-child{
+                order: -3;
+                margin-right: 32px;
+                margin-left: auto;
+            }
+        } 
         .offcanvas-start{
+            @media only screen and (min-width:992px){
+                display: flex;
+                flex-direction: row;
+                transform: none;
+                visibility: inherit;
+                position: relative;
+                background: transparent;
+                border: none;
+                order: -2;
+                width: auto;
+                .offcanvas-header{
+                    display: none;
+                }
+                .offcanvas-body{
+                    margin-left: -64px;
+                    width: 800px;
+                    overflow-y:visible;
+                    .dropdown{
+                        margin-left: 32px;
+                        .dropdown-menu{
+                            position: absolute;
+                        }
+                    }
+                    .navbar-nav{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        flex-wrap: nowrap;
+                        .nav-item{
+                            margin: auto 32px;
+                        }
+                    }
+                }
+            }
             .offcanvas-title{
                 font-size: 24px;
                 color: nth($CTA , 1 );
@@ -23,8 +76,14 @@ header{
                 }
                 .nav-item{
                     transition: all .3s;
-                    &:hover a{
+                    i{
+                        transition: all .3s;
+                    }
+                    &:hover a,i{
                         transform: translateX(3px);
+                        @media only screen and (min-width:992px){
+                            transform: translateY(3px);
+                        }
                     }
                 }
                 .dropdown-menu{
@@ -41,6 +100,9 @@ header{
                 padding-right: 8px;
             }
             @import "cart";
+            @media only screen and (min-width:992px) {
+                z-index: 2000;
+            }
         }
         .navbar-brand{
             img{

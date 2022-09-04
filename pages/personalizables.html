@@ -11,65 +11,66 @@
     <link rel="icon" href="../multimedia/logos/logo_general.png">
 </head>
 <body>
-    <header>
-        <nav class="navbar bg-light fixed-top">
-            <div class="container-fluid">
-                <button class="cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                    <i class="bi bi-cart3"></i>
-                </button>
-                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                    <div class="offcanvas-header">
-                      <a class="offcanvas-title" id="offcanvasScrollingLabel"><button class="cart-button" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-chevron-left"></i></button>Volver a productos</a>
-                    </div>
-                    <div class="offcanvas-body">
-                        <p>No hay producto en carrito</p>
-                    </div>
-                  </div>
-              <a class="navbar-brand" href="../index.html"><img src="../multimedia/logos/logo_general.png" alt=""></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <header>
+    <nav class="navbar bg-light fixed-top">
+        <div class="container-fluid">
+            <button class="cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <i class="bi bi-cart3"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                 <div class="offcanvas-header">
-                  <strong class="offcanvas-title" id="offcanvasNavbarLabel">Freaks3D</strong>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  <a class="offcanvas-title" id="offcanvasScrollingLabel"><button class="cart-button" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-chevron-left"></i></button>Volver a productos</a>
                 </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-                    </li>
-                    <li class=" dropdown">
-                      <a class="nav-link" href="productos.html">
-                        Productos
-                      </a>
-                      <button type="buton" style="background: none; border:none" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-chevron-down"></i>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="categorias/SetMateros.html">Set de mates</a></li>
-                        <li><a class="dropdown-item" href="categorias/SetEsponjas.html">Set de esponjas</a></li>
-                        <li><a class="dropdown-item" href="categorias/Figuras.html">Figuras</a></li>
-                        <li><a class="dropdown-item" href="categorias/Macetas.html">masetas</a></li>
-                        <li><a class="dropdown-item" href="personalizables.html">Lamparas</a></li>
-                        <li><a class="dropdown-item" href="categorias/mates.html">Mates</a></li>
-                      </ul>
-                    </li>
-                    <li class="d-flex nav-item">
-                        <a class="nav-link" href="personalizables.html">Impresiones personalizables</a>
-                      </li>
-                      <li class="d-flex nav-item">
-                        <a class="nav-link" href="filamento.html">Filamento</a>
-                      </li>
-                    <li class="d-flex nav-item">
-                        <a href="contacto.html" class="nav-link">Contacto</a>    
-                    </li>
-                  </ul>
+                <div class="offcanvas-body" id="carrito">
+                  <p>No hay producto en carrito</p>
                 </div>
               </div>
+          <a class="navbar-brand" href="#"><img src="../multimedia/logos/logo_general.png" alt=""></a>
+          <button class="none-lg navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class=" offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <strong class="offcanvas-title" id="offcanvasNavbarLabel">Freaks3D</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-          </nav>
-    </header>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item none-lg">
+                  <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                </li>
+                <li class=" nav-item dropdown">
+                  <a class="nav-link" href="productos.html">
+                    Productos
+                  </a>
+                  <button type="buton" style="background: none; border:none" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-chevron-down"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="categorias/SetMateros.html">Set de mates</a></li>
+                    <li><a class="dropdown-item" href="categorias/mates.html">Mates</a></li>
+                    <li><a class="dropdown-item" href="categorias/SetEsponjas.html">Set de esponjas</a></li>
+                    <li><a class="dropdown-item" href="categorias/Figuras.html">Figuras</a></li>
+                    <li><a class="dropdown-item" href="categorias/Macetas.html">masetas</a></li>
+                    <li><a class="dropdown-item" href="categorias/Tazas.html">Tazas</a></li>
+                    <li><a class="dropdown-item" href="categorias/Lamparas.html">Lamparas</a></li>
+                  </ul>
+                </li>
+                <li class="d-flex nav-item">
+                    <a class="nav-link" href="personalizables.html">Impresiones personalizables</a>
+                  </li>
+                  <li class="d-flex nav-item">
+                    <a class="nav-link" href="filamento.html">Filamento</a>
+                  </li>
+                <li class="d-flex nav-item">
+                    <a href="contacto.html" class="nav-link">Contacto</a>    
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+</header>
     <main class="index">
         <section class="presentacion">
             <h1>Personalizables</h1>
@@ -100,18 +101,18 @@
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <a href="#">
-                        <img src="..." class="d-block w-100" alt="...">
+                    <a href="#LunasPersonalizables">
+                        <img src="../multimedia/fotos/personalizables/luna-hombres.jpg" class="d-block w-100" alt="...">
                     </a>
                 </div>
                   <div class="carousel-item">
-                    <a href="#">
-                        <img src="..." class="d-block w-100" alt="...">
+                    <a href="LlaverosPersonalizables">
+                        <img src="../multimedia/fotos/personalizables/luna-hombres.jpg" class="d-block w-100" alt="...">
                     </a>
                 </div>
                   <div class="carousel-item">
-                    <a href="#">
-                        <img src="..." class="d-block w-100" alt="...">
+                    <a href="MatesPersonalizables">
+                        <img src="../multimedia/fotos/personalizables/luna-hombres.jpg" class="d-block w-100" alt="...">
                     </a>
                 </div>
                 </div>
@@ -146,22 +147,22 @@
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <a href="#">
+                        <a href="productos-pre-cart/Personalizables/Lunas.html">
                             <img src="../multimedia/fotos/personalizables/luna-hombres.jpg" class="d-block w-100" alt="...">
                         </a>
                         </div>
                       <div class="carousel-item">
-                        <a href="#">
+                        <a href="productos-pre-cart/Personalizables/Lunas.html">
                             <img src="../multimedia/fotos/personalizables/personalizableLunaConFoto.jpg" class="d-block w-100" alt="...">
                         </a>
                         </div>
                       <div class="carousel-item">
-                        <a href="#">
+                        <a href="productos-pre-cart/Personalizables/Lunas.html">
                             <img src="../multimedia/fotos/personalizables/personalizableSilvaniLuna.jpg" class="d-block w-100" alt="...">
                         </a>
                         </div>
                       <div class="carousel-item">
-                        <a href="#">
+                        <a href="productos-pre-cart/Personalizables/Lunas.html">
                             <img src="../multimedia/fotos/personalizables/personalizableLunaRojaConFoto.jpg" class="d-block w-100" alt="...">
                         </a>
                         </div>
@@ -182,27 +183,27 @@
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <a href="#">
+                        <a href="productos-pre-cart/Personalizables/Llaveros.html">
                             <img src="../multimedia/fotos/personalizables/llavero.jpg" class="d-block w-100" alt="...">
                         </a>
                         </div>
                       <div class="carousel-item">
-                        <a href="#">
+                        <a href="productos-pre-cart/Personalizables/Llaveros.html">
                             <img src="../multimedia/fotos/personalizables/personalizableLlavero.jpg" class="d-block w-100" alt="...">
                         </a>
                         </div>
                         <div class="carousel-item">
-                          <a href="#">
+                          <a href="productos-pre-cart/Personalizables/Llaveros.html">
                               <img src="../multimedia/fotos/personalizables/personalizableLlavero3.jpg" class="d-block w-100" alt="...">
                           </a>
                           </div>
                           <div class="carousel-item">
-                            <a href="#">
+                            <a href="productos-pre-cart/Personalizables/Llaveros.html">
                                 <img src="../multimedia/fotos/personalizables/personalizableLlaveroBahamasRopa.jpg" class="d-block w-100" alt="...">
                             </a>
                             </div>
                       <div class="carousel-item">
-                        <a href="#">
+                        <a href="productos-pre-cart/Personalizables/Llaveros.html">
                             <img src="../multimedia/fotos/personalizables/personalizableLlavero2.jpg" class="d-block w-100" alt="...">
                         </a>
                         </div>
@@ -223,17 +224,17 @@
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <a href="#">
+                        <a href="productos-pre-cart/Personalizables/Mates.html">
                             <img src="../multimedia/fotos/personalizables/personalizableMate.jpg" class="d-block w-100" alt="...">
                         </a>
                         </div>
                       <div class="carousel-item">
-                        <a href="#">
+                        <a href="productos-pre-cart/Personalizables/Mates.html">
                             <img src="../multimedia/fotos/productos/MatePugPerro.jpg" class="d-block w-100" alt="...">
                         </a>
                         </div>
                       <div class="carousel-item">
-                        <a href="#">
+                        <a href="productos-pre-cart/Personalizables/Mates.html">
                             <img src="../multimedia/fotos/productos/mateBabyYoda.jpg" class="d-block w-100" alt="...">
                         </a>
                         </div>
@@ -264,12 +265,12 @@
             <strong>Medios de pago</strong>
             <ul class="metodos-de-pago">
                 <li>
-                    <img src="multimedia/logos/mercado-pago.png" alt="">
+                    <img src="../multimedia/logos/mercado-pago.png" alt="">
                 </li>
             </ul>
         </div>
         <div>
-            <strong><a href="#form">Contactos</a></strong>
+            <strong><a href="contacto.html">Contactos</a></strong>
             <ul>
                 <li><a href="tel:+5491141742316" >Telefono</a></li>
                 <li><a href="mailto:cuevatomass02@gmail.com">gmail</a></li>
