@@ -6,6 +6,11 @@
 .drop-down {
     position: relative;
     margin: 32px 12px 32px auto;
+    @media only screen and (min-width:992px){
+        position: sticky;
+        top: 300px;
+        bottom: 700px;
+    }
 }
 .drop-down .text-select {
     //------------------
@@ -31,7 +36,6 @@
 }
 
 .drop-down .menu-select {
-    // position: absolute;
     width: 250px;
     user-select: none;
 }
@@ -53,6 +57,10 @@
 }
 .drop-down .hide {
     display: none;
+    @media only screen and (min-width:992px){
+        display: flex;
+        
+    }
 }
 
 .drop-down .menu-select li {

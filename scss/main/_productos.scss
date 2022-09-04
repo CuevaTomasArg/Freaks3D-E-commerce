@@ -1,2 +1,9 @@
 @import "../base/var";
 @import "../partials/article";
+#stock{
+    @media only screen and (min-width:992px){
+        .productos{
+            margin-left: 300px;
+        }
+    }
+}

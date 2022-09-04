@@ -21,6 +21,11 @@ main .presentacion p {
   margin-right: 2rem;
   font-size: 1.2rem;
 }
+@media only screen and (min-width: 992px) {
+  main .presentacion {
+    text-align: center;
+  }
+}
 main section {
   margin: 72px 0;
 }
@@ -42,6 +47,15 @@ main section .CTA-verMas button {
   color: #1b1b1b;
   color: rgb(244, 244, 244);
   border: none;
+}
+@media only screen and (min-width: 992px) {
+  main section .CTA-verMas button {
+    width: 40%;
+    height: 46px;
+    background-color: #02aab0;
+    border-radius: 4px;
+    color: #1b1b1b;
+  }
 }
 
 ul {
@@ -70,7 +84,7 @@ img {
   display: grid;
 }
 
-.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura, .formulario .datos-vivienda, .datos-compra .compra-final .carta-compra, footer div .redes, .scrolleable-cards, .MasVendidos > div {
+.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura, .formulario .datos-vivienda, .datos-compra .compra-final .carta-compra, footer div .redes, .MasVendidos > div {
   display: flex;
 }
 
@@ -332,6 +346,12 @@ header .container-fluid .cart-button {
   background-color: transparent;
   margin-right: 16px;
 }
+@media only screen and (min-width: 992px) {
+  header .container-fluid .cart-button .bi-cart3 {
+    width: 32;
+    height: 32;
+  }
+}
 header .container-fluid .offcanvas-body > div {
   margin: 64px 0;
 }
@@ -343,7 +363,7 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   display: grid;
 }
 
-.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura, .formulario .datos-vivienda, .datos-compra .compra-final .carta-compra, footer div .redes, .scrolleable-cards, .MasVendidos > div {
+.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura, .formulario .datos-vivienda, .datos-compra .compra-final .carta-compra, footer div .redes, .MasVendidos > div {
   display: flex;
 }
 
@@ -378,7 +398,7 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 .index .carta-producto-precompra article .indentidad, .carta-producto-precompra article .index .indentidad, .index .datos-compra .compra-final .carta-compra div, .datos-compra .compra-final .carta-compra .index div, .index .productos > div {
   display: grid;
 }
-.index .carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra .CaracteristicasProductoPreCompra .index ul, .index .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article .index .unidades-producto, .index .carta-producto-precompra article, .carta-producto-precompra .index article, .index .formulario .datos-vivienda .calle, .formulario .datos-vivienda .index .calle, .index .formulario .datos-vivienda .altura, .formulario .datos-vivienda .index .altura, .index .formulario .datos-vivienda, .formulario .index .datos-vivienda, .index .datos-compra .compra-final .carta-compra, .datos-compra .compra-final .index .carta-compra, .index footer div .redes, footer div .index .redes, .index .scrolleable-cards, .index .MasVendidos > div {
+.index .carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra .CaracteristicasProductoPreCompra .index ul, .index .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article .index .unidades-producto, .index .carta-producto-precompra article, .carta-producto-precompra .index article, .index .formulario .datos-vivienda .calle, .formulario .datos-vivienda .index .calle, .index .formulario .datos-vivienda .altura, .formulario .datos-vivienda .index .altura, .index .formulario .datos-vivienda, .formulario .index .datos-vivienda, .index .datos-compra .compra-final .carta-compra, .datos-compra .compra-final .index .carta-compra, .index footer div .redes, footer div .index .redes, .index .MasVendidos > div {
   display: flex;
 }
 .index .carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra .CaracteristicasProductoPreCompra .index ul, .index .carta-producto-precompra article, .carta-producto-precompra .index article, .index .formulario .datos-vivienda .calle, .formulario .datos-vivienda .index .calle, .index .formulario .datos-vivienda .altura, .formulario .datos-vivienda .index .altura {
@@ -421,6 +441,10 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   color: ligthen(rgb(244, 244, 244), 90%);
   transition: all 0.5s;
 }
+.index section:first-child p {
+  width: 60%;
+  margin: 12px auto;
+}
 .index .vista-personalizables > div {
   margin: 6rem auto;
 }
@@ -433,6 +457,12 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 }
 .index .explicacion ol li p {
   margin-left: 8px;
+}
+@media only screen and (min-width: 992px) {
+  .index .explicacion ol {
+    width: 70%;
+    margin: 64px auto;
+  }
 }
 .index .card {
   border: none;
@@ -488,6 +518,17 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   margin: 16px 8px;
 }
 
+@media only screen and (min-width: 992px) {
+  .MasVendidos, .primera-vista-personalizables {
+    display: inline-block;
+    width: 30%;
+    height: 400px;
+    margin: 0 132px 32px 132px;
+  }
+  .MasVendidos {
+    padding-top: 100px;
+  }
+}
 .productos > div {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -495,16 +536,30 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   justify-items: center;
   gap: 8px;
 }
+@media only screen and (min-width: 992px) {
+  .productos > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    width: 85%;
+    margin: 32px auto;
+  }
+}
 .productos > div .card {
   width: 90%;
   margin: 4px 0px;
+}
+@media only screen and (min-width: 992px) {
+  .productos > div .card {
+    width: 70%;
+  }
 }
 
 .carta-producto-precompra article .indentidad, .datos-compra .compra-final .carta-compra div, .productos > div {
   display: grid;
 }
 
-.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura, .formulario .datos-vivienda, .datos-compra .compra-final .carta-compra, footer div .redes, .scrolleable-cards, .MasVendidos > div {
+.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura, .formulario .datos-vivienda, .datos-compra .compra-final .carta-compra, footer div .redes, .MasVendidos > div {
   display: flex;
 }
 
@@ -534,6 +589,7 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 }
 
 .scrolleable-cards {
+  display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-padding: 24px;
@@ -548,6 +604,17 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   border-radius: 4px;
   scroll-snap-align: center;
 }
+@media only screen and (min-width: 992px) {
+  .scrolleable-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    width: 85%;
+    margin: 32px auto;
+  }
+}
 .scrolleable-cards .caracteristicas-servicio {
   text-align: center;
 }
@@ -555,11 +622,16 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   margin: 16px;
 }
 
+#caracter-service {
+  grid-template-columns: repeat(3, 1fr);
+  margin: 32px auto;
+}
+
 .carta-producto-precompra article .indentidad, .datos-compra .compra-final .carta-compra div, .productos > div {
   display: grid;
 }
 
-.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura, .formulario .datos-vivienda, .datos-compra .compra-final .carta-compra, footer div .redes, .MasVendidos > div, .scrolleable-cards {
+.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura, .formulario .datos-vivienda, .datos-compra .compra-final .carta-compra, footer div .redes, .MasVendidos > div {
   display: flex;
 }
 
@@ -596,6 +668,14 @@ footer {
   text-align: center;
   background-color: #dbdbdb;
   border-top: 32px solid #dbdbdb;
+}
+@media only screen and (min-width: 992px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 300px;
+  }
 }
 footer div a, footer div p {
   color: rgba(0, 0, 0, 0.55);
@@ -680,7 +760,7 @@ footer div ul .redes-sociales a svg {
   display: grid;
 }
 
-.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura, .formulario .datos-vivienda, .datos-compra .compra-final .carta-compra, .MasVendidos > div, .scrolleable-cards, footer div .redes {
+.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura, .formulario .datos-vivienda, .datos-compra .compra-final .carta-compra, .MasVendidos > div, footer div .redes {
   display: flex;
 }
 
@@ -870,7 +950,7 @@ header img {
   display: grid;
 }
 
-.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .MasVendidos > div, .scrolleable-cards, footer div .redes, .datos-compra .compra-final .carta-compra, .formulario .datos-vivienda, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura {
+.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .MasVendidos > div, footer div .redes, .datos-compra .compra-final .carta-compra, .formulario .datos-vivienda, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura {
   display: flex;
 }
 
@@ -906,6 +986,13 @@ header img {
 .drop-down {
   position: relative;
   margin: 32px 12px 32px auto;
+}
+@media only screen and (min-width: 992px) {
+  .drop-down {
+    position: sticky;
+    top: 300px;
+    bottom: 700px;
+  }
 }
 
 .drop-down .text-select {
@@ -963,6 +1050,11 @@ header img {
 .drop-down .hide {
   display: none;
 }
+@media only screen and (min-width: 992px) {
+  .drop-down .hide {
+    display: flex;
+  }
+}
 
 .drop-down .menu-select li {
   padding: 15px 20px;
@@ -976,11 +1068,17 @@ header img {
   background-color: #000;
 }
 
+@media only screen and (min-width: 992px) {
+  #stock .productos {
+    margin-left: 300px;
+  }
+}
+
 .carta-producto-precompra article .indentidad, .productos > div, .datos-compra .compra-final .carta-compra div {
   display: grid;
 }
 
-.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .MasVendidos > div, .scrolleable-cards, footer div .redes, .datos-compra .compra-final .carta-compra, .formulario .datos-vivienda, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura {
+.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .MasVendidos > div, footer div .redes, .datos-compra .compra-final .carta-compra, .formulario .datos-vivienda, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura {
   display: flex;
 }
 
@@ -1035,7 +1133,7 @@ header img {
   display: grid;
 }
 
-.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .MasVendidos > div, .scrolleable-cards, footer div .redes, .datos-compra .compra-final .carta-compra, .formulario .datos-vivienda, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura {
+.carta-producto-precompra .CaracteristicasProductoPreCompra ul, .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article, .MasVendidos > div, footer div .redes, .datos-compra .compra-final .carta-compra, .formulario .datos-vivienda, .formulario .datos-vivienda .calle, .formulario .datos-vivienda .altura {
   display: flex;
 }
 

@@ -21,6 +21,9 @@ main{
             margin-right: 2rem;
             font-size: 1.2rem;
         }
+        @media only screen and (min-width:992px) {
+            text-align: center;
+        }
     }
     section{
         margin: 72px 0;
@@ -37,6 +40,9 @@ main{
                 @include CTA(90%,32px);
                 color:$background;
                 border:none;
+                @media only screen and (min-width:992px){
+                    @include CTA(40%,46px)
+                }
             }
         }
     }

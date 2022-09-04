@@ -4,6 +4,12 @@
 .index{
     margin-top: 156px;
     @import "carrusel";
+    section:first-child{
+        p{
+            width: 60%;
+            margin: 12px auto ;
+        }
+    }
     .vista-personalizables{
         >div{
             margin: 6rem auto;
@@ -20,6 +26,10 @@
                 p{
                     margin-left: 8px;
                 }
+            }
+            @media only screen and (min-width:992px){
+                width: 70%;
+                margin: 64px auto;
             }
         }
     }
@@ -81,6 +91,17 @@
         }
     }
 }
+@media only screen and (min-width:992px){
+    .MasVendidos,.primera-vista-personalizables{
+        display: inline-block;
+        width: 30%;
+        height: 400px;
+        margin: 0 132px 32px 132px;
+    }
+    .MasVendidos{
+        padding-top: 100px
+    }
+}
 .productos{
     >div{
         @extend %grid;
@@ -89,9 +110,20 @@
         align-items: center;
         justify-items: center;
         gap: 8px;
+        @media only screen and (min-width:992px){
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            width: 85%;
+            margin: 32px auto;
+
+        }
         .card{
             width: 90%;
-             margin: 4px 0px;
+            margin: 4px 0px;
+            @media only screen and (min-width:992px){
+                width: 70%;;
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 @import "../base/var";
 @import "../partials/extends";
 .scrolleable-cards{
-    @extend %flex;
+    display: flex;
     overflow-x:scroll;
     scroll-snap-type: x mandatory;
     scroll-padding: 24px;
@@ -15,10 +15,23 @@
         border-radius: 4px;
         scroll-snap-align: center;
     }
+    @media only screen and (min-width:992px){
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        width: 85%;
+        margin: 32px auto;
+    }
     .caracteristicas-servicio{
         text-align: center;
         svg{
             margin: 16px;
         }
     } 
+}
+#caracter-service{
+    grid-template-columns: repeat(3,1fr);
+    margin: 32px auto;
 }
