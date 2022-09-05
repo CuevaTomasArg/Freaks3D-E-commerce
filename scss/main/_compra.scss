@@ -12,7 +12,7 @@ header{
         margin: 72px auto 32px auto; 
     }
     nav{
-        display: inline-block;
+        display: block;
         margin: 12px 24px;
         a,p{
             display: inline;
@@ -75,6 +75,9 @@ header{
 .formulario{
     display: inline-block;
     text-align: center;
+    @media only screen and (min-width:992px){
+        max-width: 600px;
+    }
     div{
         display: inline-block;
         text-align: start;

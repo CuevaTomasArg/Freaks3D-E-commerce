@@ -7,3 +7,19 @@
     border-radius: 4px;
     color: $font-color;
 }
+
+@mixin scroll-x-mandatory ($mandatory,$scroll-padding,$padding,$gap){
+    display: flex;
+    overflow-x:scroll ;
+    scroll-snap-type:$mandatory;
+    scroll-padding: $scroll-padding;
+    border-radius: 8px;
+    padding:24px;
+    gap: $gap;
+    >div{
+        flex: 0 0 100%;
+        padding: $padding ; 
+        border-radius: 4px;
+        scroll-snap-align: center;
+    }
+}

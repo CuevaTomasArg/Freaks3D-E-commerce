@@ -73,3 +73,33 @@
 .drop-down .menu-select li:hover {
     background-color: #000;
 }
+
+.datos-compra{
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr 6fr;
+        grid-template-areas: 
+        "navC navC"
+        "linkC formC";
+        align-items: flex-start;
+        nav{
+            grid-area:navC;
+            a:first-child{
+                margin-left: 126px;
+            }
+        }
+        article{
+            grid-area: linkC ;
+        }
+        form{
+            grid-area: formC;
+            margin-left: 64px;
+        }
+    }
+}
+.nav-contacto{
+    display: inline-block;
+    margin: 0 100px auto auto;
+    text-align: start;
+}
