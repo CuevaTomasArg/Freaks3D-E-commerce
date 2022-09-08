@@ -7,13 +7,14 @@
     position: relative;
     margin: 32px 12px 32px auto;
     @media only screen and (min-width:992px){
+        display: inline-block;
         position: sticky;
         top: 300px;
         bottom: 700px;
+        margin-left: 64px;
     }
 }
 .drop-down .text-select {
-    //------------------
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -27,6 +28,9 @@
     font-size: .9em;
     cursor: pointer;
     transition: .3s;
+    @media only screen and (min-width:992px){
+        display: none;
+    }
 }
 .drop-down .text-select:hover {
     background-color: rgb(255, 255, 255, .3);  
@@ -38,6 +42,9 @@
 .drop-down .menu-select {
     width: 250px;
     user-select: none;
+    @media only screen and (min-width:992px){
+        width: 300px;
+    }
 }
 .drop-down .menu-select ul {
     background-color: #fff;
@@ -59,7 +66,7 @@
     display: none;
     @media only screen and (min-width:992px){
         display: flex;
-        
+        flex-direction: column;   
     }
 }
 
@@ -69,9 +76,16 @@
     cursor: pointer;
     transition: .3s;
     border-radius: 4px;
+    &:first-child{
+        display:none;
+        @media only screen and (min-width:992px) {
+            display: inline-block;
+            font-size: 20px;
+        }
+    }
 }
 .drop-down .menu-select li:hover {
-    background-color: #000;
+    background-color: darken(#fff, 15%);
 }
 
 .datos-compra{

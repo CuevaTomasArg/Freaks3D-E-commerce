@@ -509,6 +509,41 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   }
 }
 
+@media only screen and (min-width: 992px) {
+  #inicio {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "presentacion presentacion presentacion presentacion" "personalizable personalizable masvendido masvendido" "producto producto producto producto" "filamento filamento filamento filamento" "servicio servicio servicio servicio";
+    justify-items: center;
+    align-items: flex-start;
+  }
+  #inicio .presentacion-inicial {
+    grid-area: presentacion;
+  }
+  #inicio .primera-vista-personalizables {
+    grid-area: personalizable;
+    width: 60%;
+    margin-left: 156px;
+    margin-right: auto;
+  }
+  #inicio .MasVendidos {
+    grid-area: masvendido;
+    width: 70%;
+    margin-right: 256px;
+    margin-left: auto;
+  }
+  #inicio .productos {
+    grid-area: producto;
+  }
+  #inicio .presentacion-filamento {
+    grid-area: filamento;
+  }
+  #inicio section:last-child {
+    grid-area: servicio;
+  }
+}
+
 .MasVendidos > div {
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -518,17 +553,6 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   margin: 16px 8px;
 }
 
-@media only screen and (min-width: 992px) {
-  .MasVendidos, .primera-vista-personalizables {
-    display: inline-block;
-    width: 30%;
-    height: 400px;
-    margin: 0 132px 32px 132px;
-  }
-  .MasVendidos {
-    padding-top: 100px;
-  }
-}
 .productos > div {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -616,7 +640,9 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   padding: 24px;
   gap: 12px;
   padding: 24px;
-  width: 300px;
+  margin: 32px auto;
+  min-width: 300px;
+  max-width: 900px;
 }
 .scrolleable-cards > div {
   flex: 0 0 100%;
@@ -629,10 +655,15 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    overflow-x: visible;
+    visibility: visible;
     scroll-snap-type: none;
-    width: 85%;
-    margin: 32px auto;
+    overflow-x: visible;
+    scroll-padding: 0;
+    width: auto;
+    background-color: transparent;
+  }
+  .scrolleable-cards > .card {
+    scroll-snap-align: inherit;
   }
 }
 .scrolleable-cards .caracteristicas-servicio {
@@ -926,6 +957,7 @@ header img {
 }
 .formulario div textarea {
   height: 325px;
+  resize: none;
 }
 .formulario .datos-vivienda {
   margin-left: 4px;
@@ -1036,9 +1068,11 @@ header img {
 }
 @media only screen and (min-width: 992px) {
   .drop-down {
+    display: inline-block;
     position: sticky;
     top: 300px;
     bottom: 700px;
+    margin-left: 64px;
   }
 }
 
@@ -1057,6 +1091,11 @@ header img {
   cursor: pointer;
   transition: 0.3s;
 }
+@media only screen and (min-width: 992px) {
+  .drop-down .text-select {
+    display: none;
+  }
+}
 
 .drop-down .text-select:hover {
   background-color: rgba(255, 255, 255, 0.3);
@@ -1069,6 +1108,11 @@ header img {
 .drop-down .menu-select {
   width: 250px;
   user-select: none;
+}
+@media only screen and (min-width: 992px) {
+  .drop-down .menu-select {
+    width: 300px;
+  }
 }
 
 .drop-down .menu-select ul {
@@ -1100,6 +1144,7 @@ header img {
 @media only screen and (min-width: 992px) {
   .drop-down .hide {
     display: flex;
+    flex-direction: column;
   }
 }
 
@@ -1110,9 +1155,18 @@ header img {
   transition: 0.3s;
   border-radius: 4px;
 }
+.drop-down .menu-select li:first-child {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .drop-down .menu-select li:first-child {
+    display: inline-block;
+    font-size: 20px;
+  }
+}
 
 .drop-down .menu-select li:hover {
-  background-color: #000;
+  background-color: #d9d9d9;
 }
 
 .datos-compra .contact {
@@ -1143,8 +1197,14 @@ header img {
 }
 
 @media only screen and (min-width: 992px) {
-  #stock .productos {
-    margin-left: 300px;
+  #stock {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas: "article Mates" "article SetMatero" "article SetEsponjas" "article Figuras" "article Macetas" "article Tazas";
+  }
+  #stock article {
+    grid-area: article;
   }
 }
 

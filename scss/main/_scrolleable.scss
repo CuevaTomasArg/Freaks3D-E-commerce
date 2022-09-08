@@ -26,15 +26,22 @@
 .scrolleable-cards{
     @include scroll-x-mandatory (x mandatory,24px,24px 16px 24px 72px,12px);
     padding: 24px;
-    width: 300px;
+    margin:32px auto;
+    min-width: 300px;
+    max-width: 900px;
     @media only screen and (min-width:992px){
         display: grid;
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: 1fr;
-        overflow-x: visible;
+        visibility: visible;
         scroll-snap-type: none;
-        width: 85%;
-        margin: 32px auto;
+        overflow-x: visible;
+        scroll-padding: 0;
+        width: auto;
+        background-color: transparent;
+        >.card{
+            scroll-snap-align:inherit;  
+        }
     }
     .caracteristicas-servicio{
         text-align: center;

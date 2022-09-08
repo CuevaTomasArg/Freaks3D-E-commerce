@@ -79,6 +79,45 @@
         }
     }
 }
+#inicio{
+    @media only screen and (min-width:992px) {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "presentacion presentacion presentacion presentacion"
+        "personalizable personalizable masvendido masvendido"
+        "producto producto producto producto"
+        "filamento filamento filamento filamento"
+        "servicio servicio servicio servicio";
+        justify-items: center;
+        align-items: flex-start;
+        .presentacion-inicial{
+            grid-area: presentacion;
+        }
+        .primera-vista-personalizables{
+            grid-area: personalizable;
+            width: 60%;
+            margin-left: 156px;
+            margin-right: auto;
+        }
+        .MasVendidos{
+            grid-area: masvendido;
+            width:70%;
+            margin-right: 256px;
+            margin-left: auto;
+        }
+        .productos{
+            grid-area:producto
+        }
+        .presentacion-filamento{
+            grid-area: filamento
+        }
+        section:last-child{
+            grid-area: servicio
+        }
+    }
+}
 .MasVendidos{
     >div{
         @extend %flex;
@@ -89,17 +128,6 @@
             width: 45%;
             margin: 16px 8px;
         }
-    }
-}
-@media only screen and (min-width:992px){
-    .MasVendidos,.primera-vista-personalizables{
-        display: inline-block;
-        width: 30%;
-        height: 400px;
-        margin: 0 132px 32px 132px;
-    }
-    .MasVendidos{
-        padding-top: 100px
     }
 }
 .productos{

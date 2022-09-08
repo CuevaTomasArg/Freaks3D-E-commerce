@@ -2,8 +2,18 @@
 @import "../partials/article";
 #stock{
     @media only screen and (min-width:992px){
-        .productos{
-            margin-left: 300px;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "article Mates"
+        "article SetMatero"
+        "article SetEsponjas"
+        "article Figuras"
+        "article Macetas"
+        "article Tazas";
+        article{
+            grid-area: article;
         }
     }
 }
