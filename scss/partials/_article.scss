@@ -8,9 +8,11 @@
     margin: 32px 12px 32px auto;
     @media only screen and (min-width:992px){
         display: inline-block;
+        margin: 12px 0px;
         position: sticky;
+        left: 32px;
         top: 300px;
-        bottom: 700px;
+        bottom: 200px;
         margin-left: 64px;
     }
 }

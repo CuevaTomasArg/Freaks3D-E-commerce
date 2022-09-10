@@ -11,7 +11,10 @@
         }
     }
     .vista-personalizables{
-        >div{
+        h2,h3,p{
+            text-align: center;
+        }
+        .scrolleable-personalizables{
             margin: 6rem auto;
         }
     }
@@ -24,6 +27,7 @@
             margin-bottom: 24px;
             li{
                 p{
+                    text-align: start;
                     margin-left: 8px;
                 }
             }
@@ -33,6 +37,8 @@
             }
         }
     }
+}
+
     .card{
         border: none;
         background: none;
@@ -78,7 +84,6 @@
             }
         }
     }
-}
 #inicio{
     @media only screen and (min-width:992px) {
         display: grid;
@@ -139,11 +144,10 @@
         justify-items: center;
         gap: 8px;
         @media only screen and (min-width:992px){
-            display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: auto;
-            width: 85%;
-            margin: 32px auto;
+            width: 90%;
+            margin: 32px auto ;
 
         }
         .card{

@@ -1,0 +1,14 @@
+[
+    {
+      "precio": 1000,
+      "id": 1,
+      "title": "Mate",
+      "body": "Descripcion del wea"
+    },
+    {
+      "precio": 1000,
+      "id": 2,
+      "title": "Esponja",
+      "body": "Otra descripcion de la wea"
+    }
+  ]

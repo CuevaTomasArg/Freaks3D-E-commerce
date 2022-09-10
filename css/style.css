@@ -96,7 +96,7 @@ img {
   flex-direction: row;
 }
 
-.index .card .card-body button {
+.card .card-body button {
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
@@ -104,11 +104,11 @@ img {
   margin: 8px 0;
   transition: all 0.3s;
 }
-.index .card .card-body button:hover {
+.card .card-body button:hover {
   background-color: #00cdac;
   border-color: white;
 }
-.index .card .card-body button:active {
+.card .card-body button:active {
   background-color: #01ffd6;
   border-color: white;
 }
@@ -375,7 +375,7 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   flex-direction: row;
 }
 
-.index .card .card-body button {
+.card .card-body button {
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
@@ -383,11 +383,11 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   margin: 8px 0;
   transition: all 0.3s;
 }
-.index .card .card-body button:hover {
+.card .card-body button:hover {
   background-color: #00cdac;
   border-color: white;
 }
-.index .card .card-body button:active {
+.card .card-body button:active {
   background-color: #01ffd6;
   border-color: white;
 }
@@ -407,7 +407,7 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 .index .carta-producto-precompra article .unidades-producto, .carta-producto-precompra article .index .unidades-producto, .index .formulario .datos-vivienda, .formulario .index .datos-vivienda, .index .datos-compra .compra-final .carta-compra, .datos-compra .compra-final .index .carta-compra, .index footer div .redes, footer div .index .redes, .index .MasVendidos > div {
   flex-direction: row;
 }
-.index .card .card-body button {
+.index .card .card-body button, .card .card-body .index button {
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
@@ -415,11 +415,11 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   margin: 8px 0;
   transition: all 0.3s;
 }
-.index .card .card-body button:hover {
+.index .card .card-body button:hover, .card .card-body .index button:hover {
   background-color: #00cdac;
   border-color: white;
 }
-.index .card .card-body button:active {
+.index .card .card-body button:active, .card .card-body .index button:active {
   background-color: #01ffd6;
   border-color: white;
 }
@@ -445,7 +445,10 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   width: 60%;
   margin: 12px auto;
 }
-.index .vista-personalizables > div {
+.index .vista-personalizables h2, .index .vista-personalizables h3, .index .vista-personalizables p {
+  text-align: center;
+}
+.index .vista-personalizables .scrolleable-personalizables {
   margin: 6rem auto;
 }
 .index .explicacion h2 {
@@ -456,6 +459,7 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   margin-bottom: 24px;
 }
 .index .explicacion ol li p {
+  text-align: start;
   margin-left: 8px;
 }
 @media only screen and (min-width: 992px) {
@@ -464,47 +468,48 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
     margin: 64px auto;
   }
 }
-.index .card {
+
+.card {
   border: none;
   background: none;
   border-radius: 0;
 }
-.index .card img {
+.card img {
   height: 216px;
   border-radius: 0;
 }
-.index .card .card-body {
+.card .card-body {
   text-align: center;
 }
-.index .card .card-body p, .index .card .card-body strong {
+.card .card-body p, .card .card-body strong {
   margin: 0;
 }
-.index .card .card-body strong {
+.card .card-body strong {
   font-size: 18px;
 }
-.index .card .card-body p {
+.card .card-body p {
   margin-top: 4px;
   font-size: 24px;
 }
-.index .card .card-body button {
+.card .card-body button {
   transition: all 0.3s;
 }
-.index .card .card-body button:hover a {
+.card .card-body button:hover a {
   color: white;
 }
-.index .card .card-body button a {
+.card .card-body button a {
   color: #5b5b5b;
 }
-.index .card .card-body button a i {
+.card .card-body button a i {
   margin-right: 4px;
 }
 @media only screen and (max-width: 744px) {
-  .index .card .card-body button a .boton-comprar-xs {
+  .card .card-body button a .boton-comprar-xs {
     display: inline;
   }
 }
 @media only screen and (max-width: 744px) {
-  .index .card .card-body button a span {
+  .card .card-body button a span {
     display: none;
   }
 }
@@ -562,10 +567,9 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 }
 @media only screen and (min-width: 992px) {
   .productos > div {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    width: 85%;
+    width: 90%;
     margin: 32px auto;
   }
 }
@@ -595,7 +599,7 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   flex-direction: row;
 }
 
-.index .card .card-body button {
+.card .card-body button {
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
@@ -603,11 +607,11 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   margin: 8px 0;
   transition: all 0.3s;
 }
-.index .card .card-body button:hover {
+.card .card-body button:hover {
   background-color: #00cdac;
   border-color: white;
 }
-.index .card .card-body button:active {
+.card .card-body button:active {
   background-color: #01ffd6;
   border-color: white;
 }
@@ -716,7 +720,7 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   flex-direction: row;
 }
 
-.index .card .card-body button {
+.card .card-body button {
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
@@ -724,11 +728,11 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   margin: 8px 0;
   transition: all 0.3s;
 }
-.index .card .card-body button:hover {
+.card .card-body button:hover {
   background-color: #00cdac;
   border-color: white;
 }
-.index .card .card-body button:active {
+.card .card-body button:active {
   background-color: #01ffd6;
   border-color: white;
 }
@@ -845,7 +849,7 @@ footer div ul .redes-sociales a svg {
   flex-direction: row;
 }
 
-.index .card .card-body button {
+.card .card-body button {
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
@@ -853,11 +857,11 @@ footer div ul .redes-sociales a svg {
   margin: 8px 0;
   transition: all 0.3s;
 }
-.index .card .card-body button:hover {
+.card .card-body button:hover {
   background-color: #00cdac;
   border-color: white;
 }
-.index .card .card-body button:active {
+.card .card-body button:active {
   background-color: #01ffd6;
   border-color: white;
 }
@@ -1041,7 +1045,7 @@ header img {
   flex-direction: row;
 }
 
-.index .card .card-body button {
+.card .card-body button {
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
@@ -1049,11 +1053,11 @@ header img {
   margin: 8px 0;
   transition: all 0.3s;
 }
-.index .card .card-body button:hover {
+.card .card-body button:hover {
   background-color: #00cdac;
   border-color: white;
 }
-.index .card .card-body button:active {
+.card .card-body button:active {
   background-color: #01ffd6;
   border-color: white;
 }
@@ -1069,9 +1073,11 @@ header img {
 @media only screen and (min-width: 992px) {
   .drop-down {
     display: inline-block;
+    margin: 12px 0px;
     position: sticky;
+    left: 32px;
     top: 300px;
-    bottom: 700px;
+    bottom: 200px;
     margin-left: 64px;
   }
 }
@@ -1197,14 +1203,9 @@ header img {
 }
 
 @media only screen and (min-width: 992px) {
-  #stock {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto;
-    grid-template-areas: "article Mates" "article SetMatero" "article SetEsponjas" "article Figuras" "article Macetas" "article Tazas";
-  }
-  #stock article {
-    grid-area: article;
+  .principal {
+    width: 70%;
+    margin: 32px auto 32px 360px;
   }
 }
 
@@ -1224,7 +1225,7 @@ header img {
   flex-direction: row;
 }
 
-.index .card .card-body button {
+.card .card-body button {
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
@@ -1232,11 +1233,11 @@ header img {
   margin: 8px 0;
   transition: all 0.3s;
 }
-.index .card .card-body button:hover {
+.card .card-body button:hover {
   background-color: #00cdac;
   border-color: white;
 }
-.index .card .card-body button:active {
+.card .card-body button:active {
   background-color: #01ffd6;
   border-color: white;
 }
@@ -1279,7 +1280,7 @@ header img {
   flex-direction: row;
 }
 
-.index .card .card-body button {
+.card .card-body button {
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
@@ -1287,11 +1288,11 @@ header img {
   margin: 8px 0;
   transition: all 0.3s;
 }
-.index .card .card-body button:hover {
+.card .card-body button:hover {
   background-color: #00cdac;
   border-color: white;
 }
-.index .card .card-body button:active {
+.card .card-body button:active {
   background-color: #01ffd6;
   border-color: white;
 }
