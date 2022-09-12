@@ -1256,12 +1256,48 @@ header img {
 .pre-compra .carta-producto-precompra {
   text-align: center;
 }
+@media only screen and (min-width: 992px) {
+  .pre-compra .carta-producto-precompra {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 .pre-compra .carta-producto-precompra img {
   display: inline-block;
   width: 90%;
 }
+@media only screen and (min-width: 992px) {
+  .pre-compra .carta-producto-precompra img {
+    width: 30%;
+    margin: 0 24px 0 auto;
+  }
+}
 .pre-compra .carta-producto-precompra div {
   text-align: start;
+}
+@media only screen and (min-width: 992px) {
+  .pre-compra .carta-producto-precompra article {
+    width: 30%;
+    margin: 0 auto 0 24px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .pre-compra .CaracteristicasProductoPreCompra {
+    margin: 128px 64px;
+  }
+  .pre-compra .CaracteristicasProductoPreCompra hr {
+    display: none;
+  }
+  .pre-compra .CaracteristicasProductoPreCompra h2 {
+    width: 40%;
+    margin-left: 32px;
+    margin-right: auto;
+  }
+  .pre-compra .CaracteristicasProductoPreCompra ul {
+    width: 40%;
+    margin-left: 128px;
+  }
 }
 
 .carta-producto-precompra article .indentidad, .productos > div, .datos-compra .compra-final .carta-compra div {

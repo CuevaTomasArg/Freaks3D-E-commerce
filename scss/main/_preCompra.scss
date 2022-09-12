@@ -13,12 +13,44 @@
     }
     .carta-producto-precompra{
         text-align: center;
+        @media only screen and (min-width:992px){
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
         img{
             display: inline-block;
             width: 90%;
+            @media only screen and (min-width:992px){
+                width: 30%;
+                margin: 0 24px 0 auto;
+            }
         }
         div{
             text-align: start;
+        }
+        article{
+            @media only screen and (min-width:992px){
+                width: 30%;
+                margin: 0 auto 0 24px;
+            }
+        }
+    }
+    .CaracteristicasProductoPreCompra{
+        @media only screen and (min-width:992px){
+            margin: 128px 64px;
+            hr{
+                display: none;
+            }
+            h2{
+                width: 40%;
+                margin-left:32px;
+                margin-right: auto;
+            }
+            ul{
+                width: 40%;
+                margin-left: 128px;
+            }
         }
     }
 }
