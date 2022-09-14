@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Productos - Freaks3D</title>
     <link rel="icon" href="../multimedia/logos/logo_general.png">
+    <script defer src="../js/stock.js"></script>
+    <script defer src="../js/cart.js"></script>
 </head>
 <body>
   <header>
     <nav class="navbar bg-light fixed-top">
         <div class="container-fluid">
             <button class="cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                <i class="bi bi-cart3"></i>
+                <i class="bi bi-cart3" id="contadorCarrito">0</i>
             </button>
             <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                 <div class="offcanvas-header">
@@ -23,6 +25,10 @@
                 </div>
                 <div class="offcanvas-body" id="carrito">
                   <p>No hay producto en carrito</p>
+                </div>
+                <div class="monto-total">
+                  <strong>Total</strong>
+                  <p>$<span id="precioTotal">0</span></p>
                 </div>
               </div>
           <a class="navbar-brand" href="../index.html"><img src="../multimedia/logos/logo_general.png" alt=""></a>
@@ -516,7 +522,7 @@
           <strong>Medios de pago</strong>
           <ul class="metodos-de-pago">
               <li>
-                  <img src="multimedia/logos/mercado-pago.png" alt="">
+                  <img src="../multimedia/logos/mercado-pago.png" alt="">
               </li>
           </ul>
       </div>
@@ -549,7 +555,5 @@
   </footer>
   <script src="../js/dropdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="../js/stock.js"></script>
-    <script src="../js/cart.js"></script>
   </body>
 </html>
