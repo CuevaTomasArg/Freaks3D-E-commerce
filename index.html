@@ -25,7 +25,7 @@
                       <div class="producto-en-carrito">
                         <img src="multimedia/fotos/productos/00000IMG_00000_BURST20220515121834193_COVER.jpg" alt="">
                         <p class="nombre">Mate</p>
-                        <p class="caracter">(Personaje )</p>
+                        <p class="caracter">(Personaje)</p>
                         <button>
                           <i class="bi bi-trash3"></i>
                         </button>
@@ -47,36 +47,12 @@
                             <label for="">Sucursal</label>
                             <input type="radio" name="entrega">
                           </div>
-                          <div class="provincia-entrega">
-                            <label for="provincia-destino">Provincia</label>
-                            <select name="provincia-destino">
-                              <option value="Buenos Aires">Buenos Aires</option>
-                              <option value="CABA - Ciudad Autonoma de Buenos Aires">CABA - Ciudad Autonoma de Buenos Aires</option>
-                              <option value="Catamarca">Catamarca</option>
-                              <option value="Chaco">Chaco</option>
-                              <option value="Chubut">Chubut</option>
-                              <option value="Córdoba">Córdoba</option>
-                              <option value="Corrientes">Corrientes</option>
-                              <option value="Entre Ríos">Entre Ríos</option>
-                              <option value="Formoza">Formoza</option>
-                              <option value="Jujuy">Jujuy</option>
-                              <option value="La Pampa">La Pampa</option>
-                              <option value="La Rioja">La Rioja</option>
-                              <option value="Mendoza">Mendoza</option>
-                              <option value="Misiones">Misiones</option>
-                              <option value="Neuquen">Neuquen</option>
-                              <option value="Río Negro">Río Negro</option>
-                              <option value="Salta">Salta</option>
-                              <option value="San Juan">San Juan</option>
-                              <option value="San Luis">San Luis</option>
-                              <option value="Santa Cruz">Santa Cruz</option>
-                              <option value="Santa Fe">Santa Fe</option>
-                              <option value="Santiago del Estero">Santiago del Estero</option>
-                              <option value="Tierra del Fuego, Antártida a islas del Atlántico Sur">Tierra del Fuego, Antártida a islas del Atlántico Sur</option>
-                              <option value="Tucumán">Tucumán</option>
+                          <form class="provincia-entrega" method="post" action="php/compra.php">
+                            <label for="provincia-destino" id="destinoProvincia"></label>
+                            <select name="provincia-destino" id="seleccionDestino">
                             </select>
                             <p>$XXXX,XX</p>
-                          </div>
+                          </form>
                         </div>
                       </div>
                       <hr>

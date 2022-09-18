@@ -1,16 +1,18 @@
 //Zona de declaracion de contenedores, contiene cada seccion de productos
-
-const contenedorMates = document.getElementById("Mates")
+//Contenedores
+const contenedorStock = document.getElementById('stock')
 //contenedore del carrito
 const contenedorCarrito = document.getElementById("carrito")
 //Contador del carrito
 const contadorCarrito = document.getElementById('contadorCarrito')
 
 const precioTotal = document.getElementById('precioTotal')
+
+//----CONTENEDOR GLOBAL DE PRODUCTOS----------
+const contenedorProductos = document.getElementById('stock')
 //creo el carrito
 let carrito = []
- 
-//Funcion para no perder los datos al salir de la pagina
+
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
@@ -18,30 +20,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-//Funciones para la creacion de las secciones de cada producto
-stockProductosMates.forEach((mate) => {
+stockProductos.forEach((producto) =>{
+    const contenedorCategoria = document.getElementById(`${producto.tipo}`) 
     const div = document.createElement('div')
+    console.log('cree el elemento div con la clase card')
     div.classList.add('card')
     div.innerHTML = `
-    <img src=${mate.img} class="card-img-top" alt=${mate.desc}>
+    <img src=${producto.img} class="card-img-top" alt=${producto.desc}>
     <div class="card-body">
-        <strong class="card-title">${mate.nombre}</strong>
-        <p class="card-text">${mate.precio}</p>
-        <button id="agregar${mate.id}">
+        <strong class="card-title">${producto.nombre}</strong>
+        <p class="card-text"><span>$<span>${producto.precio}</p>
+        <button id="agregar${producto.id}">
             <i class="bi bi-cart3"></i>
             <span class="boton-comprar-xs">Comprar</span> 
         </button>
+    </div>
     `
-    contenedorMates.appendChild(div)
-    const boton = document.getElementById(`agregar${mate.id}`)
+
+    contenedorCategoria.appendChild(div)
+    const boton = document.getElementById(`agregar${producto.id}`)
     boton.addEventListener('click',() => {
-        agregarAlCarrito(mate.id)
+        agregarAlCarrito(producto.id)
     })
-});
+})
 
-
-//Funcion para agregar productos al carrito
-//Por ahora solo funciona con los mates, revisar para que sea global
+//Funcion para que funciones el carrito
 const agregarAlCarrito = (prodId) => {
     //Algoritmo para no repetir elementos en al array
     const existe = carrito.some (prod => prod.id === prodId)
@@ -53,13 +56,13 @@ const agregarAlCarrito = (prodId) => {
             }
         })
     } else {
-        //Stock solo de mates, agregar mas
-    const item = stockProductosMates.find((prod) => prod.id === prodId)
+        //Stock
+    const item = stockProductos.find((prod) => prod.id === prodId)
     carrito.push(item)
     console.log(carrito)
 
 }
-actualizarCarrito()
+    actualizarCarrito()
     
 }
 //El eliminar del carrito funciona en forma de cola, no borra
@@ -71,6 +74,7 @@ const eliminarDelCarrito = (prodId) => {
     actualizarCarrito()
 }
 
+var HayProducto = null
 //Funcion para crear las cositas en el carrito
 const actualizarCarrito = ()=> {
     contenedorCarrito.innerHTML = ""
@@ -87,6 +91,7 @@ const actualizarCarrito = ()=> {
         <label for="Cant" id="cantidad">${prod.cantidad}</label>
         <input name="Cant" type="number" value="" >
         <p class="price">${prod.precio * prod.cantidad}</p>
+        <hr>
         `
         contenedorCarrito.appendChild(div)
 
@@ -94,4 +99,25 @@ const actualizarCarrito = ()=> {
     })
     contadorCarrito.innerText = carrito.length
     precioTotal.innerText = carrito.reduce((acc,prod) => acc + prod.precio * prod.cantidad,0)
+    if (carrito.length != 0){
+        HayProducto = true
+    }else{
+        HayProducto = false
+    }
+    seleccionarDestino()
 } 
+
+const seleccionarDestino = () =>{
+    if (HayProducto){
+        const title = document.getElementById('destinoProvincia')
+        const select = document.getElementById('seleccionDestino')
+        title.innerHTML =
+        `<span>Provincia</span>`
+        destino.forEach((dest) => {
+            const option = document.createElement('option')
+            option.innerText = `${dest}`
+            select.appendChild(option)
+        })
+    } 
+}
+
