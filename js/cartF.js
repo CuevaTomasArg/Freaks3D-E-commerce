@@ -1,5 +1,5 @@
-stockProductos.forEach((producto) =>{
-    const contenedorCategoria = document.getElementById(`${producto.tipo}`) 
+stockFilamento.forEach((producto) =>{
+    const contenedorMarca = document.getElementById(`${producto.tipo}`) 
     const div = document.createElement('div')
     console.log('cree el elemento div con la clase card')
     div.classList.add('card')
@@ -15,10 +15,9 @@ stockProductos.forEach((producto) =>{
     </div>
     `
 
-    contenedorCategoria.appendChild(div)
-    const boton = document.getElementById(`agregar${producto.id}`)
-    boton.addEventListener('click',() => {
+    contenedorMarca.appendChild(div)
+    const botonF = document.getElementById(`agregar${producto.id}`)
+    botonF.addEventListener('click',() => {
         agregarAlCarrito(producto.id)
     })
 });
-

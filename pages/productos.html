@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Productos - Freaks3D</title>
     <link rel="icon" href="../multimedia/logos/logo_general.png">
+    <script defer src="../js/dropdown.js"></script>
     <script defer src="../js/stock.js"></script>
-    <script defer src="../js/cart.js"></script>
+    <script defer src="../js/app.js"></script>
+    <script defer  src="../js/cart.js"></script>
 </head>
 <body>
   <header>
@@ -26,15 +28,18 @@
                 <div class="offcanvas-body" id="carrito">
                   <p>No hay producto en carrito</p>
                 </div>
-                <form class="provincia-entrega" method="post" action="php/compra.php">
-                  <label for="provincia-destino" id="destinoProvincia"></label>
-                  <select name="provincia-destino" id="seleccionDestino">
-                  </select>
-                  <p>$XXXX,XX</p>
+                <form class="provincia-entrega" id="montoPorProvincia" method="post" action="php/compra.php">
+                  
                 </form>
                 <div class="monto-total">
                   <strong>Total</strong>
                   <p>$<span id="precioTotal">0</span></p>
+                </div>
+                <div class="volver">
+                  <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Iniciar compra
+                  </button>
+                  <a class="seguir-viendo" href="#">Ver más productos</a>
                 </div>
               </div>
           <a class="navbar-brand" href="../index.html"><img src="../multimedia/logos/logo_general.png" alt=""></a>
@@ -83,25 +88,25 @@
         </div>
       </nav>
 </header>
-    <article class="drop-down">
-      <div class="text-select">
-          <span>Productos</span>
-          <i class='bi bi-chevron-down'></i>
-      </div>
-      <div class="menu-select hide">
-          <ul>
-              <li><span>Productos</span></li>
-              <li><a href="#Mates">Mates</a></li>
-              <li><a href="#SetMatero">Set matero</a></li>
-              <li><a href="#Esponjas">Set Esponjas</a></li>
-              <li><a href="#Figuras">Figuras</a></li>
-              <li><a href="#Macetas">Macetas</a></li>
-              <li><a href="#Tazas">Tazas</a></li>
-          </ul>
-      </div>
-    </article>
     <main class="index" id="stock" style="padding-top:24px ;">
-        <section class="productos principal" id="#volverProductos" >
+      <article class="drop-down">
+        <div class="text-select">
+            <span>Productos</span>
+            <i class='bi bi-chevron-down'></i>
+        </div>
+        <div class="menu-select hide">
+            <ul>
+                <li><span>Productos</span></li>
+                <li><a href="#Mates">Mates</a></li>
+                <li><a href="#SetMatero">Set matero</a></li>
+                <li><a href="#Esponjas">Set Esponjas</a></li>
+                <li><a href="#Figuras">Figuras</a></li>
+                <li><a href="#Macetas">Macetas</a></li>
+                <li><a href="#Tazas">Tazas</a></li>
+            </ul>
+        </div>
+      </article>  
+      <section class="productos principal" id="#volverProductos" >
             <h2>
                 Mates
             </h2>
@@ -154,6 +159,143 @@
           <button type="button" class="CTA-verMas">
             <a href="personalizables.html">Ver productos personalizados</a>
           </button>
+        </section>
+        <section class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin: 0;">
+          <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header modal-compra">
+                <img src="../multimedia/logos/logo_general.png"class="modal-title" id="exampleModalLabel">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <section class="modal-body datos-compra">
+                  <div>
+                    <div class="compra-final" id="cartaPreFormularioFinal">
+                      <!--/CONTENIDO/--> 
+                      <!-- <div class="carta-compra">
+                            <img src="../multimedia/fotos/filamentos/3n3-petg-azul-11-87fd1bebfcd55e8ed616357828055893-640-0.jpg" alt="">
+                            <div>
+                                <strong>Producto</strong>
+                                <p class="caracter">Caracter</p>
+                                <p class="cant">x N</p>
+                                <p class="monto">$XXXX,XX</p>
+                            </div>
+                            <hr>
+                        </div> -->
+                    </div>
+                    <div class="carta-envio">
+                        <strong>Envio</strong>
+                        <p>$XXXX,XX</p>
+                        <hr> 
+                    </div>
+                    <div class="monto-total">
+                         <strong>Total</strong>
+                        <p>$XXXX,XX</p>
+                        <hr> 
+                    </div>
+                  </div>
+                  <form class="formulario" action="../php/compra.php" method="post">
+                    <h1>Formulario de envío</h1>  
+                    <h2>Datos de contacto</h2>
+                      <div>
+                          <label for="nombre">Nombre y apellido</label>
+                          <input type="text" name="nombre">
+                      </div>
+                      <div>
+                          <label for="email">Email</label>
+                          <input type="email" name="email">
+                      </div>
+                      <div>
+                          <label for="">Celular</label>
+                          <input type="text" name="celular">
+                      </div>
+                      <h2>Información de la entrega</h2>
+                      <div class="datos-vivienda">
+                          <div class="calle">
+                              <label for="">Calle</label>
+                              <input type="text" name="street">
+                          </div>
+                          <div class="altura">
+                              <label for="">Altura</label>
+                              <input type="text" name="num">
+                          </div>
+                          <div class="dpto">
+                              <label for="">Depto</label>
+                              <input type="text" name="dpto">
+                          </div>
+                      </div>
+                      <div> <!-- Hacer que dentro de este campo se genere donde es el pais de la persona para confirmar de donde es-->
+                          <label for="provincia-destino">Provincia</label>
+                          <!-- <select name="provincia-destino">
+                              <option value="Buenos Aires">Buenos Aires</option>
+                              <option value="CABA - Ciudad Autonoma de Buenos Aires">CABA - Ciudad Autonoma de Buenos Aires</option>
+                              <option value="Catamarca">Catamarca</option>
+                              <option value="Chaco">Chaco</option>
+                              <option value="Chubut">Chubut</option>
+                              <option value="Córdoba">Córdoba</option>
+                              <option value="Corrientes">Corrientes</option>
+                              <option value="Entre Ríos">Entre Ríos</option>
+                              <option value="Formoza">Formoza</option>
+                              <option value="Jujuy">Jujuy</option>
+                              <option value="La Pampa">La Pampa</option>
+                              <option value="La Rioja">La Rioja</option>
+                              <option value="Mendoza">Mendoza</option>
+                              <option value="Misiones">Misiones</option>
+                              <option value="Neuquen">Neuquen</option>
+                              <option value="Río Negro">Río Negro</option>
+                              <option value="Salta">Salta</option>
+                              <option value="San Juan">San Juan</option>
+                              <option value="San Luis">San Luis</option>
+                              <option value="Santa Cruz">Santa Cruz</option>
+                              <option value="Santa Fe">Santa Fe</option>
+                              <option value="Santiago del Estero">Santiago del Estero</option>
+                              <option value="Tierra del Fuego, Antártida a islas del Atlántico Sur">Tierra del Fuego, Antártida a islas del Atlántico Sur</option>
+                              <option value="Tucumán">Tucumán</option>
+                            </select> -->
+                      </div>
+                      <div>
+                          <label for="">Localidad</label>
+                          <input type="text" name="localidad">
+                      </div>
+                      <div>
+                          <label for="">Cod. Postal</label>
+                          <input type="text" name="CodP">
+                      </div>
+                      <div>
+                          <h2>
+                              Datos de transferencia
+                          </h2>
+                          <div class="datos-transferencia">
+                              <strong>
+                                  MercadoPago
+                              </strong>
+                              <strong>
+                                  CVU:
+                              </strong>
+                              <p>0000003100078625438957</p>
+                              <strong>
+                                  Alias:
+                              </strong>
+                              <p>
+                                  freaks.3d
+                              </p>
+                          </div>
+                          <div class="datos-comprobante">
+                              <label for="comprobante">Adjuntar comprobante</label>
+                              <input type="file" name="comprobante">
+                          </div>
+                          <div class="transaccion">
+                              <label for="transaccion">Numero de transacción</label>
+                              <input type="text" name="transaccion">
+                          </div>
+                      </div>
+                      <button type="submit">
+                          Comprar
+                      </button>
+                  </form>
+              </div>
+            </div>
+            </section>
+          </div>
         </section>
     </main>
     <footer>
