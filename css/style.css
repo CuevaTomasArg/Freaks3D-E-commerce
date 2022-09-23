@@ -461,10 +461,11 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 .index .explicacion ol li p {
   text-align: start;
   margin-left: 8px;
+  font-size: 1.2rem;
 }
 @media only screen and (min-width: 992px) {
   .index .explicacion ol {
-    width: 70%;
+    width: 65%;
     margin: 64px auto;
   }
 }
@@ -1175,6 +1176,10 @@ header img {
   background-color: #d9d9d9;
 }
 
+.modal-compra, .modal-header {
+  height: 64px;
+  padding: 0;
+}
 @media only screen and (min-width: 992px) {
   .modal-compra, .modal-header {
     display: flex;
@@ -1193,6 +1198,9 @@ header img {
     display: inline-block;
     margin: 2px 32px;
   }
+}
+.modal-compra > img, .modal-header > img {
+  width: 64px;
 }
 
 .modal-body {
