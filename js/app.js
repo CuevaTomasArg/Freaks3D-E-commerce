@@ -1,11 +1,11 @@
 
 //Funcion para que quede guardado el carrito
-// document.addEventListener('DOMContentLoaded', () => {
-//     if (localStorage.getItem('carrito')){
-//         carrito = JSON.parse(localStorage.getItem('carrito'))
-//         actualizarCarrito()
-//     }
-// })
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizarCarrito()
+    }
+})
 
 const agregarAlCarrito = (prodId) => {
     //Algoritmo para no repetir elementos en al array
@@ -19,16 +19,20 @@ const agregarAlCarrito = (prodId) => {
         })
     } else {
         //Stock
-        if(prodId > 2000){
+        if(prodId>3000){
+            const itemPe = stockPresentacion.find((prod) => prod.id === prodId)
+            carrito.push(itemPe)
+        }else if(prodId > 2000){
             const itemF = stockFilamento.find((prod) => prod.id === prodId)
             carrito.push(itemF)
-        }else if(prodId > 1000 && prodId < 2000){
-            const itemPe = stockPersonalizables.find((prod) => prod.id === prodId)
-            carrito.push(itemPe) 
-            }else{
-                const itemP = stockProductos.find((prod) => prod.id === prodId)
-                carrito.push(itemP)
-            }
+            }else if(prodId > 1000 && prodId < 2000){
+                const itemPe = stockPersonalizables.find((prod) => prod.id === prodId)
+                carrito.push(itemPe) 
+                }else{
+                    const itemP = stockProductos.find((prod) => prod.id === prodId)
+                    carrito.push(itemP)
+                }
+        
     
     console.log(carrito)
     compraTotal = carrito
