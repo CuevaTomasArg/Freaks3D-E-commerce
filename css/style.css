@@ -218,8 +218,8 @@ header .container-fluid .offcanvas-end i {
 }
 header .container-fluid .offcanvas-end .producto-en-carrito {
   display: grid;
-  grid-template-columns: 3fr 2fr 2fr;
-  grid-template-rows: 1fr 2fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-rows: auto;
   grid-template-areas: "img pro trash " "img car trash " "cant price price " "cant_input price price ";
   justify-items: flex-start;
 }
@@ -259,11 +259,13 @@ header .container-fluid .offcanvas-end .producto-en-carrito button {
 header .container-fluid .offcanvas-end .producto-en-carrito label {
   font-weight: 800;
   margin: 12px auto auto 24px;
+  grid-area: cant;
 }
 header .container-fluid .offcanvas-end .producto-en-carrito input {
   grid-area: cant_input;
   width: 32px;
   margin: 8px auto auto 32px;
+  border: none;
 }
 header .container-fluid .offcanvas-end .producto-en-carrito .price {
   font-size: 1.5rem;
@@ -889,6 +891,9 @@ header img {
   display: inline-block;
   margin: 24px;
 }
+.datos-compra .compra-final .carta-compra {
+  margin-bottom: 24px;
+}
 .datos-compra .compra-final .carta-compra img {
   width: 128px;
 }
@@ -900,11 +905,8 @@ header img {
   column-gap: 24px;
   margin-left: 18px;
 }
-.datos-compra .compra-final .carta-compra div strong {
+.datos-compra .compra-final .carta-compra div .nomProducto {
   grid-area: titulo;
-}
-.datos-compra .compra-final .carta-compra div .caracter {
-  grid-area: caracter;
 }
 .datos-compra .compra-final .carta-compra div .cant {
   grid-area: cantidad;

@@ -1,11 +1,11 @@
 
 //Funcion para que quede guardado el carrito
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('carrito')){
-        carrito = JSON.parse(localStorage.getItem('carrito'))
-        actualizarCarrito()
-    }
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//     if (localStorage.getItem('carrito')){
+//         carrito = JSON.parse(localStorage.getItem('carrito'))
+//         actualizarCarrito()
+//     }
+// })
 
 const agregarAlCarrito = (prodId) => {
     //Algoritmo para no repetir elementos en al array
@@ -52,19 +52,24 @@ const eliminarDelCarrito = (prodId) => {
 
 const actualizarFormularioCompra = () => {
     contenedorCardsComrpa.innerHTML = ""
+    var num = 0
     carrito.forEach((prod)=>{
         const divBuy = document.createElement('div')
         divBuy.className = ("carta-compra")
         divBuy.innerHTML = `
         <img src="${prod.img}" alt="${prod.desc}">
         <div>
-            <strong>${prod.nombre}</strong>
+            <input readonly onmousedownn="return false;" name="nomProd${num}" type="hidden" value="${prod.nombre}" >    
+            <strong class="nomProducto">${prod.nombre}</strong>
+            <input readonly onmousedownn="return false;" name="cantProd${num}" type="hidden" value="${prod.cantidad}" >
             <p class="cant">x ${prod.cantidad}</p>
+            <input readonly onmousedownn="return false;" name="priceProd${num}" type="hidden" value="${prod.precio * prod.cantidad}" >
             <p class="monto">$${prod.precio * prod.cantidad}</p>
         </div>
         <hr>
         `
         contenedorCardsComrpa.appendChild(divBuy)
+        num ++
     })
 }
 
@@ -77,7 +82,6 @@ const actualizarCarrito = ()=> {
         div.innerHTML = `
         <img src="${prod.img}" alt="${prod.desc}">
         <p class="nombre">${prod.nombre}</p>
-        
         <button onclick="eliminarDelCarrito(${prod.id})">
             <i class="bi bi-trash3"></i>
         </button>
@@ -92,7 +96,8 @@ const actualizarCarrito = ()=> {
     })
     actualizarFormularioCompra()
     contadorCarrito.innerText = carrito.length
-    precioTotal.innerText = carrito.reduce((acc,prod) => acc + prod.precio * prod.cantidad + montoDestino,0)
+    var montoCarrito = carrito.reduce((acc,prod) => acc + (prod.precio * prod.cantidad),0)
+    precioTotal.innerText = montoCarrito + montoDestino
     if (carrito.length != 0){
         HayProducto = true
         if (existeDestino){
@@ -131,9 +136,13 @@ const seleccionarDestino = () =>{
         selectElement.addEventListener('change', (event) => {
             const resultado = document.getElementById('montoDestino$')
             resultado.innerText = `Monto de entrega: ${event.target.value}`
+            montoDestino = parseInt(event.target.value,10)
+            actualizarCarrito()
         })
     }else{
         document.getElementById('destinoProvincia').remove()
         document.getElementById('seleccionDestino').remove()
+        document.getElementById('montoDestino$').remove()
+        montoDestino = 0
     }
 };

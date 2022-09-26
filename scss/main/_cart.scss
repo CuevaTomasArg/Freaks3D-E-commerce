@@ -5,8 +5,8 @@
         margin-bottom: 64px;
     }
     display:grid;
-    grid-template-columns: 3fr 2fr 2fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: auto; 
     grid-template-areas: 
     "img pro trash "
     "img car trash "
@@ -46,11 +46,13 @@
     label{
         font-weight: 800;
         margin: 12px auto auto 24px;
+        grid-area: cant;
     }
     input{
         grid-area: cant_input;
         width: 32px;
         margin: 8px auto auto 32px ;
+        border: none;
     }
     .price{
         font-size: 1.5rem;

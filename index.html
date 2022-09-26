@@ -209,7 +209,7 @@
                 <img src="../multimedia/logos/logo_general.png"class="modal-title" id="exampleModalLabel">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <section class="modal-body datos-compra">
+              <form class="modal-body datos-compra" action="../php/compra.php" method="post">
                   <div>
                     <div class="compra-final" id="cartaPreFormularioFinal">
                       <!--/CONTENIDO/--> 
@@ -235,7 +235,7 @@
                         <hr> 
                     </div>
                   </div>
-                  <form class="formulario" action="../php/compra.php" method="post">
+                  <div class="formulario">
                     <h1>Formulario de envío</h1>  
                     <h2>Datos de contacto</h2>
                       <div>
@@ -333,10 +333,10 @@
                       <button type="submit">
                           Comprar
                       </button>
-                  </form>
+                  </div>
               </div>
             </div>
-            </section>
+          </form>
           </div>
         </section>
     </main>

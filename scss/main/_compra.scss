@@ -25,6 +25,7 @@ header{
         .carta-compra{
             @extend %flex;
             @extend %flexRow;
+            margin-bottom: 24px;
             img{
                 width: 128px;
             }
@@ -39,11 +40,8 @@ header{
                 justify-items: flex-start;
                 column-gap:24px ;
                 margin-left: 18px;
-                strong{
+                .nomProducto{
                     grid-area: titulo;
-                }
-                .caracter{
-                    grid-area: caracter;
                 }
                 .cant{
                     grid-area: cantidad;
