@@ -130,7 +130,15 @@
             grid-area: formulario;
         }
     }
-    .contact{
+}
+.contact{
+    nav{
+        a:first-child{
+            margin-left: 12px;
+        }
+        margin: 18px;
+    }
+    @media only screen and (min-width:992px) {
         display: grid;
         grid-template-columns: 1fr 1.5fr;
         grid-template-rows: 1fr 6fr;
@@ -141,7 +149,7 @@
         nav{
             grid-area:navC;
             a:first-child{
-                margin-left: 126px;
+                margin-left: 360px;
             }
         }
         article{
@@ -150,7 +158,7 @@
         form{
             grid-area: formC;
             margin-left: 64px;
-        }
+        }   
     }
 }
 .nav-contacto{

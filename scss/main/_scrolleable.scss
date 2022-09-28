@@ -34,26 +34,27 @@
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: 1fr;
         visibility: visible;
-        scroll-snap-type: none;
+        scroll-snap-type:none;
         overflow-x: visible;
         scroll-padding: 0;
         width: auto;
         background-color: transparent;
         >.card{
-            scroll-snap-align:inherit;  
+            scroll-snap-align:none;  
         }
     }
     .caracteristicas-servicio{
         text-align: center;
         svg{
-            margin: 16px;
+            margin: 16px auto;
+        }
+        @media only screen and (min-width:992px){
+            margin: 16px 128px;
+            width: 120%;
         }
     } 
 }
-#caracter-service{
-    grid-template-columns: repeat(3,1fr);
-    margin: 32px auto;
-}
+
 .scrolleable-personalizables{
     @include scroll-x-mandatory (proximity,24px,24px 16px 24px 72px,12px);
     padding: 24px;
@@ -61,5 +62,18 @@
     max-width: 1000px;
     >div{
         max-width:308px
+    }
+}
+.serviceSkills{
+    @media only screen and (min-width:992px){
+        width: 100%;
+        justify-items: center;
+    }
+}
+#caracter-service{
+    @media only screen and (min-width:992px){
+        grid-template-columns: repeat(3,1fr);
+        width: 200%;
+        margin-left:22rem ;
     }
 }

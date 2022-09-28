@@ -69,8 +69,8 @@ let stockFilamento = [
 ]
 
 let stockPresentacion = [
-    {id:3001,nombre:"Galletero Stich",tipo:"masVendido",numtipo:"100",desc:"Galletero impreso en 3D Stich",precio:1600,cantidad:1,img:"../multimedia/fotos/masVendido/CarameleraStich.jpg"},
-    {id:3002,nombre:"filamento marca",tipo:"masVendido",numtipo:"100",desc:"Filamento para impresora 3D",precio:1600,cantidad:1,img:"../multimedia/fotos/masVendido/MateCopaDelMundo.jpg"},
+    {id:3001,nombre:"Galletero Stich",tipo:"masVendido",numtipo:"100",desc:"Galletero impreso en 3D Stich",precio:1600,cantidad:1,img:"../multimedia/fotos/masVendidos/CarameleraStich.jpg"},
+    {id:3002,nombre:"filamento marca",tipo:"masVendido",numtipo:"100",desc:"Filamento para impresora 3D",precio:1600,cantidad:1,img:"../multimedia/fotos/masVendidos/MateCopaDelMundo.jpg"},
     {id:3003,nombre:"Set esponjas Stich",tipo:"presentacion",numTipo:1000,cantidad:1,desc:"Set espojas de stich",precio:6000,personaje:"Stich",img:"../multimedia/fotos/productos/SetEsponjasStich.jpg"},
     {id:3004,nombre:"Mate Spiderman",tipo:"presentacion",numTipo:1000,cantidad:1,desc:"Mate cabeza de spiderman",precio:0000,personaje:"Spiderman",img:"../multimedia/fotos/productos/spiderman.jpg"},
     {id:3005,nombre:"Soporte Joystick mano",tipo:"presentacion",numTipo:2,cantidad:1,desc:"Soporte para celular o joystick en forma de mano impresa en 3D",precio:1200,personaje:"Mano ",img:"../multimedia/fotos/productos/soporte-joystick-mano.jpg"},

@@ -16,10 +16,17 @@
     border-radius: 8px;
     padding:24px;
     gap: $gap;
+    @media only screen and (min-width:992px){
+        scroll-snap-type: none;   
+    }
     >div{
         flex: 0 0 100%;
         padding: $padding ; 
         border-radius: 4px;
         scroll-snap-align: center;
+        @media only screen and (min-width:992px){
+            scroll-snap-align: none;
+            flex: none;
+        }
     }
 }

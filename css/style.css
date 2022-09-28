@@ -651,11 +651,22 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   min-width: 300px;
   max-width: 900px;
 }
+@media only screen and (min-width: 992px) {
+  .scrolleable-cards {
+    scroll-snap-type: none;
+  }
+}
 .scrolleable-cards > div {
   flex: 0 0 100%;
   padding: 24px 16px 24px 72px;
   border-radius: 4px;
   scroll-snap-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .scrolleable-cards > div {
+    scroll-snap-align: none;
+    flex: none;
+  }
 }
 @media only screen and (min-width: 992px) {
   .scrolleable-cards {
@@ -670,19 +681,20 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
     background-color: transparent;
   }
   .scrolleable-cards > .card {
-    scroll-snap-align: inherit;
+    scroll-snap-align: none;
   }
 }
 .scrolleable-cards .caracteristicas-servicio {
   text-align: center;
 }
 .scrolleable-cards .caracteristicas-servicio svg {
-  margin: 16px;
+  margin: 16px auto;
 }
-
-#caracter-service {
-  grid-template-columns: repeat(3, 1fr);
-  margin: 32px auto;
+@media only screen and (min-width: 992px) {
+  .scrolleable-cards .caracteristicas-servicio {
+    margin: 16px 128px;
+    width: 120%;
+  }
 }
 
 .scrolleable-personalizables {
@@ -697,14 +709,40 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   min-width: 300px;
   max-width: 1000px;
 }
+@media only screen and (min-width: 992px) {
+  .scrolleable-personalizables {
+    scroll-snap-type: none;
+  }
+}
 .scrolleable-personalizables > div {
   flex: 0 0 100%;
   padding: 24px 16px 24px 72px;
   border-radius: 4px;
   scroll-snap-align: center;
 }
+@media only screen and (min-width: 992px) {
+  .scrolleable-personalizables > div {
+    scroll-snap-align: none;
+    flex: none;
+  }
+}
 .scrolleable-personalizables > div {
   max-width: 308px;
+}
+
+@media only screen and (min-width: 992px) {
+  .serviceSkills {
+    width: 100%;
+    justify-items: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #caracter-service {
+    grid-template-columns: repeat(3, 1fr);
+    width: 200%;
+    margin-left: 22rem;
+  }
 }
 
 .carta-producto-precompra article .indentidad, .datos-compra .compra-final .carta-compra div, .productos > div {
@@ -1222,25 +1260,34 @@ header img {
     grid-area: formulario;
   }
 }
-.datos-compra .contact {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  grid-template-rows: 1fr 6fr;
-  grid-template-areas: "navC navC" "linkC formC";
-  align-items: flex-start;
+
+.contact nav {
+  margin: 18px;
 }
-.datos-compra .contact nav {
-  grid-area: navC;
+.contact nav a:first-child {
+  margin-left: 12px;
 }
-.datos-compra .contact nav a:first-child {
-  margin-left: 126px;
-}
-.datos-compra .contact article {
-  grid-area: linkC;
-}
-.datos-compra .contact form {
-  grid-area: formC;
-  margin-left: 64px;
+@media only screen and (min-width: 992px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas: "navC navC" "linkC formC";
+    align-items: flex-start;
+  }
+  .contact nav {
+    grid-area: navC;
+  }
+  .contact nav a:first-child {
+    margin-left: 360px;
+  }
+  .contact article {
+    grid-area: linkC;
+  }
+  .contact form {
+    grid-area: formC;
+    margin-left: 64px;
+  }
 }
 
 .nav-contacto {
