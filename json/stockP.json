@@ -1,0 +1,12 @@
+[
+    {"id":1001,"nombre":"Lampara Luna","tipo":"LunasPersonalizables","numTipo":7,"cantidad":1,"desc":"Lampara de luna impresa en 3D","precio":1200,"personaje":"-----","img":"../multimedia/fotos/personalizables/luna-hombres.jpg"    },
+    {"id":1002,"nombre":"Lampara Luna","tipo":"LunasPersonalizables","numTipo":7,"cantidad":1,"desc":"Taza de Elsa rosa impresa en 3D","precio":1200,"personaje":"-----","img":"../multimedia/fotos/personalizables/PLunaConFoto.jpg"    },
+    {"id":1003,"nombre":"Lampara Luna","tipo":"LunasPersonalizables","numTipo":7,"cantidad":1,"desc":"Taza de Elsa rosa impresa en 3D","precio":1200,"personaje":"-----","img":"../multimedia/fotos/personalizables/PLunaRojaConFoto.jpg"    },
+    {"id":1004,"nombre":"Lampara Luna","tipo":"LunasPersonalizables","numTipo":7,"cantidad":1,"desc":"Taza de Elsa rosa impresa en 3D","precio":1200,"personaje":"-----","img":"../multimedia/fotos/personalizables/PSilvaniLuna.jpg"    },
+    {"id":1005,"nombre":"Llavero","tipo":"LlaverosPersonalizables","numTipo":8,"cantidad":1,"desc":"Llavero impreso en 3D","precio":1200,"personaje":"Taza de Elsa","img":"../multimedia/fotos/personalizables/PlLavero.jpg"    },
+    {"id":1006,"nombre":"Llavero","tipo":"LlaverosPersonalizables","numTipo":8,"cantidad":1,"desc":"Llavero impreso en 3D","precio":1200,"personaje":"Taza de Elsa","img":"../multimedia/fotos/personalizables/PlLavero2.jpg"    },
+    {"id":1007,"nombre":"Llavero","tipo":"LlaverosPersonalizables","numTipo":8,"cantidad":1,"desc":"Llavero impreso en 3D","precio":1200,"personaje":"Taza de Elsa","img":"../multimedia/fotos/personalizables/PlLavero3.jpg"    },
+    {"id":1008,"nombre":"Llavero","tipo":"LlaverosPersonalizables","numTipo":8,"cantidad":1,"desc":"Llavero impreso en 3D","precio":1200,"personaje":"Taza de Elsa","img":"../multimedia/fotos/personalizables/PlLaveroBahamasRopa.jpg"    },
+    {"id":1009,"nombre":"Mate","tipo":"MatesPersonalizables","numTipo":9,"cantidad":1,"desc":"Taza de Elsa rosa impresa en 3D","precio":1200,"personaje":"Taza de Elsa","img":"../multimedia/fotos/personalizables/PMate.jpg"    },
+    {"id":1009,"nombre":"Mate","tipo":"MatesPersonalizables","numTipo":9,"cantidad":1,"desc":"Taza de Elsa rosa impresa en 3D","precio":1200,"personaje":"Taza de Elsa","img":"../multimedia/fotos/personalizables/PMate.jpg"    }
+]

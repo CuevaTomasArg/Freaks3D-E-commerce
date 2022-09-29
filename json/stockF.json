@@ -1,0 +1,10 @@
+[
+    {"id":2001,"nombre":"filamento marca","tipo":"F3n3","numtipo":"100","desc":"Filamento para impresora 3D", "color":"blanco","precio":1600,"cantidad":1,"img":"../multimedia/fotos/filamentos/3n3Amarillo.png"},
+    {"id":2002,"nombre":"filamento marca","tipo":"F3n3","numtipo":"100","desc":"Filamento para impresora 3D", "color":"negro","precio":1600,"cantidad":1,"img":"../multimedia/fotos/filamentos/3n3Amarillo.png"},
+    {"id":2003,"nombre":"filamento marca","tipo":"F3n3","numtipo":"100","desc":"Filamento para impresora 3D", "color":"verde","precio":1600,"cantidad":1,"img":"../multimedia/fotos/filamentos/3n3Amarillo.png"},
+    {"id":2004,"nombre":"filamento marca","tipo":"F3n3","numtipo":"100","desc":"Filamento para impresora 3D", "color":"amarillo","precio":1600,"cantidad":1,"img":"../multimedia/fotos/filamentos/3n3Amarillo.png"},
+    {"id":2005,"nombre":"filamento marca","tipo":"F3n3","numtipo":"100","desc":"Filamento para impresora 3D", "color":"lila","precio":1600,"cantidad":1,"img":"../multimedia/fotos/filamentos/3n3Amarillo.png"},
+    {"id":2006,"nombre":"filamento marca","tipo":"FGrilon3","numtipo":"100","desc":"Filamento para impresora 3D", "color":"lila","precio":1600,"cantidad":1,"img":"../multimedia/fotos/filamentos/3n3Amarillo.png"},
+    {"id":2007,"nombre":"filamento marca","tipo":"FGrilon3","numtipo":"100","desc":"Filamento para impresora 3D", "color":"lila","precio":1600,"cantidad":1,"img":"../multimedia/fotos/filamentos/3n3Amarillo.png"},
+    {"id":2008,"nombre":"filamento marca","tipo":"FGrilon3","numtipo":"100","desc":"Filamento para impresora 3D", "color":"lila","precio":1600,"cantidad":1,"img":"../multimedia/fotos/filamentos/3n3Amarillo.png"}
+]

@@ -1,3 +1,36 @@
+
+// //Todo esto es para leer el json que tengo de stock
+// document.addEventListener('DOMContentLoaded',()=>{
+//     fetchData()
+// } )
+
+// //let stockProductos = []
+// let stockPresentacion = []
+// //let stockPersonalizables = []
+// //let stockFilamento = []
+
+// const fetchData = async() =>{
+//     try{
+//         //const pro = await fetch("../json/stock.json")
+//         const pre = await fetch("../json/stockIndex.json")
+//         //const per = await fetch("../json/stockP.json")
+//         //const fil = await fetch("../json/stockF.json")
+        
+//         //stockProductos = await pro.json()
+//         stockPresentacion = await pre.json()
+//         //stockPersonalizables = await per.json()
+//         //stockFilamento = await fil.json()
+//         //console.log(stockProductos)
+//         console.log(stockPresentacion)
+//         //console.log(stockPersonalizables)
+//         //console.log(stockFilamento)
+//     } catch(error){
+//         console.log(error)
+//     }
+// }
+
+
+
 //Funcion para ordenar los arrays para poder agregarlos desordenadamente sin problema
 function ordenar_por_insercion(Arr,dimL){
     var actual = null
@@ -11,8 +44,8 @@ function ordenar_por_insercion(Arr,dimL){
     }
 }
 
+
 let stockProductos = [
-    //Mates
     {id:3,nombre:"Mate Copa Del Mundo",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate de la copa del mundo",precio:2400,personaje:"Copa del mundo",img:"../multimedia/fotos/masVendidos/MateCopaDelMundo.jpg"},
     {id:4,nombre:"Dragob Ball Z",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate con el simbolo de la escuela de goku",precio:0000,personaje:"Mate dragon ball Z",img:"../multimedia/fotos/productos/MateDragonBall.jpg"},
     {id:5,nombre:"Elsa",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate de Elsa Frozen",precio:0000,personaje:"Elsa",img:"../multimedia/fotos/productos/mateEslsa.jpg"},

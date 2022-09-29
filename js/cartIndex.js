@@ -1,18 +1,4 @@
 
-//Todo esto es para leer el json que tengo de stock
-// document.addEventListener('DOMContentLoaded',()=>{
-//     fetchData()
-// } )
-
-// const fetchData = async() =>{
-//     try{
-//         const res = await fetch("../json/stock.json")
-//         const data = await res.json()
-//         console.log(data)
-//     } catch(error){
-//         console.log(error)
-//     }
-// }
 
 stockPresentacion.forEach((producto) =>{
     const contenedorPresentacion = document.getElementById(`${producto.tipo}`) 
