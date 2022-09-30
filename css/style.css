@@ -1540,4 +1540,11 @@ header img {
   margin: 12px 0 0 0;
 }
 
+.agradecimiento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=style.css.map */

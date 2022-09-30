@@ -19,7 +19,7 @@
     <nav class="navbar bg-light fixed-top">
         <div class="container-fluid">
             <button class="cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                <i class="bi bi-cart3" id="contadorCarrito">0</i>
+                <i class="bi bi-cart3" id="contadorCarrito"></i>
             </button>
             <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                 <div class="offcanvas-header">
@@ -167,7 +167,7 @@
                 <img src="../multimedia/logos/logo_general.png"class="modal-title" id="exampleModalLabel">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <section class="modal-body datos-compra">
+              <form class="modal-body datos-compra" action="../php/compra.php" method="post">
                   <div>
                     <div class="compra-final" id="cartaPreFormularioFinal">
                       <!--/CONTENIDO/--> 
@@ -184,16 +184,16 @@
                     </div>
                     <div class="carta-envio">
                         <strong>Envio</strong>
-                        <p>$XXXX,XX</p>
+                        <p id="montoDelDestino"></p>
                         <hr> 
                     </div>
                     <div class="monto-total">
                          <strong>Total</strong>
-                        <p>$XXXX,XX</p>
+                        <p>$ <span id="precioTotalForm"></span> </p>
                         <hr> 
                     </div>
                   </div>
-                  <form class="formulario" action="../php/compra.php" method="post">
+                  <div class="formulario">
                     <h1>Formulario de envío</h1>  
                     <h2>Datos de contacto</h2>
                       <div>
@@ -223,9 +223,9 @@
                               <input type="text" name="dpto">
                           </div>
                       </div>
-                      <div> <!-- Hacer que dentro de este campo se genere donde es el pais de la persona para confirmar de donde es-->
+                      <!--<div>  Hacer que dentro de este campo se genere donde es el pais de la persona para confirmar de donde es
                           <label for="provincia-destino">Provincia</label>
-                          <!-- <select name="provincia-destino">
+                           <select name="provincia-destino">
                               <option value="Buenos Aires">Buenos Aires</option>
                               <option value="CABA - Ciudad Autonoma de Buenos Aires">CABA - Ciudad Autonoma de Buenos Aires</option>
                               <option value="Catamarca">Catamarca</option>
@@ -250,8 +250,8 @@
                               <option value="Santiago del Estero">Santiago del Estero</option>
                               <option value="Tierra del Fuego, Antártida a islas del Atlántico Sur">Tierra del Fuego, Antártida a islas del Atlántico Sur</option>
                               <option value="Tucumán">Tucumán</option>
-                            </select> -->
-                      </div>
+                            </select> 
+                      </div>-->
                       <div>
                           <label for="">Localidad</label>
                           <input type="text" name="localidad">
@@ -288,13 +288,20 @@
                               <input type="text" name="transaccion">
                           </div>
                       </div>
+                      <div id="dataEnviar">
+                        <!-- <input readonly onmousedownn="return false;" name="nomProd" type="text" value="">
+                        <input readonly onmousedownn="return false;" name="cantProd" type="hidden" value="" >
+                        <input readonly onmousedownn="return false;" name="priceProd" type="hidden" value=""> -->
+                      </div>
                       <button type="submit">
                           Comprar
                       </button>
-                  </form>
+                  </div>
               </div>
             </div>
-            </section>
+          </form>
+          </div>
+        </section>
           </div>
         </section>
     </main>

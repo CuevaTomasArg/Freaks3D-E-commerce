@@ -10,12 +10,16 @@ $ciudad=$_POST["localidad"];
 $postalCod=$_POST["codP"];
 $comprobante=$_POST["comprobante"];
 $CodTransaccion=$_POST["transaccion"];
+$produtoCantidad=$_POST["productos"];
+
+
 
 $mensaje="Datos de envío" . "\r\n" . "nombre:" . $nombre . "\r\n";
 $mensaje="Email:" . $email . "\r\n" . "Calle donde vive:" . $street . "-" . $num . "\r\n";
 $mensaje="Departamento:" . $departamento . "\r\n" . "Localidad:" . $ciudad. "\r\n";
 $mensaje="Codigo postal:" . $postalCod . "\r\n" . "Comprobante:" . $comprobante. "\r\n";
-$mensaje="Codigo de transacción:" . $CodTransaccion;
+$mensaje="Codigo de transacción:" . $CodTransaccion."\r\n";
+$mensaje="Estos son los productos que pagó: ". $produtoCantidad;
 
 $Asunto="Pedido de compra";
 

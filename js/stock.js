@@ -140,6 +140,10 @@ const contenedorCardsComrpa = document.getElementById("cartaPreFormularioFinal")
 //Contador del carrito
 const contadorCarrito = document.getElementById('contadorCarrito')
 const precioTotal = document.getElementById('precioTotal')
+const precioTotalForm = document.getElementById('precioTotalForm')
+const montoDelDestino = document.getElementById('montoDelDestino')
+
+
 
 //Se inicializa variable para saber si hay productos en el carrito
 var HayProducto = null
