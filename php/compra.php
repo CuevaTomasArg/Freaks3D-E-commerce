@@ -3,7 +3,6 @@ $nombre=$_POST["nombre"];
 $email=$_POST["email"];
 $celular=$_POST["celular"];
 $street=$_POST["street"];
-$num=$_POST["num"];
 $prov=$_POST["prov"];
 $departamento=$_POST["dpto"];
 $ciudad=$_POST["localidad"];
@@ -15,7 +14,8 @@ $produtoCantidad=$_POST["productos"];
 
 
 $mensaje="Datos de envío" . "\r\n" . "nombre:" . $nombre . "\r\n";
-$mensaje="Email:" . $email . "\r\n" . "Calle donde vive:" . $street . "-" . $num . "\r\n";
+$mensaje="Email: " . $email . "\r\n" . "Calle donde vive:" . $street .  "\r\n";
+$mensaje="Provincia: " . $prov .  "\r\n";
 $mensaje="Departamento:" . $departamento . "\r\n" . "Localidad:" . $ciudad. "\r\n";
 $mensaje="Codigo postal:" . $postalCod . "\r\n" . "Comprobante:" . $comprobante. "\r\n";
 $mensaje="Codigo de transacción:" . $CodTransaccion."\r\n";

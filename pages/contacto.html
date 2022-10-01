@@ -156,20 +156,10 @@
                 <img src="../multimedia/logos/logo_general.png"class="modal-title" id="exampleModalLabel">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <form class="modal-body datos-compra" action="../php/compra.php" method="post">
+              <form class="modal-body datos-compra" action="php/compra.php" method="post">
                   <div>
                     <div class="compra-final" id="cartaPreFormularioFinal">
-                      <!--/CONTENIDO/--> 
-                      <!-- <div class="carta-compra">
-                            <img src="../multimedia/fotos/filamentos/3n3-petg-azul-11-87fd1bebfcd55e8ed616357828055893-640-0.jpg" alt="">
-                            <div>
-                                <strong>Producto</strong>
-                                <p class="caracter">Caracter</p>
-                                <p class="cant">x N</p>
-                                <p class="monto">$XXXX,XX</p>
-                            </div>
-                            <hr>
-                        </div> -->
+                      <!--/CONTENIDO DEL CARRITO/--> 
                     </div>
                     <div class="carta-envio">
                         <strong>Envio</strong>
@@ -200,47 +190,15 @@
                       <h2>Información de la entrega</h2>
                       <div class="datos-vivienda">
                           <div class="calle">
-                              <label for="">Calle</label>
+                              <label for="street">Domicilio</label>
                               <input type="text" name="street">
-                          </div>
-                          <div class="altura">
-                              <label for="">Altura</label>
-                              <input type="text" name="num">
                           </div>
                           <div class="dpto">
                               <label for="">Depto</label>
                               <input type="text" name="dpto">
                           </div>
                       </div>
-                      <!--<div>  Hacer que dentro de este campo se genere donde es el pais de la persona para confirmar de donde es
-                          <label for="provincia-destino">Provincia</label>
-                           <select name="provincia-destino">
-                              <option value="Buenos Aires">Buenos Aires</option>
-                              <option value="CABA - Ciudad Autonoma de Buenos Aires">CABA - Ciudad Autonoma de Buenos Aires</option>
-                              <option value="Catamarca">Catamarca</option>
-                              <option value="Chaco">Chaco</option>
-                              <option value="Chubut">Chubut</option>
-                              <option value="Córdoba">Córdoba</option>
-                              <option value="Corrientes">Corrientes</option>
-                              <option value="Entre Ríos">Entre Ríos</option>
-                              <option value="Formoza">Formoza</option>
-                              <option value="Jujuy">Jujuy</option>
-                              <option value="La Pampa">La Pampa</option>
-                              <option value="La Rioja">La Rioja</option>
-                              <option value="Mendoza">Mendoza</option>
-                              <option value="Misiones">Misiones</option>
-                              <option value="Neuquen">Neuquen</option>
-                              <option value="Río Negro">Río Negro</option>
-                              <option value="Salta">Salta</option>
-                              <option value="San Juan">San Juan</option>
-                              <option value="San Luis">San Luis</option>
-                              <option value="Santa Cruz">Santa Cruz</option>
-                              <option value="Santa Fe">Santa Fe</option>
-                              <option value="Santiago del Estero">Santiago del Estero</option>
-                              <option value="Tierra del Fuego, Antártida a islas del Atlántico Sur">Tierra del Fuego, Antártida a islas del Atlántico Sur</option>
-                              <option value="Tucumán">Tucumán</option>
-                            </select> 
-                      </div>-->
+                           <input type="hidden" name="prov">
                       <div>
                           <label for="">Localidad</label>
                           <input type="text" name="localidad">
@@ -278,19 +236,15 @@
                           </div>
                       </div>
                       <div id="dataEnviar">
-                        <!-- <input readonly onmousedownn="return false;" name="nomProd" type="text" value="">
-                        <input readonly onmousedownn="return false;" name="cantProd" type="hidden" value="" >
-                        <input readonly onmousedownn="return false;" name="priceProd" type="hidden" value=""> -->
+                        <!--AQUI DENTRO VA LA INFORMACION DE LOS PRODUCTOS ELEGIDOS DENTRO DEL CARRITO GENERADA EN APP.JS-->
                       </div>
-                      <button type="submit">
+                      <button onclick="ejecutarCompra()" id="ejecutarCompra" type="submit" >
                           Comprar
                       </button>
                   </div>
-              </div>
+              </form>
             </div>
           </form>
-          </div>
-        </section>
           </div>
         </section>
     </main>

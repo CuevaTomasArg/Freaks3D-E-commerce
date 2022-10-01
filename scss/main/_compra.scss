@@ -75,6 +75,8 @@ header{
     text-align: center;
     @media only screen and (min-width:992px){
         max-width: 600px;
+        margin-left: 0;
+        margin-right: auto;
     }
     div{
         display: inline-block;
@@ -113,21 +115,14 @@ header{
             @extend %flexColumn;
         }
         .calle{
-            width: 156px;
+            width: 216px;
             margin: 0;
             input{
                 width:125%
             }
         }
-        .altura{
-            margin: auto 4rem;
-            width: 91px;
-            input{
-                width: 100%;
-            }
-        }
         .dpto{
-            margin:0;
+            margin:0 auto 0 90px;
             width: 128px;
         }
     }

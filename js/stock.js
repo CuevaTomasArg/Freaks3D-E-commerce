@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizarCarrito()
+    }
+})
+
+
 
 // //Todo esto es para leer el json que tengo de stock
 // document.addEventListener('DOMContentLoaded',()=>{
@@ -155,7 +163,3 @@ var compraTotal = []
 //inicializada en null, ya que en false, va a eliminar lo que se creo luego de ser true dentro de una funcion
 //----CONTENEDOR GLOBAL DE PRODUCTOS----------
 const contenedorProductos = document.getElementById('stock')
-
-
-//creo el carrito
-let carrito = []

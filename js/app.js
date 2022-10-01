@@ -1,11 +1,8 @@
 
 //Funcion para que quede guardado el carrito
- document.addEventListener('DOMContentLoaded', () => {
-     if (localStorage.getItem('carrito')){
-         carrito = JSON.parse(localStorage.getItem('carrito'))
-         actualizarCarrito()
-     }
- })
+
+//creo el carrito
+let carrito = []
 
 const agregarAlCarrito = (prodId) => {
     //Algoritmo para no repetir elementos en al array
@@ -34,7 +31,6 @@ const agregarAlCarrito = (prodId) => {
                 }
         
     
-    console.log(carrito)
     compraTotal = carrito
 
 }
@@ -76,6 +72,7 @@ const actualizarFormularioCompra = () => {
 
 //Funcion para crear las cositas en el carrito
 const actualizarCarrito = ()=> {
+    console.log(carrito)
     contenedorCarrito.innerHTML = ""
     carrito.forEach((prod) => {
         const div = document.createElement('div')
@@ -151,7 +148,17 @@ const seleccionarDestino = () =>{
     }
 };
 
-const ejecutarCompra = document.getElementById('ejecutarCompra')
-    ejecutarCompra.addEventListener('click',() => {
-        carrito = []
-    })
+
+const ejecutarCompra = () =>{
+    console.log("El carrito tiene", carrito.length, "elementos")
+    carrito = []
+    console.log("elimine el carrito madafucer")
+    actualizarCarrito()
+}
+
+// const ejecutarCompra = document.getElementById('ejecutarCompra')
+//     console.log("El carrito tiene", carrito.length, "elementos")
+//     ejecutarCompra.addEventListener('click',() => {
+//         carrito = []
+//         console.log("elimine el carrito madafucer")
+//     })

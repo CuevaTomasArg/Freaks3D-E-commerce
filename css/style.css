@@ -977,6 +977,8 @@ header img {
 @media only screen and (min-width: 992px) {
   .formulario {
     max-width: 600px;
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 .formulario div {
@@ -1011,21 +1013,14 @@ header img {
   flex-wrap: wrap;
 }
 .formulario .datos-vivienda .calle {
-  width: 156px;
+  width: 216px;
   margin: 0;
 }
 .formulario .datos-vivienda .calle input {
   width: 125%;
 }
-.formulario .datos-vivienda .altura {
-  margin: auto 4rem;
-  width: 91px;
-}
-.formulario .datos-vivienda .altura input {
-  width: 100%;
-}
 .formulario .datos-vivienda .dpto {
-  margin: 0;
+  margin: 0 auto 0 90px;
   width: 128px;
 }
 .formulario h2 {
