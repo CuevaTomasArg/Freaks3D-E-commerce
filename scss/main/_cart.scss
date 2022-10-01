@@ -48,11 +48,30 @@
         margin: 12px auto auto 24px;
         grid-area: cant;
     }
-    input{
+    .CantidadDeProd{
         grid-area: cant_input;
-        width: 32px;
-        margin: 8px auto auto 32px ;
-        border: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "C up"
+        "C down" ;
+        input{
+            grid-area: C;
+            width: 32px;
+            margin: 24px auto auto 32px ;
+            border: none;
+        }
+        .aum{
+            grid-area: up;
+        }
+        .dis{
+            grid-area: down;
+        }
+        button{
+            height: 4px;
+            display: inline-block;
+        }
     }
     .price{
         font-size: 1.5rem;

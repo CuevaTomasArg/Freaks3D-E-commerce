@@ -1,4 +1,4 @@
-const dropDowns = document.querySelectorAll(".text-select");
+const dropDowns = document.querySelectorAll(".text-select")
 dropDowns.forEach((dropDown, index) => {
     dropDown.addEventListener("click", handleOnClickDropDown);
 });

@@ -53,6 +53,12 @@ ul{
 a,i{
     text-decoration: none;
     color: $links;
+    font-size:medium;
+    font-weight: 300;
+    &:hover{
+        color: darken($links, 40%);
+        font-weight: 500;
+    }
 }
 h1,h2,h3,h4,h5,h6{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

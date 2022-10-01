@@ -45,6 +45,20 @@ const eliminarDelCarrito = (prodId) => {
     carrito.splice(indice,1)
     actualizarCarrito()
 };
+const aumentarCant = (prodId) =>{
+    const item = carrito.find((prod)=> prod.id === prodId)
+    const indice = carrito.indexOf(item)
+    carrito[indice].cantidad ++
+    actualizarCarrito()
+}
+const disminuirCant = (prodId) =>{
+    const item = carrito.find((prod)=> prod.id === prodId)
+    const indice = carrito.indexOf(item)
+    if(carrito[indice].cantidad > 1){
+        carrito[indice].cantidad --
+        actualizarCarrito()
+    }
+}
 
 const actualizarFormularioCompra = () => {
     contenedorCardsComrpa.innerHTML = ""
@@ -84,7 +98,15 @@ const actualizarCarrito = ()=> {
             <i class="bi bi-trash3"></i>
         </button>
         <label for="Cant" id="cantidad">Cantidad</label>
-        <input readonly onmousedownn="return false;" name="Cant" type="number" value="${prod.cantidad}" >
+        <div class="CantidadDeProd">
+            <input readonly onmousedownn="return false;" name="Cant" type="number" value="${prod.cantidad}" >
+            <button class="aum" onclick="aumentarCant(${prod.id})">
+                <i class="bi bi-chevron-up"></i>
+            <button>
+            <button class="dis" onclick="disminuirCant(${prod.id})">
+                <i class="bi bi-chevron-down"></i>
+            <button>
+        </div>
         <p class="price">${prod.precio * prod.cantidad}</p>
         <hr>
         `

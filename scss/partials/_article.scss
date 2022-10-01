@@ -1,5 +1,30 @@
 @import "../base/var";
 @import "extends";
+#indiceProductos{
+    display: inline-block;
+    margin: 12px 0px;
+    position: absolute;
+    left: 24px;
+    top: 300px;
+    @media only screen and (max-width:992px){
+        display: none;
+    }
+    dl{
+        width: 300px;
+        background-color:#fff ;
+        border-radius: 4px;
+        dd,dt{
+            height: 24px;
+        }
+        dt{
+            margin: 32px 32px;
+        }
+        dd{
+            margin: 32px 64px;
+        }
+    }
+}
+
 .drop-down * {
     box-sizing: border-box;
 }
@@ -7,13 +32,12 @@
     position: relative;
     margin: 32px 12px 32px auto;
     @media only screen and (min-width:992px){
-        display: inline-block;
-        margin: 12px 0px;
-        position: sticky;
-        left: 32px;
-        top: 300px;
-        bottom: 200px;
-        margin-left: 64px;
+        display: none;
+    }
+}
+.text-select{
+    @media only screen and (min-width:992px){
+        display: none;
     }
 }
 .drop-down .text-select {
@@ -44,9 +68,6 @@
 .drop-down .menu-select {
     width: 250px;
     user-select: none;
-    @media only screen and (min-width:992px){
-        width: 300px;
-    }
 }
 .drop-down .menu-select ul {
     background-color: #fff;

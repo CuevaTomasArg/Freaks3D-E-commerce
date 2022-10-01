@@ -65,6 +65,12 @@ ul {
 a, i {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.55);
+  font-size: medium;
+  font-weight: 300;
+}
+a:hover, i:hover {
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 500;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -261,11 +267,28 @@ header .container-fluid .offcanvas-end .producto-en-carrito label {
   margin: 12px auto auto 24px;
   grid-area: cant;
 }
-header .container-fluid .offcanvas-end .producto-en-carrito input {
+header .container-fluid .offcanvas-end .producto-en-carrito .CantidadDeProd {
   grid-area: cant_input;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "C up" "C down";
+}
+header .container-fluid .offcanvas-end .producto-en-carrito .CantidadDeProd input {
+  grid-area: C;
   width: 32px;
-  margin: 8px auto auto 32px;
+  margin: 24px auto auto 32px;
   border: none;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito .CantidadDeProd .aum {
+  grid-area: up;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito .CantidadDeProd .dis {
+  grid-area: down;
+}
+header .container-fluid .offcanvas-end .producto-en-carrito .CantidadDeProd button {
+  height: 4px;
+  display: inline-block;
 }
 header .container-fluid .offcanvas-end .producto-en-carrito .price {
   font-size: 1.5rem;
@@ -1098,6 +1121,33 @@ header img {
   border-color: white;
 }
 
+#indiceProductos {
+  display: inline-block;
+  margin: 12px 0px;
+  position: absolute;
+  left: 24px;
+  top: 300px;
+}
+@media only screen and (max-width: 992px) {
+  #indiceProductos {
+    display: none;
+  }
+}
+#indiceProductos dl {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+#indiceProductos dl dd, #indiceProductos dl dt {
+  height: 24px;
+}
+#indiceProductos dl dt {
+  margin: 32px 32px;
+}
+#indiceProductos dl dd {
+  margin: 32px 64px;
+}
+
 .drop-down * {
   box-sizing: border-box;
 }
@@ -1108,13 +1158,13 @@ header img {
 }
 @media only screen and (min-width: 992px) {
   .drop-down {
-    display: inline-block;
-    margin: 12px 0px;
-    position: sticky;
-    left: 32px;
-    top: 300px;
-    bottom: 200px;
-    margin-left: 64px;
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .text-select {
+    display: none;
   }
 }
 
@@ -1150,11 +1200,6 @@ header img {
 .drop-down .menu-select {
   width: 250px;
   user-select: none;
-}
-@media only screen and (min-width: 992px) {
-  .drop-down .menu-select {
-    width: 300px;
-  }
 }
 
 .drop-down .menu-select ul {
