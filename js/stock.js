@@ -55,58 +55,78 @@ function ordenar_por_insercion(Arr,dimL){
 
 let stockProductos = [
     {id:3,nombre:"Mate Copa Del Mundo",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate de la copa del mundo",precio:2400,personaje:"Copa del mundo",img:"../multimedia/fotos/masVendidos/MateCopaDelMundo.jpg"},
-    {id:4,nombre:"Dragob Ball Z",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate con el simbolo de la escuela de goku",precio:0000,personaje:"Mate dragon ball Z",img:"../multimedia/fotos/productos/MateDragonBall.jpg"},
-    {id:5,nombre:"Elsa",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate de Elsa Frozen",precio:0000,personaje:"Elsa",img:"../multimedia/fotos/productos/mateEslsa.jpg"},
-    {id:6,nombre:"Spiderman",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate cabeza de spiderman",precio:0000,personaje:"Spiderman",img:"../multimedia/fotos/productos/spiderman.jpg"},
-    {id:7,nombre:"Stich Cabeza",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate de la cabeza de stich",precio:0000,personaje:"stich",img:"../multimedia/fotos/productos/MateSticht.jpg"},
-    {id:8,nombre:"Baby Yoda",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate cabeza de Baby Yoda",precio:0000,personaje:"Baby Yoda",img:"../multimedia/fotos/productos/mateBabyYoda.jpg"},
+    {id:4,nombre:"Dragob Ball Z",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate con el simbolo de la escuela de goku",precio:1200,personaje:"Mate dragon ball Z",img:"../multimedia/fotos/productos/MateDragonBall.jpg"},
+    {id:5,nombre:"Elsa",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate de Elsa Frozen",precio:1600,personaje:"Elsa",img:"../multimedia/fotos/productos/mateEslsa.jpg"},
+    {id:6,nombre:"Spiderman",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate cabeza de spiderman",precio:1600,personaje:"Spiderman",img:"../multimedia/fotos/productos/spiderman.jpg"},
+    {id:7,nombre:"Stich Cabeza",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate de la cabeza de stich",precio:1200,personaje:"stich",img:"../multimedia/fotos/productos/MateSticht.jpg"},
+    {id:8,nombre:"Baby Yoda",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate cabeza de Baby Yoda",precio:1500,personaje:"Baby Yoda",img:"../multimedia/fotos/productos/mateBabyYoda.jpg"},
     {id:10,nombre:"Llaveros Buda",tipo:"Figura",numTipo:3,cantidad:1,desc:"Llaveros de buda impresos en 3D",precio:1100,personaje:"Buda",img:"../multimedia/fotos/productos/BudasChiquitos.jpg"},
     {id:11,nombre:"Llaveros Buda Adulto",tipo:"Figura",numTipo:3,cantidad:1,desc:"Llavero de buda impreso en 3D",precio:2400,personaje:"Bda",img:"../multimedia/fotos/productos/Budas.jpg"},
-    {id:12,nombre:"Steve",tipo:"Figura",numTipo:2,cantidad:1,desc:"Minecraft Steve figura impresa en 3D",precio:2400,personaje:"Steve",img:"../multimedia/fotos/productos/FiguraMinecraft.jpg"},
+    {id:12,nombre:"Steve",tipo:"Figura",numTipo:2,cantidad:1,desc:"Minecraft Steve figura impresa en 3D",precio:1700,personaje:"Steve",img:"../multimedia/fotos/productos/FiguraMinecraft.jpg"},
     {id:13,nombre:"Soporte Joystick mano",tipo:"Figura",numTipo:2,cantidad:1,desc:"Soporte para celular o joystick en forma de mano impresa en 3D",precio:1200,personaje:"Mano ",img:"../multimedia/fotos/productos/soporte-joystick-mano.jpg"},
     {id:9,nombre:"Camiones",tipo:"Figura",numTipo:2,cantidad:1,desc:"Camiones dibujito",precio:1000,personaje:"Impresion en 3D de personaje infantil",img:"../multimedia/fotos/productos/Camiones.jpg"},
     {id:1,nombre:"Mate Buda",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate de buda",precio:1000,personaje:"Mate cabeza de Buda",img:"../multimedia/fotos/productos/Buda.png"},
     {id:2,nombre:"Mate Pug",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate de cabeza de un perro",precio:1100,personaje:"Perro de raza Pug",img:"../multimedia/fotos/productos/MatePugPerro.jpg"},
     {id:14,nombre:"Bob Esponja",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero Bob esponja impresa en 3D",precio:1200,personaje:"Bob Esponja",img:"../multimedia/fotos/productos/set_Matero_bob_esponja.jpg"},
     {id:15,nombre:"Boca Junior",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero Boca Junior impresa en 3D",precio:1200,personaje:"Club Boca Junior",img:"../multimedia/fotos/productos/SetMateroBocaJunior.jpg"},
-    {id:16,nombre:"Fernet",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero Fernet impresa en 3D",precio:1200,personaje:"Fernet",img:"../multimedia/fotos/productos/SetMateroFernet.jpg"},
-    {id:17,nombre:"Groot",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero Groot impresa en 3D",precio:1200,personaje:"Groot",img:"../multimedia/fotos/productos/SetMateroGroot.jpg"},
+    {id:16,nombre:"Fernet",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero Fernet impresa en 3D",precio:2950,personaje:"Fernet",img:"../multimedia/fotos/productos/SetMateroFernet.jpg"},
+    {id:17,nombre:"Groot",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero Groot impresa en 3D",precio:2600,personaje:"Groot",img:"../multimedia/fotos/productos/SetMateroGroot.jpg"},
     {id:18,nombre:"Harry Potter",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero Harry Potter impresa en 3D",precio:1200,personaje:"Harry Potter",img:"../multimedia/fotos/productos/SetMateroHarryPotter.jpg"},
     {id:19,nombre:"Independiente",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero Independiente impresa en 3D",precio:1200,personaje:"Independiente",img:"../multimedia/fotos/productos/SetMateroIndependiente.jpg"},
     {id:20,nombre:"Independiente",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero Independiente impresa en 3D",precio:1200,personaje:"Independiente",img:"../multimedia/fotos/productos/SetMateroIndependiente.jpg"},
-    {id:21,nombre:"La bella y la bestia",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero La bella y la bestia impresa en 3D",precio:1200,personaje:"La bella y la bestia",img:"../multimedia/fotos/productos/SetMateroLaBellaYLaBestia.jpg"},
+    {id:21,nombre:"La bella y la bestia",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero La bella y la bestia impresa en 3D",precio:3300,personaje:"La bella y la bestia",img:"../multimedia/fotos/productos/SetMateroLaBellaYLaBestia.jpg"},
     {id:22,nombre:"River Plate",tipo:"SetMatero",numTipo:3,cantidad:1,desc:"Set Matero River Plate impresa en 3D",precio:1200,personaje:"River Plate",img:"../multimedia/fotos/productos/SeTMateroRiver.jpg"},
-    {id:23,nombre:"Homero Simpson",tipo:"Esponjas",numTipo:4,cantidad:1,desc:"Porta esponjas Homero Simpson impresa en 3D",precio:1200,personaje:"Homero Simpson",img:"../multimedia/fotos/productos/PortaEsponjasHomeroSimpson.jpg"},
-    {id:24,nombre:"Bob Esponja",tipo:"Esponjas",numTipo:4,cantidad:1,desc:"Set esponjas Bob Esponja impresa en 3D",precio:1200,personaje:"Bob Esponja",img:"../multimedia/fotos/productos/set_esponjas_Bob_Esponja.jpg"},
-    {id:25,nombre:"Mickey Mouse",tipo:"Esponjas",numTipo:4,cantidad:1,desc:"Set esponjas Mickey Mouse impresa en 3D",precio:1200,personaje:"Mickey Mouse",img:"../multimedia/fotos/productos/SetEsponjasMickieMouse.jpg"},
-    {id:26,nombre:"Stich rosa",tipo:"Esponjas",numTipo:4,cantidad:1,desc:"Set esponjas Stich rosa impresa en 3D",precio:1200,personaje:"Stich rosa",img:"../multimedia/fotos/productos/SetEsponjasStichRosa.jpg"},
-    {id:27,nombre:"Roberto Plant",tipo:"Macetas",numTipo:5,cantidad:1,desc:"Maceta Roberto Plant rosa impresa en 3D",precio:1200,personaje:"Roberto Plant",img:"../multimedia/fotos/productos/RobertPlant.jpg"},
+    {id:23,nombre:"Homero Simpson",tipo:"Esponjas",numTipo:4,cantidad:1,desc:"Porta esponjas Homero Simpson impresa en 3D",precio:600,personaje:"Homero Simpson",img:"../multimedia/fotos/productos/PortaEsponjasHomeroSimpson.jpg"},
+    {id:24,nombre:"Bob Esponja",tipo:"Esponjas",numTipo:4,cantidad:1,desc:"Set esponjas Bob Esponja impresa en 3D",precio:2300,personaje:"Bob Esponja",img:"../multimedia/fotos/productos/set_esponjas_Bob_Esponja.jpg"},
+    {id:25,nombre:"Mickey Mouse",tipo:"Esponjas",numTipo:4,cantidad:1,desc:"Set esponjas Mickey Mouse impresa en 3D",precio:2300,personaje:"Mickey Mouse",img:"../multimedia/fotos/productos/SetEsponjasMickieMouse.jpg"},
+    {id:26,nombre:"Stich rosa",tipo:"Esponjas",numTipo:4,cantidad:1,desc:"Set esponjas Stich rosa impresa en 3D",precio:2300,personaje:"Stich rosa",img:"../multimedia/fotos/productos/SetEsponjasStichRosa.jpg"},
+    {id:27,nombre:"Robert Plant",tipo:"Macetas",numTipo:5,cantidad:1,desc:"Maceta Roberto Plant rosa impresa en 3D",precio:600,personaje:"Roberto Plant",img:"../multimedia/fotos/productos/RobertPlant.jpg"},
     {id:28,nombre:"Macetas griegas",tipo:"Macetas",numTipo:5,cantidad:1,desc:"Maceta Macetas griegas rosa impresa en 3D",precio:1200,personaje:"Macetas griegas",img:"../multimedia/fotos/productos/MasetaHercules.jpg"},
-    {id:29,nombre:"Taza de Elsa",tipo:"Tazas",numTipo:6,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/productos/TazaElsa.jpg"}
+    {id:29,nombre:"Taza de Elsa",tipo:"Tazas",numTipo:6,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1600,personaje:"Taza de Elsa",img:"../multimedia/fotos/productos/TazaElsa.jpg"},
+    {id:30,nombre:"Mate Racing",tipo:"Mate",numTipo:6,cantidad:1,desc:"mate de racigng impresa en 3D",precio:1200,personaje:"Racing",img:""},
+    {id:31,nombre:"Lampara Merodeador Harry Potter",tipo:"Lampara",numTipo:7,cantidad:1,desc:"Lampara de harry potter impresa en 3D",precio:3200,personaje:"Harry Potter",img:"../multimedia/fotos/productos/LunaPersonalizadaConUnGorroPrendida.jpg"},
+    {id:32,nombre:"Mate Buda",tipo:"Mate",numTipo:1,cantidad:1,desc:"Mate de Buda impreso en 3D",precio:1600,personaje:"Buda",img:"../multimedia/fotos/productos/Buda.png"}
+    
 ]
 
 let stockPersonalizables = [
     {id:1001,nombre:"Lampara Luna",tipo:"LunasPersonalizables",numTipo:7,cantidad:1,desc:"Lampara de luna impresa en 3D",precio:1200,personaje:"-----",img:"../multimedia/fotos/personalizables/luna-hombres.jpg"},
-    {id:1002,nombre:"Lampara Luna",tipo:"LunasPersonalizables",numTipo:7,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"-----",img:"../multimedia/fotos/personalizables/PLunaConFoto.jpg"},
-    {id:1003,nombre:"Lampara Luna",tipo:"LunasPersonalizables",numTipo:7,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"-----",img:"../multimedia/fotos/personalizables/PLunaRojaConFoto.jpg"},
-    {id:1004,nombre:"Lampara Luna",tipo:"LunasPersonalizables",numTipo:7,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"-----",img:"../multimedia/fotos/personalizables/PSilvaniLuna.jpg"},
-    {id:1005,nombre:"Llavero",tipo:"LlaverosPersonalizables",numTipo:8,cantidad:1,desc:"Llavero impreso en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PlLavero.jpg"},
-    {id:1006,nombre:"Llavero",tipo:"LlaverosPersonalizables",numTipo:8,cantidad:1,desc:"Llavero impreso en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PlLavero2.jpg"},
-    {id:1007,nombre:"Llavero",tipo:"LlaverosPersonalizables",numTipo:8,cantidad:1,desc:"Llavero impreso en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PlLavero3.jpg"},
-    {id:1008,nombre:"Llavero",tipo:"LlaverosPersonalizables",numTipo:8,cantidad:1,desc:"Llavero impreso en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PlLaveroBahamasRopa.jpg"},
-    {id:1009,nombre:"Mate",tipo:"MatesPersonalizables",numTipo:9,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PMate.jpg"},
-    {id:1009,nombre:"Mate",tipo:"MatesPersonalizables",numTipo:9,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PMate.jpg"}
+    {id:1001,nombre:"Lampara Luna",tipo:"LunasPersonalizables",numTipo:7,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"-----",img:"../multimedia/fotos/personalizables/PLunaConFoto.jpg"},
+    {id:1001,nombre:"Lampara Luna",tipo:"LunasPersonalizables",numTipo:7,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"-----",img:"../multimedia/fotos/personalizables/PLunaRojaConFoto.jpg"},
+    {id:1001,nombre:"Lampara Luna",tipo:"LunasPersonalizables",numTipo:7,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"-----",img:"../multimedia/fotos/personalizables/PSilvaniLuna.jpg"},
+    {id:1002,nombre:"Llavero",tipo:"LlaverosPersonalizables",numTipo:8,cantidad:1,desc:"Llavero impreso en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PlLavero.jpg"},
+    {id:1002,nombre:"Llavero",tipo:"LlaverosPersonalizables",numTipo:8,cantidad:1,desc:"Llavero impreso en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PlLavero2.jpg"},
+    {id:1002,nombre:"Llavero",tipo:"LlaverosPersonalizables",numTipo:8,cantidad:1,desc:"Llavero impreso en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PlLavero3.jpg"},
+    {id:1002,nombre:"Llavero",tipo:"LlaverosPersonalizables",numTipo:8,cantidad:1,desc:"Llavero impreso en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PlLaveroBahamasRopa.jpg"},
+    {id:1003,nombre:"Mate",tipo:"MatesPersonalizables",numTipo:9,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PMate.jpg"},
+    {id:1003,nombre:"Mate",tipo:"MatesPersonalizables",numTipo:9,cantidad:1,desc:"Taza de Elsa rosa impresa en 3D",precio:1200,personaje:"Taza de Elsa",img:"../multimedia/fotos/personalizables/PMate.jpg"}
 ]
 
 let stockFilamento = [
-    {id:2001,nombre:"filamento marca",tipo:"F3n3",numtipo:"100",desc:"Filamento para impresora 3D", color:"blanco",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3Amarillo.png"},
-    {id:2002,nombre:"filamento marca",tipo:"F3n3",numtipo:"100",desc:"Filamento para impresora 3D", color:"negro",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3Amarillo.png"},
-    {id:2003,nombre:"filamento marca",tipo:"F3n3",numtipo:"100",desc:"Filamento para impresora 3D", color:"verde",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3Amarillo.png"},
-    {id:2004,nombre:"filamento marca",tipo:"F3n3",numtipo:"100",desc:"Filamento para impresora 3D", color:"amarillo",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3Amarillo.png"},
-    {id:2005,nombre:"filamento marca",tipo:"F3n3",numtipo:"100",desc:"Filamento para impresora 3D", color:"lila",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3Amarillo.png"},
-    {id:2006,nombre:"filamento marca",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"lila",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3Amarillo.png"},
-    {id:2007,nombre:"filamento marca",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"lila",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3Amarillo.png"},
-    {id:2008,nombre:"filamento marca",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"lila",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3Amarillo.png"}
+    {id:2001,nombre:"Amarillo",tipo:"F3n3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Amarillo",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3Amarillo.png"},
+    {id:2002,nombre:"Gris",tipo:"F3n3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Gris",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3-Filamentogris.jpg"},
+    {id:2003,nombre:"Naranja",tipo:"F3n3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Naranja",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3-naranja.jpg"},
+    {id:2004,nombre:"Azul",tipo:"F3n3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Azul",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3-petg-azul.jpg"},
+    {id:2005,nombre:"Rosa",tipo:"F3n3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Rosa",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/3n3-rosa.jpg"},
+    {id:2006,nombre:"Acqua",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Acqua",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Acqua.jpg"},
+    {id:2007,nombre:"Amarillo",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Amarillo",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Amarillo.jpg"},
+    {id:2008,nombre:"Azul",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Azul",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Azul.jpg"},
+    {id:2009,nombre:"Blanco",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Blanco",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Blanco.jpg"},
+    {id:2010,nombre:"Bronce",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Bronce",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Bronce.jpg"},
+    {id:2011,nombre:"Caribe",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Caribe",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Caribe.jpg"},
+    {id:2012,nombre:"Chocolate",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Chocolate",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Chocolate.jpg"},
+    {id:2013,nombre:"Cobre",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Cobre",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Cobre.jpg"},
+    {id:2014,nombre:"Dulce De Leche",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"DulceDeLeche",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/DulceDeLeche.jpg"},
+    {id:2015,nombre:"Fucsia",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Fucsia",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Fucsia.jpg"},
+    {id:2016,nombre:"Lavanda",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Lavanda",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Lavanda.jpg"},
+    {id:2017,nombre:"Naranja Fluo",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Naranja",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/NaranjaFluo.jpg"},
+    {id:2018,nombre:"Negro",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Negro",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Negro.jpg"},
+    {id:2019,nombre:"Rojo",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Rojo",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Rojo.jpg"},
+    {id:2020,nombre:"Rosa",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Rosa",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Rosa.jpg"},
+    {id:2021,nombre:"Salmon",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Salmon",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Salmon.jpg"},
+    {id:2022,nombre:"Turquesa",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Turquesa",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Turquesa.jpg"},
+    {id:2023,nombre:"VerdeManzana",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"VerdeManzana",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/VerdeManzana.jpg"},
+    {id:2024,nombre:"Violeta",tipo:"FGrilon3",numtipo:"100",desc:"Filamento para impresora 3D", color:"Violeta",precio:1600,cantidad:1,img:"../multimedia/fotos/filamentos/Violeta.jpg"}
 ]
 
 let stockPresentacion = [
@@ -150,7 +170,7 @@ const contadorCarrito = document.getElementById('contadorCarrito')
 const precioTotal = document.getElementById('precioTotal')
 const precioTotalForm = document.getElementById('precioTotalForm')
 const montoDelDestino = document.getElementById('montoDelDestino')
-
+const resultadoSelect = document.getElementById('resultadoSelect')
 
 
 //Se inicializa variable para saber si hay productos en el carrito

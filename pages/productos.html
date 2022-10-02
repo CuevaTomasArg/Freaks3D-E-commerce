@@ -97,10 +97,11 @@
         <div class="menu-select hide">
             <ul>
                 <li><span>Productos</span></li> 
-                <li><a href="#Mates">Mates</a></li>
+                <li><a href="#Mate">Mates</a></li>
                 <li><a href="#SetMatero">Set matero</a></li>
+                <li><a href="#Lampara">Lamparas</a></li>
                 <li><a href="#Esponjas">Set Esponjas</a></li>
-                <li><a href="#Figuras">Figuras</a></li>
+                <li><a href="#Figura">Figuras</a></li>
                 <li><a href="#Macetas">Macetas</a></li>
                 <li><a href="#Tazas">Tazas</a></li>
             </ul>
@@ -109,10 +110,11 @@
       <article id="indiceProductos">
         <dl  style="padding-bottom: 2px;padding-top:2px;">
           <dt><span>Productos</span></dt> 
-          <dd><a href="#Mates">Mates</a></dd>
+          <dd><a href="#Mate">Mates</a></dd>
           <dd><a href="#SetMatero">Set matero</a></dd>
+          <dd><a href="#Lampara">Lamparas</a></dd>
           <dd><a href="#Esponjas">Set Esponjas</a></dd>
-          <dd><a href="#Figuras">Figuras</a></dd>
+          <dd><a href="#Figura">Figuras</a></dd>
           <dd><a href="#Macetas">Macetas</a></dd>
           <dd><a href="#Tazas">Tazas</a></dd>
       </dl>
@@ -133,6 +135,14 @@
                 <!-- CONTENIDO -->
             </div>
         </section>
+        <section class="productos principal" >
+          <h2>
+              Lamparas
+          </h2>
+          <div id="Lampara">
+              <!-- CONTENIDO -->
+          </div>
+      </section>
         <section class="productos principal">
             <h2>
                 Set esponjas
@@ -186,7 +196,8 @@
                     <div class="carta-envio">
                         <strong>Envio</strong>
                         <p id="montoDelDestino"></p>
-                        <hr> 
+                        <hr>
+                        <input id="resultadoSelect" readonly onmousedownn="return false;" name="destinoDeProvincia" type="hidden">
                     </div>
                     <div class="monto-total">
                          <strong>Total</strong>

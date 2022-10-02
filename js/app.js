@@ -151,6 +151,7 @@ const seleccionarDestino = () =>{
         destino.forEach((dest) => {
             const option = document.createElement('option')
             option.setAttribute('value',`${dest.monto}`)
+            option.setAttribute('id',`${dest.provincia}`)
             option.innerText = `${dest.provincia}`
             select.appendChild(option)
         })
@@ -159,8 +160,11 @@ const seleccionarDestino = () =>{
             const resultado = document.getElementById('montoDestino$')
             resultado.innerText = `Monto de entrega: ${event.target.value}`
             montoDelDestino.innerText = event.target.value
+            //----------------------
             montoDestino = parseInt(event.target.value,10)
+            resultadoSelect.setAttribute('value',selectElement.options[selectElement.selectedIndex].text)
             actualizarCarrito()
+
         })
     }else{
         document.getElementById('destinoProvincia').remove()
@@ -177,10 +181,3 @@ const ejecutarCompra = () =>{
     console.log("elimine el carrito madafucer")
     actualizarCarrito()
 }
-
-// const ejecutarCompra = document.getElementById('ejecutarCompra')
-//     console.log("El carrito tiene", carrito.length, "elementos")
-//     ejecutarCompra.addEventListener('click',() => {
-//         carrito = []
-//         console.log("elimine el carrito madafucer")
-//     })
