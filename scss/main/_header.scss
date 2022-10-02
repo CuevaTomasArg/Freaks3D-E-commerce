@@ -8,8 +8,10 @@ header{
     }
     .container-fluid{
         flex-direction: row-reverse;
+        height: 64px;
         @media only screen and (min-width:992px){
             justify-content: flex-end !important;
+            height: auto;
             .none-lg{
                 display: none;
             }
@@ -106,11 +108,17 @@ header{
         }
         .navbar-brand{
             img{
-                width: 98px;
+                width: 52px;
+                @media only screen and (min-width:992px){
+                    width: 98px;
+                }
             }
         }
         .navbar-toggler{
             margin-left: 16px;
+            .navbar-toggler-icon{
+                height: 32px;
+            }
         }
         .cart-button{
             border:none;

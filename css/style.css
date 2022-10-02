@@ -39,7 +39,7 @@ main section .CTA-verMas {
   margin: 12px;
   padding-top: 32px;
 }
-main section .CTA-verMas button {
+main section .CTA-verMas button, main section .CTA-verMas a {
   width: 90%;
   height: 32px;
   background-color: #02aab0;
@@ -49,7 +49,7 @@ main section .CTA-verMas button {
   border: none;
 }
 @media only screen and (min-width: 992px) {
-  main section .CTA-verMas button {
+  main section .CTA-verMas button, main section .CTA-verMas a {
     width: 40%;
     height: 46px;
     background-color: #02aab0;
@@ -113,11 +113,12 @@ input[type=number] {
 }
 
 .card .card-body button {
+  position: relative;
+  bottom: 0;
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
   padding: 6px 16px;
-  margin: 8px 0;
   transition: all 0.3s;
 }
 .card .card-body button:hover {
@@ -137,10 +138,12 @@ header .navbar {
 }
 header .container-fluid {
   flex-direction: row-reverse;
+  height: 64px;
 }
 @media only screen and (min-width: 992px) {
   header .container-fluid {
     justify-content: flex-end !important;
+    height: auto;
   }
   header .container-fluid .none-lg {
     display: none;
@@ -245,7 +248,12 @@ header .container-fluid .offcanvas-end .producto-en-carrito hr {
 header .container-fluid .offcanvas-end .producto-en-carrito img {
   width: 80%;
   grid-area: img;
-  margin: 0 auto;
+  margin: 0 auto auto 12px;
+}
+@media only screen and (max-width: 992px) {
+  header .container-fluid .offcanvas-end .producto-en-carrito img {
+    width: 100px;
+  }
 }
 header .container-fluid .offcanvas-end .producto-en-carrito p {
   display: inline-block;
@@ -323,7 +331,7 @@ header .container-fluid .offcanvas-end .metodo-entrega > div .provincia-entrega 
   display: block;
 }
 header .container-fluid .offcanvas-end .metodo-entrega > div .provincia-entrega label {
-  display: block;
+  display: inline-block;
 }
 header .container-fluid .offcanvas-end .metodo-entrega > div .provincia-entrega select {
   display: inline-block;
@@ -352,7 +360,7 @@ header .container-fluid .offcanvas-end .volver {
   text-align: center;
 }
 header .container-fluid .offcanvas-end .volver button {
-  margin: 12px;
+  margin: 8px 12px;
   width: 90%;
   height: 32px;
   background-color: #02aab0;
@@ -360,6 +368,7 @@ header .container-fluid .offcanvas-end .volver button {
   color: #1b1b1b;
 }
 header .container-fluid .offcanvas-end .volver button a {
+  margin: 4px auto;
   color: #1b1b1b;
 }
 header .container-fluid .offcanvas-end .volver .seguir-viendo {
@@ -371,10 +380,18 @@ header .container-fluid .offcanvas-end .volver .seguir-viendo {
   }
 }
 header .container-fluid .navbar-brand img {
-  width: 98px;
+  width: 52px;
+}
+@media only screen and (min-width: 992px) {
+  header .container-fluid .navbar-brand img {
+    width: 98px;
+  }
 }
 header .container-fluid .navbar-toggler {
   margin-left: 16px;
+}
+header .container-fluid .navbar-toggler .navbar-toggler-icon {
+  height: 32px;
 }
 header .container-fluid .cart-button {
   border: none;
@@ -411,11 +428,12 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 }
 
 .card .card-body button {
+  position: relative;
+  bottom: 0;
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
   padding: 6px 16px;
-  margin: 8px 0;
   transition: all 0.3s;
 }
 .card .card-body button:hover {
@@ -443,11 +461,12 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   flex-direction: row;
 }
 .index .card .card-body button, .card .card-body .index button {
+  position: relative;
+  bottom: 0;
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
   padding: 6px 16px;
-  margin: 8px 0;
   transition: all 0.3s;
 }
 .index .card .card-body button:hover, .card .card-body .index button:hover {
@@ -468,6 +487,12 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   object-fit: cover;
   width: 100%;
 }
+@media only screen and (min-width: 992px) {
+  .index .carousel-inner .carousel-item img {
+    width: 600px;
+    height: 480px;
+  }
+}
 .index .carousel-inner .carousel-item .carousel-caption {
   bottom: -32px;
   right: 5%;
@@ -480,7 +505,7 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   width: 60%;
   margin: 12px auto;
 }
-.index .vista-personalizables h2, .index .vista-personalizables h3, .index .vista-personalizables p {
+.index .vista-personalizables h2, .index .vista-personalizables h3, .index .vista-personalizables strong, .index .vista-personalizables p {
   text-align: center;
 }
 .index .vista-personalizables .scrolleable-personalizables {
@@ -553,34 +578,57 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 @media only screen and (min-width: 992px) {
   #inicio {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-template-areas: "presentacion presentacion presentacion presentacion" "personalizable personalizable masvendido masvendido" "producto producto producto producto" "filamento filamento filamento filamento" "servicio servicio servicio servicio";
     justify-items: center;
-    align-items: flex-start;
+    align-items: center;
   }
   #inicio .presentacion-inicial {
     grid-area: presentacion;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+  #inicio .presentacion-inicial img {
+    width: 94px;
+    margin: 0px auto 12px auto;
+  }
+}
+@media only screen and (min-width: 992px) and (min-width: 992px) {
+  #inicio .presentacion-inicial img {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 992px) {
   #inicio .primera-vista-personalizables {
     grid-area: personalizable;
     width: 60%;
     margin-left: 156px;
     margin-right: auto;
   }
+}
+@media only screen and (min-width: 992px) {
   #inicio .MasVendidos {
     grid-area: masvendido;
     width: 70%;
     margin-right: 256px;
     margin-left: auto;
   }
+}
+@media only screen and (min-width: 992px) {
   #inicio .productos {
     grid-area: producto;
   }
+}
+@media only screen and (min-width: 992px) {
   #inicio .presentacion-filamento {
     grid-area: filamento;
+    display: block;
   }
-  #inicio section:last-child {
+}
+@media only screen and (min-width: 992px) {
+  #inicio #caracter-service {
     grid-area: servicio;
   }
 }
@@ -597,7 +645,7 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 .productos > div {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  align-items: center;
+  align-items: stretch;
   justify-items: center;
   gap: 8px;
 }
@@ -605,18 +653,30 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   .productos > div {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    width: 90%;
+    width: 95%;
     margin: 32px auto;
   }
 }
 .productos > div .card {
   width: 90%;
   margin: 4px 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.productos > div .card path {
+  margin: 12px auto;
 }
 @media only screen and (min-width: 992px) {
   .productos > div .card {
     width: 70%;
   }
+}
+.productos > div .card .card-title {
+  width: 100%;
+}
+.productos > div .card button {
+  margin-bottom: 0;
+  margin-top: auto;
 }
 
 .carta-producto-precompra article .indentidad, .datos-compra .compra-final .carta-compra div, .productos > div {
@@ -636,11 +696,12 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 }
 
 .card .card-body button {
+  position: relative;
+  bottom: 0;
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
   padding: 6px 16px;
-  margin: 8px 0;
   transition: all 0.3s;
 }
 .card .card-body button:hover {
@@ -653,24 +714,25 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 }
 
 /* Works on Firefox */
-@media only screen and (min-width: 992px) {
-  .scrolleable-cards, .scrolleable-personalizables {
-    scrollbar-width: 4px;
-    scrollbar-color: transparent;
-  }
-  .scrolleable-cards, .scrolleable-personalizables::-webkit-scrollbar {
-    width: 4px;
-  }
-  .scrolleable-cards, .scrolleable-personalizables::-webkit-scrollbar-track {
-    background: rgb(244, 244, 244);
-  }
-  .scrolleable-cards, .scrolleable-personalizables::-webkit-scrollbar-thumb {
-    background-color: #c1c1c1;
-    max-width: 4px;
-    border-radius: 4px;
-    border-color: transparent;
-  }
+.scrolleable-cards, .scrolleable-personalizables {
+  scrollbar-width: 0;
+  scrollbar-color: transparent;
 }
+
+.scrolleable-cards, .scrolleable-personalizables::-webkit-scrollbar {
+  width: 0;
+}
+
+.scrolleable-cards, .scrolleable-personalizables::-webkit-scrollbar-track {
+  background: rgb(244, 244, 244);
+}
+
+.scrolleable-cards, .scrolleable-personalizables::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  max-width: 0;
+  border-color: transparent;
+}
+
 .scrolleable-cards {
   display: flex;
   overflow-x: scroll;
@@ -678,15 +740,16 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   scroll-padding: 24px;
   border-radius: 8px;
   padding: 24px;
+  width: 300px;
   gap: 12px;
-  padding: 24px;
-  margin: 32px auto;
+  margin: 12px auto;
   min-width: 300px;
-  max-width: 900px;
+  max-width: 1200px;
 }
 @media only screen and (min-width: 992px) {
   .scrolleable-cards {
     scroll-snap-type: none;
+    width: 90%;
   }
 }
 .scrolleable-cards > div {
@@ -698,23 +761,26 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 @media only screen and (min-width: 992px) {
   .scrolleable-cards > div {
     scroll-snap-align: none;
-    flex: none;
   }
 }
 @media only screen and (min-width: 992px) {
   .scrolleable-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     visibility: visible;
     scroll-snap-type: none;
-    overflow-x: visible;
+    overflow-x: unset;
     scroll-padding: 0;
-    width: auto;
+    width: 100%;
     background-color: transparent;
+    gap: 32px;
+    justify-content: start;
   }
   .scrolleable-cards > .card {
     scroll-snap-align: none;
+    width: 135%;
+    margin-left: 0;
   }
 }
 .scrolleable-cards .caracteristicas-servicio {
@@ -759,8 +825,10 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
     flex: none;
   }
 }
-.scrolleable-personalizables > div {
-  max-width: 308px;
+@media only screen and (min-width: 992px) {
+  .scrolleable-personalizables > div {
+    width: 300px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -774,7 +842,6 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
   #caracter-service {
     grid-template-columns: repeat(3, 1fr);
     width: 200%;
-    margin-left: 22rem;
   }
 }
 
@@ -795,11 +862,12 @@ header .container-fluid .offcanvas-body .dropdown a, header .container-fluid .of
 }
 
 .card .card-body button {
+  position: relative;
+  bottom: 0;
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
   padding: 6px 16px;
-  margin: 8px 0;
   transition: all 0.3s;
 }
 .card .card-body button:hover {
@@ -924,11 +992,12 @@ footer div ul .redes-sociales a svg {
 }
 
 .card .card-body button {
+  position: relative;
+  bottom: 0;
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
   padding: 6px 16px;
-  margin: 8px 0;
   transition: all 0.3s;
 }
 .card .card-body button:hover {
@@ -1115,11 +1184,12 @@ header img {
 }
 
 .card .card-body button {
+  position: relative;
+  bottom: 0;
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
   padding: 6px 16px;
-  margin: 8px 0;
   transition: all 0.3s;
 }
 .card .card-body button:hover {
@@ -1370,11 +1440,12 @@ header img {
 }
 
 .card .card-body button {
+  position: relative;
+  bottom: 0;
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
   padding: 6px 16px;
-  margin: 8px 0;
   transition: all 0.3s;
 }
 .card .card-body button:hover {
@@ -1461,11 +1532,12 @@ header img {
 }
 
 .card .card-body button {
+  position: relative;
+  bottom: 0;
   background-color: transparent;
   border: 1px solid #0f0f0f;
   border-radius: 32px;
   padding: 6px 16px;
-  margin: 8px 0;
   transition: all 0.3s;
 }
 .card .card-body button:hover {
@@ -1595,6 +1667,26 @@ header img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+.agradecimiento img {
+  margin-top: 12px;
+  width: 60%;
+}
+@media only screen and (min-width: 992px) {
+  .agradecimiento img {
+    width: auto;
+  }
+}
+.agradecimiento h1, .agradecimiento h2 {
+  font-size: 1.2rem;
+  margin: 12px 32px;
+}
+@media only screen and (min-width: 992px) {
+  .agradecimiento h1, .agradecimiento h2 {
+    width: 600px;
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

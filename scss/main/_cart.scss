@@ -16,7 +16,10 @@
     img{
         width: 80%;
         grid-area: img;
-        margin: 0 auto;
+        margin: 0 auto auto 12px;
+        @media only screen and (max-width:992px){
+            width: 100px;
+        }
     }
     p{
         display: inline-block;
@@ -99,12 +102,12 @@
         .provincia-entrega{
             display: block;
             label{
-                display:block
+                display:inline-block;
             }
             select{
                 display:inline-block;
                 width:136px;
-                margin:12px 12px auto auto
+                margin:12px 12px auto auto;
             }
             p{
                 display: inline-block;
@@ -133,9 +136,10 @@
 .volver{
     text-align: center;
     button{
-        margin: 12px;
+        margin: 8px 12px;
         @include CTA( 90%,32px);
         a{
+            margin: 4px auto;
             color: $font-color;
         }
     }

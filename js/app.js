@@ -142,8 +142,10 @@ const seleccionarDestino = () =>{
         const montoDest = document.createElement('p')
         title.innerText = 'Provincia'
         title.setAttribute('id','destinoProvincia')
+        title.setAttribute('style',"margin-rigth:12px")
         select.setAttribute('id','seleccionDestino')
         select.setAttribute('name','provincia-destino')
+        select.setAttribute('style',"margin-left:12px;")
         montoDest.setAttribute('id','montoDestino$')
         formularioProv.appendChild(title)
         formularioProv.appendChild(select)
@@ -158,7 +160,8 @@ const seleccionarDestino = () =>{
         const selectElement = document.getElementById('seleccionDestino')
         selectElement.addEventListener('change', (event) => {
             const resultado = document.getElementById('montoDestino$')
-            resultado.innerText = `Monto de entrega: ${event.target.value}`
+            resultado.setAttribute('style',"margin:12px")
+            resultado.innerText = `Monto de entrega: $${event.target.value}`
             montoDelDestino.innerText = event.target.value
             //----------------------
             montoDestino = parseInt(event.target.value,10)

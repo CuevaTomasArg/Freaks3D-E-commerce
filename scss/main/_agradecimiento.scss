@@ -4,4 +4,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    img{
+        margin-top: 12px;
+        width: 60%;
+        @media only screen and (min-width:992px){
+            width: auto;
+        }
+    }
+    h1,h2{
+        font-size:1.2rem;
+        margin: 12px 32px;
+        @media only screen and (min-width:992px){
+            width: 600px;
+            font-size: 2rem;
+        }
+    }
 }

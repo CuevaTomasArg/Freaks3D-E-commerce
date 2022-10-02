@@ -11,7 +11,7 @@
         }
     }
     .vista-personalizables{
-        h2,h3,p{
+        h2,h3,strong,p{
             text-align: center;
         }
         .scrolleable-personalizables{
@@ -62,7 +62,7 @@
             }
             button{
                 @extend %add_cart;
-                transition: all .3s;
+                transition: all .3s;                
                 &:hover a{
                     color: lighten($background, 40%);
                 }
@@ -88,7 +88,7 @@
 #inicio{
     @media only screen and (min-width:992px) {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto;
         grid-template-areas: 
         "presentacion presentacion presentacion presentacion"
@@ -97,9 +97,19 @@
         "filamento filamento filamento filamento"
         "servicio servicio servicio servicio";
         justify-items: center;
-        align-items: flex-start;
+        align-items: center;
         .presentacion-inicial{
             grid-area: presentacion;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img{
+                width:94px;
+                margin:0px auto 12px auto ;
+                @media only screen and (min-width:992px){
+                    width: 50%;
+                }
+            }
         }
         .primera-vista-personalizables{
             grid-area: personalizable;
@@ -117,9 +127,10 @@
             grid-area:producto
         }
         .presentacion-filamento{
-            grid-area: filamento
+            grid-area: filamento;
+            display: block;
         }
-        section:last-child{
+        #caracter-service{
             grid-area: servicio
         }
     }
@@ -141,23 +152,36 @@
         @extend %grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        align-items: center;
+        align-items: stretch;
         justify-items: center;
         gap: 8px;
         @media only screen and (min-width:992px){
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: auto;
-            width: 90%;
+            width: 95%;
             margin: 32px auto ;
 
         }
         .card{
             width: 90%;
             margin: 4px 0px;
+            flex-direction: column;
+            justify-content: center;
+            path{
+                margin: 12px auto;
+            }
             @media only screen and (min-width:992px){
                 width: 70%;;
+            }
+            .card-title{
+                width: 100%
+            }
+            button{
+                margin-bottom: 0;
+                margin-top:auto
             }
         }
     }
 }
+
 @import "scrolleable";

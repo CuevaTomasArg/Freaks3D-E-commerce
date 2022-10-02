@@ -2,14 +2,13 @@
 @import "../partials/extends";
 @import "../partials/mixin";
 /* Works on Firefox */
-@media only screen and (min-width:992px){
     .scrolleable-cards,.scrolleable-personalizables{
-        scrollbar-width:4px;
+        scrollbar-width:0;
         scrollbar-color: transparent;
       }
       
     .scrolleable-cards,.scrolleable-personalizables::-webkit-scrollbar {
-        width: 4px;
+        width: 0;
     }
       
     .scrolleable-cards,.scrolleable-personalizables::-webkit-scrollbar-track {
@@ -17,30 +16,54 @@
       }
       
     .scrolleable-cards,.scrolleable-personalizables::-webkit-scrollbar-thumb {
-        background-color: darken($background, 20%);
-        max-width:4px ;
-        border-radius: 4px;
+        background-color: transparent;
+        max-width:0 ;
+        // border-radius: 4px;
         border-color:transparent;
       }
-}
 .scrolleable-cards{
-    @include scroll-x-mandatory (x mandatory,24px,24px 16px 24px 72px,12px);
-    padding: 24px;
-    margin:32px auto;
+    display: flex;
+    overflow-x:scroll ;
+    scroll-snap-type:x mandatory;
+    scroll-padding: 24px;
+    border-radius: 8px;
+    padding:24px;
+    width: 300px;
+    gap: 12px;
+    margin: 12px auto;
+    @media only screen and (min-width:992px){
+        scroll-snap-type: none;  
+        width: 90%; 
+    }
+    >div{
+        flex: 0 0 100%;
+        padding: 24px 16px 24px 72px ; 
+        border-radius: 4px;
+        scroll-snap-align: center;
+        @media only screen and (min-width:992px){
+            scroll-snap-align: none;
+            // flex: none;
+        }
+    }
+    
     min-width: 300px;
-    max-width: 900px;
+    max-width: 1200px;
     @media only screen and (min-width:992px){
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        grid-template-rows: 1fr;
+        grid-template-rows: auto;
         visibility: visible;
         scroll-snap-type:none;
-        overflow-x: visible;
+        overflow-x: unset;
         scroll-padding: 0;
-        width: auto;
+        width: 100%;
         background-color: transparent;
+        gap: 32px;
+        justify-content: start;
         >.card{
             scroll-snap-align:none;  
+            width: 135%;
+            margin-left: 0;
         }
     }
     .caracteristicas-servicio{
@@ -60,8 +83,11 @@
     padding: 24px;
     min-width: 300px;
     max-width: 1000px;
+    // margin: 12px 32px;
     >div{
-        max-width:308px
+        @media only screen and (min-width:992px){
+            width:300px
+        }
     }
 }
 .serviceSkills{
@@ -74,6 +100,8 @@
     @media only screen and (min-width:992px){
         grid-template-columns: repeat(3,1fr);
         width: 200%;
-        margin-left:22rem ;
+        // margin-left:22rem ;
     }
 }
+
+
